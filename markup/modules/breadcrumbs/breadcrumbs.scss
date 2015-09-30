@@ -3,6 +3,8 @@
     padding-bottom: 15px;
     @extend .col-xs-12;
     @include font-tuning(11,15);
+    font-size: 1.1rem;
+    padding-left: 0;
     @include at(xs){
         padding:0;
     }
