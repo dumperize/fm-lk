@@ -1,0 +1,11 @@
+.list_col-1{
+    &__item{        
+        margin: 20px 0;
+        &:first-child{
+            margin-top: 0px;
+        }
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }    
+}

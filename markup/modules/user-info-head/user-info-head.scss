@@ -1,0 +1,21 @@
+.user-info-head {
+  $block-height: 55px;
+  position: relative;
+  height: $block-height;
+  border-top: 1px solid transparent;
+  &__icon {
+    width: $block-height; height: $block-height;
+    background: url('%=staticPrefixForCss=%assets/user-info-head/no_foto_lk.png') $color-bg-grey-light no-repeat;
+    position: absolute;
+    left: 20px;
+  }
+  &__name {
+    height: 33px; line-height: 33px;
+    margin-top:11px;
+    padding-left: $block-height + 30px;
+    font-weight: bold;
+    background-color: $color-bg-grey-light;
+    color: $color-bg-grey-exdark;
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,32 @@
+.totop-btn {
+    &__button {
+        display: none;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+        background-color: #FFFFFF;
+        position: fixed;
+        right: 50%;
+        bottom: 10px;
+        transform: translateX(480px);
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__text {
+        text-align: center;
+        @include vertical-align;
+    }
+    &__holder {
+        width: 18px;
+        margin: 0 auto;
+    }
+    &__icon {
+        transform: rotate(-90deg);
+        @extend %icon;
+        @extend %icon_block;
+        @extend %icon_size_xsmall;
+        @extend %icon_strelka;
+    }
+}

@@ -1,0 +1,8 @@
+.list_col-3{
+    &__item{
+        padding-bottom: 20px;
+        @extend .col-md-4;
+        @extend .col-sm-6;
+        @extend .col-xs-12;
+    }
+}

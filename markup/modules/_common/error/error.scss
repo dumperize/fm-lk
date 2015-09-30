@@ -1,0 +1,54 @@
+.error {
+    //padding-top: 50px;
+    @include at(xs){
+        padding-top: 20px;
+    }
+    &__num {
+        float: left;
+        margin-right: 20px;
+        color: $color-orange;
+        font-weight: bold;
+        @include font-tuning(90, 90);
+        @include at(xs){
+            float: none;
+            @include font-tuning(60, 60);
+
+        }
+        @include at(sm){
+            @include font-tuning(80, 80);
+        }
+        @include at(md){
+            @include font-tuning(80, 80);
+        }
+    }
+    &__text {
+        color: $color-orange;
+        @include font-tuning(35, 40);
+        @include at(xs){
+            @include font-tuning(20, 24);
+        }
+        @include at(sm){
+            @include font-tuning(32, 36)
+        }
+        @include at(md){
+            @include font-tuning(32, 36)
+        }
+    }
+    &__holder {
+        padding-bottom: 20px;
+        @include cf;
+    }
+    &__invitation {
+        padding-bottom: 10px;
+        @include font-tuning(20, 20);
+        @include at(xs){
+            @include font-tuning(14, 16);
+        }
+        @include at(sm){
+            @include font-tuning(18, 20);
+        }
+        @include at(md){
+            @include font-tuning(18, 20);
+        }
+    }
+}

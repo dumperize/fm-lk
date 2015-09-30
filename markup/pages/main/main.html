@@ -1,0 +1,35 @@
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="ru"><!--<![endif]-->
+{{#with page_main}}
+<head>
+    {{> head/head head}}
+</head>
+
+<body class="page">
+{{> header/header header}}
+
+<div block="main-page" mix="block:container">
+
+    <div elem="top">
+    {{> breadcrumbs/breadcrumbs breadcrumbs}}
+    {{> user-info-head/user-info-head user-info-head}}
+
+    </div><!--top-->
+
+    <div elem="left">
+    </div><!--left-->
+
+    <div elem="right">
+    </div><!--right-->
+
+{{> footer/footer footer}}
+</body>
+{{/with}}
+</html>

@@ -1,0 +1,60 @@
+<header block="header">
+    <div class="container">
+        <div class="row">
+            <div elem="left-col">
+                <div block="logo">
+                    <div elem="img">
+                        <a href="{{logo-url}}" elem="link">
+                            <img alt="Facemaster.ru Logo" src="%=staticPrefix=%img/general/logo.svg"
+                                 width="100%">
+                        </a>
+                    </div>
+                    <div block="visitor">
+                        <p elem="count">{{visitor}}</p>
+
+                        <p elem="mera">в неделю</p>
+                    </div>
+                </div>
+            </div>
+            <div elem="title">
+                <a href="{{logo-url}}" block="title">
+                    <p elem="text" mix="block:h1">ПОИСК МАСТЕРОВ В СФЕРЕ УСЛУГ</p>
+                </a>
+            </div>
+            <div elem="login">
+                {{#if auth}}
+                <div block="login">
+                    <a href="{{homeUrl}}" elem="btn" mix="block:btn">{{authData.name}}</a>
+                    <div block="menu-user">
+                        <ul elem="ul">
+                            {{#each authData.menuUser}}
+                            <li elem="item">
+                                <a href="{{url}}" elem="item-link">{{{title}}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                {{else}}
+                <div block="login">
+                    <a href="{{authUrl}}" elem="btn" mix="block:btn">Вход для Мастеров</a>
+                </div>
+                {{/if}}
+            </div>
+            <div elem="menu">
+                <nav block="menu">
+                <ul block="main-menu">
+                    {{#each menu}}
+                    <li elem="item">
+                        <a href="{{url}}" elem="item-link" mix="block:link">{{{title}}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                </nav>
+            </div>
+            <div elem="social">
+                {{> social/social social}}
+            </div>
+        </div>
+    </div>
+</header>

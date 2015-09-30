@@ -1,0 +1,26 @@
+.phone-btn{
+    &__button {
+        font-size: 0.68em;
+        margin-bottom: 10px;
+        @extend .btn;
+        @extend .btn_size_xmedium;
+        @extend .btn_color_black;
+        @extend .btn_uppercase;
+
+    }
+    &__phone-details {
+        display: none;
+        height: 42px;
+        text-align: center;
+    }
+    &__phone {
+        color: $color-text-dark;
+        font-weight: bold;
+        @include font-tuning(12, 12);
+    }
+    &__url {
+        color: $color-orange;
+        @include font-tuning(10, 10);
+    }
+
+}
