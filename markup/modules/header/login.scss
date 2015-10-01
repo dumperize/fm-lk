@@ -18,6 +18,7 @@
         text-decoration: none;
         color: #fff;
         @include font-tuning(11,30);
+        font-size: 1.1rem;
         &:visited, &:hover {
             color: #fff;
         }

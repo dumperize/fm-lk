@@ -1,0 +1,42 @@
+.master-list {
+  color: $color-bg-grey-exdark;
+  &__master-card {
+    padding: 10px;
+    height: 130px;
+    margin-bottom: 20px;
+    background-color: $color-bg-grey-light;
+    position: relative;
+  }
+  &__avatar-cont {
+    width: 110px; height: 110px;
+    overflow: hidden;
+    margin-right:20px;
+    background: url('%=staticPrefixForCss=%general/lk/no_foto_lk.png') 50% 50% no-repeat;
+    border: 1px solid blue;
+    float: left;
+  }
+  &__name {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  &__rubric {margin-bottom: 10px;}
+  &__tarif {float: left;}
+  &__strong {font-weight: bold;}
+  &__change {
+    color: $color-text-blue;
+    margin-left: 20px;
+  }
+  &__edit {
+    @extend .button_1;
+    color:$color-bg-grey-medium;
+    bottom: 10px; right: 10px;
+  }
+  &__publish {
+    @extend .button_1;
+    color: $color-text-white;
+    background-color: $color-orange;
+    border: $color-orange;
+    top:10px; right: 10px;
+  }
+}

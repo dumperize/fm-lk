@@ -18,15 +18,18 @@
 <div block="main-page" mix="block:container">
 
     <div elem="top">
-    {{> breadcrumbs/breadcrumbs breadcrumbs}}
-    {{> user-info-head/user-info-head user-info-head}}
+        {{> breadcrumbs/breadcrumbs breadcrumbs}}
+        {{> user-info-head/user-info-head user-info-head}}
 
     </div><!--top-->
 
     <div elem="left">
+        {{> lk-menu/lk-menu lk-menu}}
+        {{> notice/notice notice}}
     </div><!--left-->
 
     <div elem="right">
+        {{> master-list/master-list master-list}}
     </div><!--right-->
 
 {{> footer/footer footer}}
