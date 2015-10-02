@@ -1,17 +1,37 @@
 <div block="master-list">
 
+    {{#each masters}}
+    {{#if text-help}}
+    <div elem="cont-help"><p elem="text-help">{{text-help}}</p></div>
+    {{/if}}
+
+
     <div elem="master-card">
         <div elem="avatar-cont">
-            <!--<img src="%=staticPrefix=%img/content/test/test.png">-->
+            {{#if is-avatar-exist}}
+            <img elem="avatar" src="{{avatar.src}}" alt="{{avatar.alt}}">
+            {{/if}}
         </div>
 
-        <p elem="name">Мастер — Сярдин Илья</p>
-        <p elem="rubric"><span elem="strong">Рубрика:</span> Тренеры</p>
-        <p elem="tarif">Тариф: Профессионал</p> <a href="#" elem="change">cменить</a>
+        <p elem="name">Мастер — {{name}}</p>
+        <p elem="rubric"><span elem="strong">Рубрика:</span> {{rubric-name}}</p>
+        <p elem="tarif">Тариф: {{tarif-name}}</p><a href="{{tarif_link.url}}" elem="change">cменить</a>
 
-        <a href="#" elem="edit">Редактировать</a>
-        <a href="#" elem="publish">Опубликовать</a>
+        <p elem="edit">{{> button/link-button/link-button edit-button}}</p>
+        <!--<p elem="publish">{{> button/link-button/link-button publish-button}}</p>-->
+
+        {{#if is-moderate-status}}
+        <p elem="status" mod="moderate">
+            {{status-text}}<br>
+            <a elem="status-link" href="{{moderate.url}}">{{moderate.text}}</a>
+        </p>
+        {{else}}
+        <p elem="status">{{status-text}}</p>
+        {{/if}}
+
 
     </div><!--master-card-->
+{{/each}}
+
 
 </div><!--master-list-->

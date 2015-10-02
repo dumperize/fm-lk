@@ -1,5 +1,16 @@
 .master-list {
   color: $color-bg-grey-exdark;
+  &__cont-help {
+    padding-bottom: 24px;
+    text-align: right;
+    padding-right: 164px;
+    background:  url('%=staticPrefixForCss=%general/lk/arrowDown.png') 87% 67% no-repeat;
+  }
+  &__text-help {
+    font-family: "Cheeseusaceu", serif;
+    font-size: 2.2rem;
+    color: $color-bg-grey-dark;
+  }
   &__master-card {
     padding: 10px;
     height: 130px;
@@ -12,8 +23,11 @@
     overflow: hidden;
     margin-right:20px;
     background: url('%=staticPrefixForCss=%general/lk/no_foto_lk.png') 50% 50% no-repeat;
-    border: 1px solid blue;
+    background-size: cover;
     float: left;
+  }
+  &__avatar {
+    @include img-max-size (110px, 110px);
   }
   &__name {
     font-size: 1.9rem;
@@ -28,15 +42,44 @@
     margin-left: 20px;
   }
   &__edit {
-    @extend .button_1;
-    color:$color-bg-grey-medium;
-    bottom: 10px; right: 10px;
+    @include button-mid;
+    position: absolute;
+    top: 10px; right: 10px;
   }
   &__publish {
-    @extend .button_1;
-    color: $color-text-white;
-    background-color: $color-orange;
-    border: $color-orange;
-    top:10px; right: 10px;
+    @include button-mid;
+    position: absolute;
+    bottom :10px; right: 10px;
+  }
+  &__status {
+    border: 1px solid;
+    text-align: center;
+    width: $button-mid-width;
+    height: $button-mid-height;
+    line-height: $button-mid-height;
+    color: #AAA;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    text-transform: uppercase;
+    &_moderate {
+      height: 58px;
+      line-height: normal;
+      padding: 12px 0;
+    }
+  }
+  &__status-link {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #666;
+    line-height: normal;
+    text-transform: lowercase;
+    position: relative;
+    top:-4px;
+    &:hover {
+      color: #666;
+    }
   }
 }

@@ -1,11 +1,98 @@
 {
-    "page_main": {
-        "head": {
-            "title": "FaceMaster.ru. Специалисты Тольятти"
+  "page_main": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": "readyBlocksData.block_header",
+    "footer": "readyBlocksData.block_footer",
+    "breadcrumbs": {
+      "links": [
+        {
+          "url": "index.html",
+          "title": "fsd"
+        }
+      ]
+    },
+    "master-list": {
+      "masters": [
+        {
+          "text-help": "Заполните вашу страницу",
+          "name": "Сярдин Илья",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": true,
+          "rubric-name": "Тренеры",
+          "tarif-name": "Профессионал",
+          "tarif_link": {
+            "url": "#"
+          },
+          "edit-button": {
+            "text": "Редактировать",
+            "url": "index.html"
+          },
+          "publish-button": {
+            "text": "Опубликовать",
+            "url": "index.html",
+            "static-mod": "orange"
+          },
+          "status-text": "Опубликовано"
         },
-        "header": "readyBlocksData.block_header",
-        "footer": "readyBlocksData.block_footer", 
-        "dopFunction": "readyBlocksData.block_main_dopFunction",
-        "mainFunction": "readyBlocksData.block_main_mainFunction"
+        {
+          "text-help": "Ваша страница заполнена, опубликуйте её",
+          "name": "Мельников Иван",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": true,
+          "rubric-name": "Инструктора",
+          "tarif-name": "Фиговый",
+          "tarif_link": {
+            "url": "#"
+          },
+          "edit-button": {
+            "text": "Редактировать",
+            "url": "index.html"
+          },
+          "publish-button": {
+            "text": "Опубликовать",
+            "url": "index.html",
+            "static-mod": "orange"
+          },
+          "status-text": "Не опубликовано"
+        },
+        {
+          "text-help": "",
+          "name": "Мельников Иван",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": false,
+          "rubric-name": "Инструктора",
+          "tarif-name": "Фиговый",
+          "tarif_link": {
+            "url": "#"
+          },
+          "edit-button": {
+            "text": "Редактировать",
+            "url": "index.html"
+          },
+          "publish-button": {
+            "text": "Опубликовать",
+            "url": "index.html",
+            "static-mod": "orange"
+          },
+          "status-text": "На модерации",
+          "is-moderate-status": true,
+            "moderate": {
+              "url":"#",
+              "text":"Снять с модерации"
+            }
+        }
+      ]
     }
+  }
 }

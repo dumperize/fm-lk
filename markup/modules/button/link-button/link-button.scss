@@ -1,0 +1,24 @@
+.button {
+  display: block;
+  border: 1px solid;
+  text-align: center;
+  height: $button-mid-height;
+  line-height: $button-mid-height;
+  color: $color-bg-grey-exdark;
+  font-weight: bold;
+  text-decoration: none;
+  //  font-size: 1.4rem;
+  text-transform: uppercase;
+  &:hover {
+    color: #333;
+  }
+  &_orange {
+    color: $color-text-white;
+    background-color: $color-orange;
+    border: $color-orange;
+    &:hover {
+      color: $color-text-white;
+      background-color: $color-orange-light;
+    }
+  }
+}

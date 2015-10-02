@@ -1,0 +1,11 @@
+{
+    "edit-button": {
+      "text": "Редактировать",
+      "url": "index.html"
+    },
+    "publish-button": {
+      "text": "Опубликовать",
+      "url": "index.html",
+      "mod": "orange"
+    }
+}

@@ -75,33 +75,33 @@ p {line-height: 1.3em}
 
 .main-page>* {min-height: 50px !important}
 .main-page {
-
+    $border-true: 0px;
     &__top {
-        border: 1px solid orange;
+        border: $border-true solid orange; //убрать
         padding-bottom: 10px;
     }
     &__left {
-        border: 1px solid blue;
+        border: $border-true solid blue; //убрать
         @extend .col-lg-3;
         padding-left: 20px;
         padding-right: 20px;
     }
     &__right {
-        border: 1px solid red;
+        border: $border-true solid red; //убрать
         @extend .col-lg-9;
     }
 }
-.button_1 {
-    width: 150px;
-    height: 40px;
-    position: absolute;
-    border:1px solid;
-    text-align: center;
-    line-height: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.4rem;
-    text-transform: uppercase;
+
+/* Размеры обычной кнопки */
+@mixin button-mid () {
+    width: $button-mid-width;
+    height: $button-mid-height;
+}
+@mixin img-max-size ($max-width, $max-height) {
+    max-width: $max-width;
+    max-height: $max-height;
+    width: auto;
+    height: auto;
 }
 
 
