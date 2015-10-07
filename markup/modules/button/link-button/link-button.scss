@@ -21,4 +21,15 @@
       background-color: $color-orange-light;
     }
   }
+  &_grey {
+    font-size: 1.1rem;
+    text-transform: none;
+    color: $color-text-dark;
+    background-color: $color-bg-grey-medium;
+    border: $color-bg-grey-medium;
+    &:hover {
+      color: $color-text-dark;
+      background-color: $color-bg-grey-xmedium;
+    }
+  }
 }

@@ -1,0 +1,27 @@
+.master-list.master-list_stat {
+  .master-list {
+    &__info-cont {
+      padding-left: 130px;
+    }
+    &__title {
+      color: #333;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    &__master-card {
+      padding: 10px 20px;
+      min-height: 180px;
+      height: auto;
+    }
+    &__name {
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+    &__stat-title {
+      font-weight: bold;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+  }
+}

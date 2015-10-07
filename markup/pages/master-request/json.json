@@ -1,0 +1,47 @@
+{
+  "page_master_request": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": "readyBlocksData.block_header",
+    "footer": "readyBlocksData.block_footer",
+    "breadcrumbs": {
+      "links": [
+        {
+          "url": "index.html",
+          "title": "fsd"
+        }
+      ]
+    },
+    "master-request-list": {
+      "masters": [
+        {
+          "name": "Грищенко Слава",
+          "is-avatar-exist": false,
+          "rubric-name": "Инструктора",
+          "master-request": "3 заявки",
+          "show-button": {
+            "text": "Просмотреть заявки",
+            "url": "index.html",
+            "mod": "grey"
+          }
+        },
+        {
+          "name": "Сярдин Илья",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": true,
+          "rubric-name": "Тренеры",
+          "master-request": "0 заявок",
+          "show-button": {
+            "text": "Просмотреть заявки",
+            "url": "index.html",
+            "mod": "grey"
+          }
+        }
+      ]
+    }
+  }
+}

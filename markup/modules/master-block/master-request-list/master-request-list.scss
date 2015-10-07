@@ -1,0 +1,10 @@
+.master-list.master-list_stat {
+  .master-list {
+    &__button {
+      @include button-mid;
+      position: absolute;
+      bottom: 20px;
+      left: 150px;
+    }
+  }
+}

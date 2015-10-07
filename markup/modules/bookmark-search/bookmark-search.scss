@@ -1,0 +1,57 @@
+.bookmark-search {
+  $block-height: 55px;
+  height: $block-height;
+  padding-top:12px;
+
+  &__title {
+    color: $color-bg-grey-exdark;
+    background-color: $color-bg-grey-light;
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 10px;
+    position: relative;
+  }
+  &__label-search {
+    float: right;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+    margin-right: 34px;
+  }
+  &__search-ico {
+    @extend %icon;
+    @extend %icon_search;
+    @extend %icon_block;
+    @include icon_size(18px);
+    position: absolute;
+    right: 7px; top:5px;
+    margin: 3px;
+  }
+  &__input-cont {
+    background-color: $color-bg-grey-light;
+    height: 33px;
+    line-height: 33px;
+    position: relative;
+    display: none;
+  }
+  &__search-input {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    padding: 1px 4px;
+    height: 21px;
+    width: 78%;
+  }
+  &__submit {
+    position: absolute;
+    right: 7px; top:5px;
+    margin: 3px;
+    border: none;
+    background-color: transparent;
+    @extend %icon;
+    @extend %icon_search;
+    @extend %icon_block;
+    @include icon_size(18px);
+  }
+}

@@ -29,15 +29,12 @@
             "url": "#"
           },
           "edit-button": {
-            "text": "Редактировать",
-            "url": "index.html"
-          },
-          "publish-button": {
-            "text": "Опубликовать",
+            "text": "Заполнить",
             "url": "index.html",
-            "static-mod": "orange"
+            "mod": "orange"
           },
-          "status-text": "Опубликовано"
+          "status-text": "Не опубликовано",
+          "is-status": true
         },
         {
           "text-help": "Ваша страница заполнена, опубликуйте её",
@@ -59,13 +56,12 @@
           "publish-button": {
             "text": "Опубликовать",
             "url": "index.html",
-            "static-mod": "orange"
-          },
-          "status-text": "Не опубликовано"
+            "mod": "orange"
+          }
         },
         {
           "text-help": "",
-          "name": "Мельников Иван",
+          "name": "Волков Данил",
           "avatar": {
             "src": "%=staticPrefix=%img/content/test/test-img.jpg",
             "alt": ""
@@ -83,14 +79,65 @@
           "publish-button": {
             "text": "Опубликовать",
             "url": "index.html",
-            "static-mod": "orange"
+            "mod": "orange"
           },
           "status-text": "На модерации",
-          "is-moderate-status": true,
-            "moderate": {
-              "url":"#",
-              "text":"Снять с модерации"
-            }
+          "is-status": true,
+          "status-link": {
+             "url":"#",
+             "text":"Снять с модерации"
+          }
+        },
+        {
+          "name": "Неупокоев Аркадий",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": false,
+          "rubric-name": "Инструктора",
+          "tarif-name": "Фиговый",
+          "tarif_link": {
+            "url": "#"
+          },
+          "edit-button": {
+            "text": "Редактировать",
+            "url": "index.html"
+          },
+          "publish-button": {
+            "text": "Опубликовать",
+            "url": "index.html",
+            "mod": "orange"
+          },
+          "moderate-comment": "Ваше что там, не соответствует, что то там"
+        },
+        {
+          "name": "Грищенко Слава",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": false,
+          "rubric-name": "Инструктора",
+          "tarif-name": "Фиговый",
+          "tarif_link": {
+            "url": "#"
+          },
+          "edit-button": {
+            "text": "Редактировать",
+            "url": "index.html"
+          },
+          "publish-button": {
+            "text": "Опубликовать",
+            "url": "index.html",
+            "mod": "orange"
+          },
+          "status-text": "Опубликован",
+          "is-status": true,
+          "status-link": {
+            "url":"#",
+            "text":"Снять с публикации"
+          }
         }
       ]
     }

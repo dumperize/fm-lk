@@ -1,0 +1,35 @@
+<div block="master-list" mod="stat">
+
+    <p elem="title">Статистика</p>
+
+    {{#each masters}}
+
+    <div elem="master-card">
+        <p elem="name">{{name}}</p>
+        <div elem="avatar-cont">
+            {{#if is-avatar-exist}}
+            <img elem="avatar" src="{{avatar.src}}" alt="{{avatar.alt}}">
+            {{/if}}
+        </div>
+
+        <div elem="info-cont">
+            <p elem="rubric"><span elem="strong">Рубрика:</span> {{rubric-name}}</p>
+
+            <p elem="stat-title">Посетителей в рубрике</p>
+            <p elem="stat">За 3 месяца: {{visitors.three-months}}<br>За последний месяц: {{visitors.months}}<br>За последнюю неделю: {{visitors.week}}</p>
+
+            {{#if page-visitors}}
+            <p elem="stat-title">Посетителей на Вашей странице</p>
+            <p elem="stat">За 3 месяца: {{page-visitors.three-months}}<br>За последний месяц: {{page-visitors.months}}<br>За последнюю неделю: {{page-visitors.week}}</p>
+            {{/if}}
+
+            <p elem="stat-title">Просмотров Вашего номера телефона</p>
+            <p elem="stat">За 3 месяца: {{views.three-months}}<br>За последний месяц: {{views.months}}<br>За последнюю неделю: {{views.week}}</p>
+        </div><!--info-cont-->
+        <div elem="cf"></div>
+
+    </div><!--master-card-->
+    {{/each}}
+
+
+</div><!--master-list_stat-->

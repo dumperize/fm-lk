@@ -5,7 +5,6 @@
     <div elem="cont-help"><p elem="text-help">{{text-help}}</p></div>
     {{/if}}
 
-
     <div elem="master-card">
         <div elem="avatar-cont">
             {{#if is-avatar-exist}}
@@ -16,22 +15,31 @@
         <p elem="name">Мастер — {{name}}</p>
         <p elem="rubric"><span elem="strong">Рубрика:</span> {{rubric-name}}</p>
         <p elem="tarif">Тариф: {{tarif-name}}</p><a href="{{tarif_link.url}}" elem="change">cменить</a>
+        <p elem="button-top">{{> button/link-button/link-button edit-button}}</p>
 
-        <p elem="edit">{{> button/link-button/link-button edit-button}}</p>
-        <!--<p elem="publish">{{> button/link-button/link-button publish-button}}</p>-->
-
-        {{#if is-moderate-status}}
+        {{#if is-status}}
+        {{#if status-link}}
         <p elem="status" mod="moderate">
-            {{status-text}}<br>
-            <a elem="status-link" href="{{moderate.url}}">{{moderate.text}}</a>
+            {{status-text}}
+            <br>
+            <a elem="status-link" href="{{status-link.url}}">{{status-link.text}}</a>
         </p>
+
         {{else}}
         <p elem="status">{{status-text}}</p>
         {{/if}}
 
+        {{else}}
+        <p elem="button-bottom">{{> button/link-button/link-button publish-button}}</p>
+        {{/if}}
 
     </div><!--master-card-->
-{{/each}}
+
+    {{#if moderate-comment}}
+    <p elem="moderate-comment">Комментарии модератора: {{moderate-comment}}</p>
+    {{/if}}
+
+    {{/each}}
 
 
 </div><!--master-list-->

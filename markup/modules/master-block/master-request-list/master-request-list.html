@@ -1,0 +1,29 @@
+<div block="master-list" mod="stat">
+
+    <p elem="title">Заявки</p>
+
+    {{#each masters}}
+
+    <div elem="master-card">
+        <p elem="name">{{name}}</p>
+        <div elem="avatar-cont">
+            {{#if is-avatar-exist}}
+            <img elem="avatar" src="{{avatar.src}}" alt="{{avatar.alt}}">
+            {{/if}}
+        </div>
+
+        <div elem="info-cont">
+            <p elem="rubric"><span elem="strong">Рубрика:</span> {{rubric-name}}</p>
+
+            <p elem="stat"><span elem="strong">Всего:</span> {{master-request}}</p>
+
+            <p elem="button">{{> button/link-button/link-button show-button}}</p>
+
+        </div><!--info-cont-->
+        <div elem="cf"></div>
+
+    </div><!--master-card-->
+    {{/each}}
+
+
+</div><!--master-list_stat-->

@@ -3,11 +3,18 @@
   position: relative;
   height: $block-height;
   border-top: 1px solid transparent;
-  &__icon {
+  &__icon-cont {
     width: $block-height; height: $block-height;
-    background: url('%=staticPrefixForCss=%assets/user-info-head/no_foto_lk.png') $color-bg-grey-light no-repeat;
+    background-color: $color-bg-grey-light;
     position: absolute;
     left: 20px;
+    padding: 5px;
+  }
+  &__icon {
+    @extend %icon;
+    @extend %icon_man;
+    @extend %icon_block;
+    @include icon_size(45px);
   }
   &__name {
     height: 33px; line-height: 33px;

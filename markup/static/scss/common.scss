@@ -66,16 +66,64 @@ h2, .h2{
 
 p {line-height: 1.3em}
 
+
+
+/*-------Структура страницы-------*/
+
+$footer-height-lg: 80px; //высота футера-lg
+$footer-height-md: 90px; //высота футера-md
+$footer-height-sm:100px; //высота футера-sm
+$footer-height-xs:110px; //высота футера-xs
+
 .page {}
-
-.page__wrapper {min-height: 100%; margin-bottom: -50px;}
+.page__wrapper {
+    margin-bottom: -$footer-height-lg; //место для футера
+    min-height: 100%;
+    display: block;
+    @include at(md) {
+        margin-bottom: -$footer-height-md;
+    }
+    @include at(sm) {
+        margin-bottom: -$footer-height-sm;
+    }
+    @include at(xs) {
+        margin-bottom: -$footer-height-xs;
+    }
+}
 * html .page__wrapper {height: 100%;}
+.page__buffer {
+    height: $footer-height-lg + 20px;
+    @include at(md) {
+        height: $footer-height-md + 20px;
+    }
+    @include at(sm) {
+        height: $footer-height-sm + 20px;
+    }
+    @include at(xs) {
+        height: $footer-height-xs + 20px;
+    }
+}
+.page__footer {
+    height: $footer-height-lg;
+//    border: 1px solid blue;
+    @include at(md) {
+        height: $footer-height-md;
+    }
+    @include at(sm) {
+        height: $footer-height-sm;
+    }
+    @include at(xs) {
+        height: $footer-height-xs;
+    }
+}
+/*-----Структура страницы-конец-----*/
 
-.page__buffer {height: 50px;  width: 40px;}
 
+
+/*--------Структура контента--------*/
 .main-page>* {min-height: 50px !important}
 .main-page {
-    $border-true: 0px;
+    $border-true: 0px; //нарисовать вспомогательные рамки
     &__top {
         border: $border-true solid orange; //убрать
         padding-bottom: 10px;
@@ -90,7 +138,26 @@ p {line-height: 1.3em}
         border: $border-true solid red; //убрать
         @extend .col-lg-9;
     }
+    &__top-left-col {
+        @extend .col-lg-9;
+        border: $border-true solid purple;
+    }
+    &__top-right-col {
+        @extend .col-lg-3;
+        border: $border-true solid mediumorchid;
+    }
+    &__top-top {@extend .col-lg-12;}
 }
+.right-column {
+    @extend .row;
+    &__center {
+        @extend .col-lg-8;
+    }
+    &__right {
+        @extend .col-lg-4;
+    }
+}
+/*------Структура контента-конец-----*/
 
 /* Размеры обычной кнопки */
 @mixin button-mid () {
@@ -224,4 +291,5 @@ p {line-height: 1.3em}
 .main-page {
     &__left {padding-left: 20px; padding-right: 20px;} //переопределяем внутренние поля
     &__right {padding: 0}
+    &__top-right-col {padding-left: 0}
 }

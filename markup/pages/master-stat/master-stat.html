@@ -7,7 +7,7 @@
 <html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="ru"><!--<![endif]-->
-{{#with page_main}}
+{{#with page_master_stat}}
 <head>
     {{> head/head head}}
 </head>
@@ -18,9 +18,21 @@
 
     <div block="main-page" mix="block:container">
 
-        <div elem="top">
-            {{> breadcrumbs/breadcrumbs breadcrumbs}}
-            {{> user-info-head/user-info-head user-info-head}}
+        <div elem="top" mix="block:row">
+
+            <div elem="top-top">
+                {{> breadcrumbs/breadcrumbs breadcrumbs}}
+            </div><!--top-top-->
+
+            <div elem="top-left-col">
+
+                {{> user-info-head/user-info-head user-info-head}}
+            </div><!--left_col-->
+
+            <div elem="top-right-col">
+                {{> bookmark-search/bookmark-search}}
+            </div><!--right_col-->
+
         </div><!--top-->
 
         <div elem="left">
@@ -29,7 +41,17 @@
         </div><!--left-->
 
         <div elem="right">
-            {{> master-block/master-list/master-list master-list}}
+
+            <div block="right-column">
+
+                <div elem="center">
+                    {{> master-block/master-stat-list/master-stat-list master-stat-list}}
+                </div><!--center-->
+
+                <div elem="right"></div>
+
+            </div><!--right-column-->
+
         </div><!--right-->
 
     </div><!--main-page-->
