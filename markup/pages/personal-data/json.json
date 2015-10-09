@@ -1,0 +1,26 @@
+{
+  "page_personal_data": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": "readyBlocksData.block_header",
+    "footer": "readyBlocksData.block_footer",
+    "breadcrumbs": {
+      "links": [
+        {
+          "url": "index.html",
+          "title": "fsd"
+        }
+      ]
+    },
+    "personal-data": {
+      "edit-link": "index.html",
+      "name": "Грищенко Слава",
+      "sex": "мужской",
+      "birth-date":"27.08.1988",
+      "phone": "+7 967 489-78-77",
+      "email": "old_graff@rambler.ru",
+      "delete-link":"#"
+    }
+  }
+}

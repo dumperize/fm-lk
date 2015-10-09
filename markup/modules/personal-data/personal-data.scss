@@ -1,0 +1,33 @@
+.personal-data {
+  &__title {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  &__edit-link {
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: $color-bg-grey-medium;
+    margin-left: 10px;
+  }
+  &__edit-ico {
+    @extend %icon;
+    @extend %icon_pencil_edit;
+    @extend %icon_inline;
+    @include icon_size(12px);
+    margin-right: 4px;
+  }
+  &__strong {
+    font-weight: bold;
+  }
+  &__data {
+    line-height: 2.2em;
+    margin-bottom: 30px
+  }
+  &__delete-link {
+    &:hover {
+      color: red;
+    }
+  }
+}
