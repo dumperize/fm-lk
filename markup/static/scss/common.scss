@@ -120,115 +120,9 @@ $footer-height-xs:110px; //высота футера-xs
 
 
 
-/*--------Структура контента - старая-------*/
-.main-page2>* {min-height: 50px !important} //убрать
-.main-page2 {
-    $border-true: 0px; //нарисовать вспомогательные рамки
-    &__top {
-        border: $border-true solid orange; //убрать
-        padding-bottom: 10px;
-    }
-    &__left {
-        border: $border-true solid blue; //убрать
-        @extend .col-lg-3;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    &__right {
-        border: $border-true solid red; //убрать
-        @extend .col-lg-9;
-    }
-    &__top-left-col {
-        @extend .col-lg-9;
-        border: $border-true solid purple;
-    }
-    &__top-right-col {
-        @extend .col-lg-3;
-        border: $border-true solid mediumorchid;
-    }
-    &__top-top {@extend .col-lg-12;}
-}
-.right-column {
-    @extend .row;
-    &__center {
-        @extend .col-lg-8;
-    }
-    &__right {
-        @extend .col-lg-4;
-    }
-}
-/*---Структура контента - старая - конец---*/
-
-
-
 /*--------Базовая разметка сайта-------*/
-.main-page>* {min-height: 70px !important} //убрать
-.main-page {
-    $border-true: 1px; //нарисовать вспомогательные рамки
-    &__top {
-        border: $border-true solid orange; //убрать
-        min-height: 0 !important;
-        padding: 10px 0;
-    }
-    &__column-header {
-        border: $border-true solid yellowgreen;  //убрать
-        @extend .col-lg-9;
-        padding-bottom: 10px;
-    }
-    &__column-1 {
-        border: $border-true solid yellowgreen;  //убрать
-        @extend .col-lg-3;
-    }
-    &__column-2 {
-        border: $border-true solid deeppink;  //убрать
-        @extend .col-lg-6;
-    }
-    &__column-3 {
-        border: $border-true solid red;  //убрать
-        @extend .col-lg-3;
-        float: right !important;
-    }
-}
+/* Вынес вниз */
 /*---Базовая разметка сайта - конец---*/
-
-
-/*--------Базовая разметка сайта - тест сетки-------*/
-.grid-test>* {min-height: 50px !important} //убрать
-.grid-test {
-    $border-true: 1px; //нарисовать вспомогательные рамки
-    &__top {
-        border: $border-true solid orange; //убрать
-        min-height: 0 !important;
-        padding: 10px 0;
-    }
-    &__wrapper {
-        border: $border-true solid blue;  //убрать
-        @extend .col-lg-9;
-    }
-    &__column-3 {
-        border: $border-true solid red;  //убрать
-        @extend .col-lg-3;
-    }
-}
-.column-cont-test>* {min-height: 50px !important} //убрать
-.column-cont-test {
-    $border-true: 1px; //нарисовать вспомогательные рамки
-    border: $border-true solid green; //убрать
-    @extend  .row;
-    &__header {
-        border: $border-true solid yellowgreen; //убрать
-        padding-bottom: 10px;
-    }
-    &__column-1 {
-        border: $border-true solid deeppink; //убрать
-        @extend .col-lg-3;
-    }
-    &__column-2 {
-        border: $border-true solid purple; //убрать
-        @extend .col-lg-9;
-    }
-}
-/*---Базовая разметка сайта - тест сетки - конец---*/
 
 
 
@@ -360,17 +254,58 @@ $footer-height-xs:110px; //высота футера-xs
     }
 }
 
+
 /* Вынесенно сюда, что бы при extend не затерало переопределенные значения*/
-.main-page2 {
-    &__left {padding-left: 20px; padding-right: 20px;} //переопределяем внутренние поля
-    &__right {padding: 0}
-    &__top-right-col {padding-left: 0}
-}
-.column-cont {
+
+/*--------Базовая разметка сайта-------*/
+//.main-page>* {min-height: 70px !important} //убрать
+/* Три колонки */
+.main-page {
+    $border-true: 0px; //нарисовать вспомогательные рамки
+    &__top {
+        border: $border-true solid orange; //убрать
+        min-height: 0 !important;
+        padding: 10px 0;
+    }
+    &__column-header {
+        border: $border-true solid yellowgreen;  //убрать
+        @extend .col-lg-9;
+        padding: 0;
+        padding-bottom: 10px;
+    }
     &__column-1 {
-        padding-left: 20px;
+        border: $border-true solid yellowgreen;  //убрать
+        @extend .col-lg-3;
+        padding-left: 0;
+        padding-right: 20px;
     }
     &__column-2 {
+        border: $border-true solid deeppink;  //убрать
+        @extend .col-lg-6;
+        padding: 0;
+    }
+    &__column-3 {
+        border: $border-true solid red;  //убрать
+        @extend .col-lg-3;
         padding-right: 0;
+        float: right;       //крайняя правая колонка, подключается первой в html
+        min-height: 100px;  //минимальная высота, что бы другие колонки не заняли её место
     }
 }
+/* Две колонки */
+.main-page_two-column {
+    .main-page {
+        &__column-header {
+            @extend .col-lg-12;
+            padding: 0 0 10px 0;
+        }
+        &__column-2 {
+            @extend .col-lg-9;
+            padding: 0;
+        }
+        &__column-3 {
+            display: none; //скрываем третью колонку если забыли убрать её из html
+        }
+    }
+}
+/*---Базовая разметка сайта - конец---*/

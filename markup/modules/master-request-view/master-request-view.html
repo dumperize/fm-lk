@@ -1,0 +1,27 @@
+<div block="master-request-view">
+    {{> content-title/content-title}}
+    <table elem="table">
+        <thead>
+        <tr>
+            <td>Время заявки</td>
+            <td>Имя заявителя</td>
+            <td>Контактные данные</td>
+            <!--<td>Текст заявки</td>-->
+            <td>Статус</td>
+        </tr>
+        </thead>
+        {{#each request}}
+        <tbody>
+        <tr>
+            <td>{{date}}</td>
+            <td>{{name}}</td>
+            <td>{{phone}}</td>
+            <td rowspan="2"><a href="{{action.url}}" mix="block:js-master-request-delete">{{action.text}}</a></td>
+        </tr>
+        <tr>
+            <td colspan="3">{{text}}</td>
+        </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</div><!--master-request-view-->

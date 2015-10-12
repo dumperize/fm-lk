@@ -16,38 +16,37 @@
 <section class="page__wrapper">
     {{> header/header header}}
 
-    <div block="main-page" mix="block:container">
+    <div block="main-page" mod="two-column"  mix="block:container">
 
         <div elem="top">
             {{> breadcrumbs/breadcrumbs breadcrumbs}}
         </div><!--top-->
 
-
         <div elem="column-3"></div>
 
-                <div elem="column-header">
 
-                    {{> user-info-head/user-info-head user-info-head}}
+        <div elem="column-header">
 
-                </div><!--header-->
+            {{> user-info-head/user-info-head user-info-head}}
 
-                <div elem="column-1">
-
-                    {{> lk-menu/lk-menu lk-menu}}
-                    {{> notice/notice notice}}
-
-                </div><!--column-1-->
-
-                <div elem="column-2">
-
-                    {{> master-block/master-list/master-list master-list}}
-
-                </div><!--column-2-->
+        </div><!--column-header-->
 
 
+        <div elem="column-1">
 
-    </div><!--grid-test-->
+            {{> lk-menu/lk-menu lk-menu}}
+            {{> notice/notice notice}}
 
+        </div><!--column-1-->
+
+
+        <div elem="column-2">
+
+            {{> master-block/master-list/master-list master-list}}
+
+        </div><!--column-2-->
+
+    </div><!--main-page-->
 
     <div class="page__buffer"></div>
 </section><!--wrapper-->
@@ -55,7 +54,6 @@
 <footer class="page__footer">
     {{> footer/footer footer}}
 </footer><!--footer-->
-
 
 </body>
 {{/with}}

@@ -7,7 +7,7 @@
 <html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="ru"><!--<![endif]-->
-{{#with page_personal_data}}
+{{#with page_master_request}}
 <head>
     {{> head/head head}}
 </head>
@@ -39,7 +39,7 @@
 
 
         <div elem="column-2">
-            {{> personal-data/personal-data personal-data}}
+            {{> master-request-view/master-request-view master-request-view}}
         </div><!--column-2-->
 
     </div><!--main-page-->
@@ -50,7 +50,6 @@
 <footer class="page__footer">
     {{> footer/footer footer}}
 </footer><!--footer-->
-
 
 </body>
 {{/with}}

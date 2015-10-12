@@ -16,43 +16,31 @@
 <section class="page__wrapper">
     {{> header/header header}}
 
-    <div block="main-page" mix="block:container">
+    <div block="main-page"  mix="block:container">
 
-        <div elem="top" mix="block:row">
-
-            <div elem="top-top">
-                {{> breadcrumbs/breadcrumbs breadcrumbs}}
-            </div><!--top-top-->
-
-            <div elem="top-left-col">
-
-                {{> user-info-head/user-info-head user-info-head}}
-            </div><!--left_col-->
-
-            <div elem="top-right-col">
-                {{> bookmark-search/bookmark-search}}
-            </div><!--right_col-->
-
+        <div elem="top">
+            {{> breadcrumbs/breadcrumbs breadcrumbs}}
         </div><!--top-->
 
-        <div elem="left">
+        <div elem="column-3">
+            {{> bookmark-search/bookmark-search}}
+        </div><!--column-3-->
+
+
+        <div elem="column-header">
+            {{> user-info-head/user-info-head user-info-head}}
+        </div><!--column-header-->
+
+
+        <div elem="column-1">
             {{> lk-menu/lk-menu lk-menu}}
             {{> notice/notice notice}}
-        </div><!--left-->
+        </div><!--column-1-->
 
-        <div elem="right">
 
-            <div block="right-column">
-
-                <div elem="center">
-                    {{> master-block/master-stat-list/master-stat-list master-stat-list}}
-                </div><!--center-->
-
-                <div elem="right"></div>
-
-            </div><!--right-column-->
-
-        </div><!--right-->
+        <div elem="column-2">
+            {{> master-block/master-stat-list/master-stat-list master-stat-list}}
+        </div><!--column-2-->
 
     </div><!--main-page-->
 
@@ -67,3 +55,4 @@
 </body>
 {{/with}}
 </html>
+
