@@ -12,9 +12,11 @@
       background-color: #D9D9D9;
       color: $color-text-dark;
     }
-    &_active {
+    &_highlight {
       background-color: $color-orange;
       color: $color-text-white;
+      font-weight: bold;
+      letter-spacing: 0.1em;
       &:hover {
         background-color: $color-orange;
         color: $color-text-white;

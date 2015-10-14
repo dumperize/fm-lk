@@ -1,10 +1,13 @@
 <div block="bookmark-search">
-    <form action="#" elem="form" mix="block:js-bookmark-search-cont">
+    <form action="{{action}}" method="{{method}}"  elem="form" mix="block:js-bookmark-search-cont">
         <p elem="title" mix="block:js-bookmark-search-title">Закладки<label for="bookmark-search" elem="label-search">Найти</label>
             <span elem="search-ico"></span></p>
         <p elem="input-cont" mix="block:js-bookmark-search-input">
-                <input type="text" id="bookmark-search" elem="search-input">
+                <input type="text" name="{{inputs.query.name}}" id="bookmark-search" elem="search-input">
                 <input type="submit" value="" elem="submit">
         </p><!--input-cont-->
     </form>
+    <div elem="result" mix="block:js-bookmark-result">
+
+    </div><!--result-->
 </div><!--bookmark-search-->

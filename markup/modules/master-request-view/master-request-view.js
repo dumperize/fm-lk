@@ -14,6 +14,10 @@ $('.js-master-request-delete').click(function () {
                 success: function (data) {
                     if (data.success) {
                         tbody.remove();
+                        if ($('.js-master-request-table').find('tbody').length == 0) {
+                            $('.js-master-request-table').hide();
+                            $('.js-master-request-empty').show();
+                        }
                     }
                 }
             });

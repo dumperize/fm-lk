@@ -5,6 +5,7 @@
     },
     "header": "readyBlocksData.block_header",
     "footer": "readyBlocksData.block_footer",
+    "lk-menu": "readyBlocksData.block_lk_menu",
     "breadcrumbs": {
       "links": [
         {
@@ -84,8 +85,8 @@
           "status-text": "На модерации",
           "is-status": true,
           "status-link": {
-             "url":"#",
-             "text":"Снять с модерации"
+            "url": "#",
+            "text": "Снять с модерации"
           }
         },
         {
@@ -135,8 +136,8 @@
           "status-text": "Опубликован",
           "is-status": true,
           "status-link": {
-            "url":"#",
-            "text":"Снять с публикации"
+            "url": "#",
+            "text": "Снять с публикации"
           }
         }
       ]

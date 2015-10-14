@@ -1,6 +1,12 @@
 <div block="master-request-view">
     {{> content-title/content-title}}
-    <table elem="table">
+
+
+    {{#if request}}
+
+    <p elem="empty" mod="hidden" mix="block:js-master-request-empty">У вас еще нет ни одной заявки</p>
+
+    <table elem="table" mix="block:js-master-request-table">
         <thead>
         <tr>
             <td>Время заявки</td>
@@ -24,4 +30,7 @@
         </tbody>
         {{/each}}
     </table>
+    {{else}}
+    <p elem="empty">У вас еще нет ни одной заявки</p>
+    {{/if}}
 </div><!--master-request-view-->

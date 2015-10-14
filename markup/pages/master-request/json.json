@@ -1,19 +1,30 @@
 {
-  "page_master_request": {
+  "page_master_request_list": {
     "head": {
       "title": "FaceMaster.ru. Специалисты Тольятти"
     },
     "header": "readyBlocksData.block_header",
     "footer": "readyBlocksData.block_footer",
+    "lk-menu": "readyBlocksData.block_lk_menu",
     "breadcrumbs": {
       "links": [
         {
           "url": "index.html",
-          "title": "fsd"
+          "title": "fsdd"
         }
       ]
     },
+    "bookmark-search": {
+      "action": "bookmark-search-response.json",
+      "method": "GET",
+      "inputs":{
+        "query":{
+          "name": "query"
+        }
+      }
+    },
     "master-request-list": {
+      "title": "Заявки",
       "masters": [
         {
           "name": "Грищенко Слава",

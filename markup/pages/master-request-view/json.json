@@ -5,6 +5,7 @@
     },
     "header": "readyBlocksData.block_header",
     "footer": "readyBlocksData.block_footer",
+    "lk-menu": "readyBlocksData.block_lk_menu",
     "breadcrumbs": {
       "links": [
         {
@@ -14,7 +15,7 @@
       ]
     },
     "master-request-view": {
-      "title": "Заявки",
+      "title": "Заявки для Мастера Грищенко Слава",
       "request": [
         {
           "date": "12.05.2015",
@@ -32,7 +33,7 @@
           "phone": "+7 960 840-00-00",
           "text": "Очень длинное описание заявки с уточнениями и кучей подробностей.",
           "action": {
-            "url": "#",
+            "url": "http://localhost:3004/master-request-view/delete-handler.json",
             "text": "Удалить"
           }
         },
@@ -42,7 +43,7 @@
           "phone": "+7 960 840-00-00",
           "text": "Очень длинное описание заявки с уточнениями и кучей подробностей. Очень длинное описание заявки с уточнениями и кучей подробностей. Очень длинное описание заявки с уточнениями и кучей подробностей. Очень длинное описание заявки с уточнениями и кучей подробностей",
           "action": {
-            "url": "#",
+            "url": "http://localhost:3004/master-request-view/delete-handler.json",
             "text": "Удалить"
           }
         },
@@ -52,7 +53,7 @@
           "phone": "+7 960 840-00-00",
           "text": "Очень длинное описание заявки с уточнениями и кучей подробностей.",
           "action": {
-            "url": "#",
+            "url": "http://localhost:3004/master-request-view/delete-handler.json",
             "text": "Удалить"
           }
         }

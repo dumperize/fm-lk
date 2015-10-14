@@ -5,6 +5,7 @@
     },
     "header": "readyBlocksData.block_header",
     "footer": "readyBlocksData.block_footer",
+    "lk-menu": "readyBlocksData.block_lk_menu",
     "breadcrumbs": {
       "links": [
         {
@@ -14,6 +15,7 @@
       ]
     },
     "master-stat-list": {
+      "title": "Статистика",
       "masters": [
         {
           "name": "Грищенко Слава",

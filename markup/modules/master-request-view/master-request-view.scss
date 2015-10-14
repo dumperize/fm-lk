@@ -4,7 +4,6 @@
     position: relative;
   }
   &__table td {
-    //    border: 1px solid blue;
     padding: 10px 8px;
   }
   &__table thead {
@@ -19,5 +18,10 @@
   }
   &__table tbody tr:nth-child(2) td {
     padding-bottom: 40px;
+  }
+  &__empty {
+    &_hidden {
+      display: none;
+    }
   }
 }

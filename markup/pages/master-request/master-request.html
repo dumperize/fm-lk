@@ -7,7 +7,7 @@
 <html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="ru"><!--<![endif]-->
-{{#with page_master_request}}
+{{#with page_master_request_list}}
 <head>
     {{> head/head head}}
 </head>
@@ -23,7 +23,7 @@
         </div><!--top-->
 
         <div elem="column-3">
-            {{> bookmark-search/bookmark-search}}
+            {{> bookmark-search/bookmark-search bookmark-search}}
         </div><!--column-3-->
 
 
