@@ -120,7 +120,7 @@ var tarsConfig = {
          * Example: ['google chrome', 'firefox']
          * Avalible: safari, internet explorer, google chrome, firefox, opera
          */
-        browser: 'google chrome',
+        browser: 'firefox',
 
         /**
          * Choose the page to open in browser at first opening

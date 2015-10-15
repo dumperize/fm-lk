@@ -4,11 +4,11 @@
 }
 
 html {font-size: 62.5%}
-body {font-size: 1.4rem} /* 1rem = 10px */
+body {font-size: 1.4rem; font-family: 'PT Sans Caption', sans-serif;} /* 1rem = 10px */
 
 html, body {
     height: 100%;
-    font-family: 'PT Sans Caption', sans-serif;
+//    font-family: sans-serif !important;
     background-color: $color-bg;
     color: $color-text;
 }

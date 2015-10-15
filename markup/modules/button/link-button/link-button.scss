@@ -7,7 +7,7 @@
   color: $color-bg-grey-exdark;
   font-weight: bold;
   text-decoration: none;
-  //  font-size: 1.4rem;
+//  font-size: 1.4rem;
   text-transform: uppercase;
   &:hover {
     color: #333;
@@ -16,6 +16,7 @@
     color: $color-text-white;
     background-color: $color-orange;
     border: $color-orange;
+//    border: 1px solid blue;
     &:hover {
       color: $color-text-white;
       background-color: $color-orange-light;
