@@ -1,0 +1,42 @@
+.personal-data-edit {
+  &__form {
+    padding-top: 10px;
+  }
+  &__label {
+    display: block;
+    //    border: 1px solid blue;
+    &_radio {
+      float: left;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+    &_radio > span {
+      width: 66px;
+    }
+    &_radio input {
+      vertical-align: middle
+    }
+  }
+  &__strong {
+    width: 130px;
+    display: inline-block;
+  }
+  &__fieldset {
+    border: 1px solid #CCC;
+    padding: 10px;
+  }
+  &__legend {
+    padding: 0 4px;
+  }
+  &__input {
+    border: 1px solid #CCC;
+    padding: 2px 6px;
+  }
+  &__save, &__cancel {
+    width: $button-mid-width;
+    height: $button-mid-height;
+    float: left;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}

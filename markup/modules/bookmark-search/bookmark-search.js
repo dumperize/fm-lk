@@ -1,4 +1,4 @@
-// При клике за пределами контейнера 'js-bookmark-search-cont' возвращаем его в исходное состояние
+// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 'js-bookmark-search-cont' пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $(document).click(function (event) {
         if ($(event.target).closest('.js-bookmark-search-cont').length) {
             return;
@@ -9,7 +9,7 @@ $(document).click(function (event) {
     }
 );
 
-// При клике на контейнер 'js-bookmark-search-title' скрываем его и показываем контейнер с поиском
+// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 'js-bookmark-search-title' пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $('.js-bookmark-search-title').click(function () {
         $(this).hide();
         $('.js-bookmark-search-input').show();
@@ -17,7 +17,7 @@ $('.js-bookmark-search-title').click(function () {
     }
 );
 
-// AJAX отправка формы
+// AJAX пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 $('.js-bookmark-search-cont').submit(function () {
         $.ajax({
             url: $(this).attr('action'),

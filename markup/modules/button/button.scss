@@ -1,5 +1,6 @@
 .button {
   display: block;
+  width: 100%;
   border: 1px solid;
   text-align: center;
   height: $button-mid-height;
@@ -23,8 +24,6 @@
     }
   }
   &_grey {
-    font-size: 1.1rem;
-    text-transform: none;
     color: $color-text-dark;
     background-color: $color-bg-grey-medium;
     border: $color-bg-grey-medium;
@@ -32,5 +31,9 @@
       color: $color-text-dark;
       background-color: $color-bg-grey-xmedium;
     }
+  }
+  &_small-font {
+    font-size: 1.1rem;
+    text-transform: none;
   }
 }

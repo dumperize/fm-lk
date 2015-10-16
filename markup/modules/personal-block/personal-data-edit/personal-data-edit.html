@@ -1,0 +1,68 @@
+<div block="personal-data-edit">
+    <div elem="form-cont">
+
+        {{> content-title/content-title}}
+
+        <form elem="form" action="{{action}}" method="{{method}}">
+
+            <label elem="label">
+                <span elem="strong">Имя Фамилия: </span>
+                <input elem="input" type="text" name="{{inputs.fio.name}}" value="{{inputs.fio.value}}">
+            </label>
+            <br>
+
+            <label elem="label">
+                <span elem="strong">Дата рождения: </span>
+                <input elem="input" type="text" name="{{inputs.birthday.name}}" value="{{inputs.birthday.value}}">
+            </label>
+            <br>
+
+            <label elem="label">
+                <span elem="strong">Телефон: </span>
+                <input elem="input" type="tel" name="{{inputs.phone.name}}" value="{{inputs.phone.value}}">
+            </label>
+            <br>
+
+            <label elem="label">
+                <span elem="strong">Эл. почта: </span>
+                <input elem="input" type="email" name="{{inputs.email.name}}" value="{{inputs.phone.value}}">
+            </label>
+            <br>
+
+            <fieldset elem="fieldset">
+                <legend elem="legend">Пол</legend>
+                <label elem="label" mod="radio">
+                    <span elem="strong">Мужской</span>
+                    <input elem="input" type="radio" name="{{inputs.sex.name}}" value="{{inputs.male.value}}">
+                </label>
+                <label elem="label" mod="radio">
+                    <span elem="strong">Женский</span>
+                    <input elem="input" type="radio" name="{{inputs.sex.name}}" value="{{inputs.female.value}}">
+                </label>
+            </fieldset>
+            <br>
+
+            <fieldset elem="fieldset">
+                <legend elem="legend">Изменить пароль</legend>
+
+                <label elem="label">
+                    <span elem="strong">Старый пароль: </span>
+                    <input elem="input" type="password" name="{{inputs.old-password.name}}" value="">
+                </label>
+                <br>
+
+                <label elem="label">
+                    <span elem="strong">Новый пароль: </span>
+                    <input elem="input" type="password" name="{{inputs.new-password.name}}" value="">
+                </label>
+            </fieldset>
+
+            <p elem="save">{{> button/submit-button/submit-button save-button}}</p>
+
+            <p elem="cancel">{{> button/link-button/link-button cancel-button}}</p>
+
+        </form>
+
+    </div><!--form-cont-->
+
+</div><!--personal-data-edit-->
