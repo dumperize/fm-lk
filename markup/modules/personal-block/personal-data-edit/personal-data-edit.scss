@@ -1,20 +1,47 @@
 .personal-data-edit {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+//  display: table;
+  text-align: center;
+  display: none;
+  &__wrapper {
+    display: table-cell;
+    vertical-align: middle
+  }
+  &__form-cont {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: $color-bg-grey-light;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
   &__form {
     padding-top: 10px;
   }
   &__label {
     display: block;
-    //    border: 1px solid blue;
     &_radio {
       float: left;
       margin-right: 20px;
-      vertical-align: middle;
+      margin-bottom: 4px;
     }
     &_radio > span {
       width: 66px;
+      vertical-align: middle;
     }
     &_radio input {
       vertical-align: middle
+    }
+    &_error {
+      background-color: #FA8072;
+      padding: 8px 10px 4px 10px;
+      margin-left: -10px;
     }
   }
   &__strong {
@@ -39,4 +66,15 @@
     margin-top: 20px;
     margin-right: 20px;
   }
+  &__error {
+    padding: 8px 10px;
+    background-color: #FA8072;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    margin-left: -10px;
+  }
+  &__clear {clear: both}
 }
+

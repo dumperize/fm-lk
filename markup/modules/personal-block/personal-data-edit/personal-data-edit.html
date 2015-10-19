@@ -1,68 +1,81 @@
-<div block="personal-data-edit">
-    <div elem="form-cont">
+<div block="personal-data-edit" mix="block:js-personal-data-edit">
+    <div elem="wrapper">
+        <div elem="form-cont">
 
-        {{> content-title/content-title}}
+            {{> content-title/content-title}}
 
-        <form elem="form" action="{{action}}" method="{{method}}">
+            <form elem="form" action="{{action}}" method="{{method}}">
 
-            <label elem="label">
-                <span elem="strong">Имя Фамилия: </span>
-                <input elem="input" type="text" name="{{inputs.fio.name}}" value="{{inputs.fio.value}}">
-            </label>
-            <br>
-
-            <label elem="label">
-                <span elem="strong">Дата рождения: </span>
-                <input elem="input" type="text" name="{{inputs.birthday.name}}" value="{{inputs.birthday.value}}">
-            </label>
-            <br>
-
-            <label elem="label">
-                <span elem="strong">Телефон: </span>
-                <input elem="input" type="tel" name="{{inputs.phone.name}}" value="{{inputs.phone.value}}">
-            </label>
-            <br>
-
-            <label elem="label">
-                <span elem="strong">Эл. почта: </span>
-                <input elem="input" type="email" name="{{inputs.email.name}}" value="{{inputs.phone.value}}">
-            </label>
-            <br>
-
-            <fieldset elem="fieldset">
-                <legend elem="legend">Пол</legend>
-                <label elem="label" mod="radio">
-                    <span elem="strong">Мужской</span>
-                    <input elem="input" type="radio" name="{{inputs.sex.name}}" value="{{inputs.male.value}}">
+                <label elem="label" mod="{{errors.mod}}">
+                    <span elem="strong">Имя Фамилия: </span>
+                    <input elem="input" type="text" name="{{inputs.full_name.name}}" value="{{inputs.full_name.value}}">
                 </label>
-                <label elem="label" mod="radio">
-                    <span elem="strong">Женский</span>
-                    <input elem="input" type="radio" name="{{inputs.sex.name}}" value="{{inputs.female.value}}">
-                </label>
-            </fieldset>
-            <br>
-
-            <fieldset elem="fieldset">
-                <legend elem="legend">Изменить пароль</legend>
+                {{#if errors.full_name}}
+                <p elem="error">{{errors.full_name}}</p>
+                {{/if}}
+                <br>
 
                 <label elem="label">
-                    <span elem="strong">Старый пароль: </span>
-                    <input elem="input" type="password" name="{{inputs.old-password.name}}" value="">
+                    <span elem="strong">Дата рождения: </span>
+                    <input elem="input" type="text" name="{{inputs.birthday.name}}" value="{{inputs.birthday.value}}">
                 </label>
                 <br>
 
                 <label elem="label">
-                    <span elem="strong">Новый пароль: </span>
-                    <input elem="input" type="password" name="{{inputs.new-password.name}}" value="">
+                    <span elem="strong">Телефон: </span>
+                    <input elem="input" type="tel" name="{{inputs.phone.name}}" value="{{inputs.phone.value}}">
                 </label>
-            </fieldset>
+                <br>
 
-            <p elem="save">{{> button/submit-button/submit-button save-button}}</p>
+                <label elem="label">
+                    <span elem="strong">Эл. почта: </span>
+                    <input elem="input" type="email" name="{{inputs.email.name}}" value="{{inputs.phone.value}}">
+                </label>
+                <br>
 
-            <p elem="cancel">{{> button/link-button/link-button cancel-button}}</p>
+                <fieldset elem="fieldset">
+                    <legend elem="legend">Пол</legend>
+                    <label elem="label" mod="radio">
+                        <span elem="strong">Мужской</span>
+                        <input elem="input" type="radio" name="{{inputs.sex.name}}" value="{{inputs.male.value}}">
+                    </label>
+                    <label elem="label" mod="radio">
+                        <span elem="strong">Женский</span>
+                        <input elem="input" type="radio" name="{{inputs.sex.name}}" value="{{inputs.female.value}}">
+                    </label>
+                    <br elem="clear">
+                    {{#if errors.full_name}}
+                    <p elem="error">{{errors.full_name}}</p>
+                    {{/if}}
+                </fieldset>
+                <br>
 
-        </form>
+                <fieldset elem="fieldset">
+                    <legend elem="legend">Изменить пароль</legend>
 
-    </div><!--form-cont-->
+                    <label elem="label">
+                        <span elem="strong">Старый пароль: </span>
+                        <input elem="input" type="password" name="{{inputs.old-password.name}}" value="">
+                    </label>
+                    <br>
+
+                    <label elem="label" mod="{{errors.mod}}">
+                        <span elem="strong">Новый пароль: </span>
+                        <input elem="input" type="password" name="{{inputs.new-password.name}}" value="">
+                    </label>
+                    {{#if errors.full_name}}
+                    <p elem="error">{{errors.full_name}}</p>
+                    {{/if}}
+                </fieldset>
+
+                <p elem="save">{{> button/submit-button/submit-button save-button}}</p>
+
+                <p elem="cancel">{{> button/link-button/link-button cancel-button}}</p>
+
+            </form>
+
+        </div><!--personal-data-edit__form-cont-->
+
+    </div><!--personal-data-edit__wrapper-->
 
 </div><!--personal-data-edit-->

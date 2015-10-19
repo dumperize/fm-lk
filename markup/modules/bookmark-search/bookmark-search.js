@@ -1,4 +1,4 @@
-// ��� ����� �� ��������� ���������� 'js-bookmark-search-cont' ���������� ��� � �������� ���������
+// По клику за пределами блока 'js-bookmark-search-cont' возвращаем в усзодное состояние
 $(document).click(function (event) {
         if ($(event.target).closest('.js-bookmark-search-cont').length) {
             return;
@@ -9,7 +9,7 @@ $(document).click(function (event) {
     }
 );
 
-// ��� ����� �� ��������� 'js-bookmark-search-title' �������� ��� � ���������� ��������� � �������
+// По клику на 'js-bookmark-search-title' прячем его и показываем 'js-bookmark-search-input' и ставим фокус на поле #bookmark-search
 $('.js-bookmark-search-title').click(function () {
         $(this).hide();
         $('.js-bookmark-search-input').show();
@@ -17,7 +17,7 @@ $('.js-bookmark-search-title').click(function () {
     }
 );
 
-// AJAX �������� �����
+// AJAX запрос на получение списка мастеров
 $('.js-bookmark-search-cont').submit(function () {
         $.ajax({
             url: $(this).attr('action'),
