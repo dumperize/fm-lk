@@ -18,22 +18,57 @@
       "edit-link": "/personal-data-edit/personal-data-edit.html",
       "name": "Грищенко Слава",
       "sex": "мужской",
-      "birth-date":"27.08.1988",
-      "phone": "+7 967 489-78-77",
-      "email": "old_graff@rambler.ru",
-      "delete-link":"#"
-    },
-    "personal-data-edit": {
-      "title": "Редактирование личных данных",
-      "edit-link": "index.html",
-      "name": "Грищенко Слава",
-      "sex": "мужской",
       "birth-date": "27.08.1988",
       "phone": "+7 967 489-78-77",
       "email": "old_graff@rambler.ru",
-      "errors": {
-        "full_name": "Ошибка!",
-        "mod": "error"
+      "delete-link": "#"
+    },
+    "personal-data-edit": {
+      "title": "Редактирование личных данных",
+      "form-edit": {
+        "action": "personal-data-edit-response.json",
+        "method": "GET",
+        "inputs": {
+          "full_name": {
+            "name": "full_name",
+            "value": "Мельников Иван",
+            "error": "Какая то непонятная ошибка в имени или фамилии",
+            "mod": "error"
+          },
+          "birthday": {
+            "name": "birthday",
+            "value": "12.10.1988",
+            "error": "Странно, ещё ошибка в дате рождения",
+            "mod": "error"
+          },
+          "phone": {
+            "name": "phone",
+            "value": "960 840-21-21",
+            "error": "Да что, б** не так!?",
+            "mod": "error"
+          },
+          "email": {
+            "name": "email",
+            "value": "old_graff@rambler.com",
+            "error": "Косяяяяяяяяк!",
+            "mod": "error"
+          },
+          "sex": {
+            "name": "sex",
+            "value": "male",
+            "value2": "female",
+            "add_property": "checked",
+            "error": "Тут то что, не так может быть!?"
+          },
+          "old-password": {
+            "error": "Пароль то, не тот!",
+            "mod": "error"
+          },
+          "new-password": {
+            "error": "Такой пароль любой дурак подберёт",
+            "mod": "error"
+          }
+        }
       },
       "save-button": {
         "text": "Сохранить",

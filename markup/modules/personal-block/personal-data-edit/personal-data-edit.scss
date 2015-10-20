@@ -11,7 +11,11 @@
   display: none;
   &__wrapper {
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+  }
+  &__form-scroll {
+    overflow: auto;
+    height: 100vh;
   }
   &__form-cont {
     display: inline-block;
@@ -43,6 +47,9 @@
       padding: 8px 10px 4px 10px;
       margin-left: -10px;
     }
+  }
+  &__country-code {
+    float: right;
   }
   &__strong {
     width: 130px;

@@ -29,12 +29,8 @@ $('.js-bookmark-search-cont').submit(function () {
                     $('.js-bookmark-result').html('');
                     for (var i = 0; i < response.data.length; i++) {
                         $('.js-bookmark-result').append(response.data[i]);
-                        console.log(response.data[i]);
                     }
                 }
-            },
-            beforeSend: function () {
-                console.log('before send');
             }
         });
         return false;
