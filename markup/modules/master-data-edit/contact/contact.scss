@@ -1,0 +1,21 @@
+.mde-contact {
+  &__list {
+    font-size: 1.2rem;
+    li {
+      margin: 10px 0;
+    }
+  }
+  &__phone-ico, &__email-ico, &__skype-ico, &__icq-ico, &__map-tag-ico {
+    @extend %icon;
+    @extend %icon_phone;
+    @extend %icon_inline;
+    @include icon_size(18px);
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  &__email-ico {}
+  &__skype-ico {
+  }
+  &__icq-ico {}
+  &__map-tag-ico {}
+}

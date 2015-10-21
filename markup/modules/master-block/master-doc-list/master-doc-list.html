@@ -14,10 +14,11 @@
 
         <div elem="info-cont">
             <p elem="rubric"><span elem="strong">Рубрика:</span> {{rubric-name}}</p>
+            <p elem="rubric"><span elem="strong">Опубликована до:</span> {{publication-end-date}}</p>
 
-            <p elem="stat"><span elem="strong">Всего:</span> {{master-request}}</p>
-
-            <p elem="button">{{> button/link-button/link-button show-button}}</p>
+            <a href="{{price-doc-url}}">Прайс</a><br>
+            <a href="{{contract-doc-url}}">Договор</a><br>
+            <a href="{{publication-request-doc-url}}">Заявка на публикацию</a><br>
 
         </div><!--info-cont-->
         <div elem="cf"></div>

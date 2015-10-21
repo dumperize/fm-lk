@@ -31,7 +31,7 @@
           },
           "edit-button": {
             "text": "Заполнить",
-            "url": "index.html",
+            "url": "../master-data-edit/master-data-edit.html",
             "mod": "orange"
           },
           "status-text": "Не опубликовано",
@@ -52,7 +52,7 @@
           },
           "edit-button": {
             "text": "Редактировать",
-            "url": "index.html"
+            "url": "../master-data-edit/master-data-edit.html"
           },
           "publish-button": {
             "text": "Опубликовать",
@@ -75,7 +75,7 @@
           },
           "edit-button": {
             "text": "Редактировать",
-            "url": "index.html"
+            "url": "../master-data-edit/master-data-edit.html"
           },
           "publish-button": {
             "text": "Опубликовать",
@@ -103,7 +103,7 @@
           },
           "edit-button": {
             "text": "Редактировать",
-            "url": "index.html"
+            "url": "../master-data-edit/master-data-edit.html"
           },
           "publish-button": {
             "text": "Опубликовать",
@@ -126,11 +126,11 @@
           },
           "edit-button": {
             "text": "Редактировать",
-            "url": "index.html"
+            "url": "../master-data-edit/master-data-edit.html"
           },
           "publish-button": {
             "text": "Опубликовать",
-            "url": "index.html",
+            "url": "#",
             "mod": "orange"
           },
           "status-text": "Опубликован",

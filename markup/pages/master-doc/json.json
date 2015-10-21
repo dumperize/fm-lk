@@ -1,0 +1,45 @@
+{
+  "page_master_doc": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": "readyBlocksData.block_header",
+    "footer": "readyBlocksData.block_footer",
+    "lk-menu": "readyBlocksData.block_lk_menu",
+    "breadcrumbs": {
+      "links": [
+        {
+          "url": "index.html",
+          "title": "fsd"
+        }
+      ]
+    },
+    "master-doc-list": {
+      "title": "Документы",
+      "masters": [
+        {
+          "name": "Грищенко Слава",
+          "is-avatar-exist": false,
+          "rubric-name": "Инструктора",
+          "publication-end-date": "ещё не опубликованна",
+          "price-doc-url": "#",
+          "contract-doc-url": "#",
+          "publication-request-doc-url": "#"
+        },
+        {
+          "name": "Сярдин Илья",
+          "avatar": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "is-avatar-exist": true,
+          "rubric-name": "Тренеры",
+          "publication-end-date": "31 декабря 2015",
+          "price-doc-url": "#",
+          "contract-doc-url": "#",
+          "publication-request-doc-url": "#"
+        }
+      ]
+    }
+  }
+}

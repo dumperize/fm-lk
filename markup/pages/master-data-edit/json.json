@@ -1,0 +1,31 @@
+{
+  "page_master_data_edit": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": "readyBlocksData.block_header",
+    "footer": "readyBlocksData.block_footer",
+    "lk-menu": "readyBlocksData.block_lk_menu",
+    "breadcrumbs": {
+      "links": [
+        {
+          "url": "index.html",
+          "title": "fsd"
+        }
+      ]
+    },
+    "master-data-edit": {
+      "name": "Окаемов Владимир Анатольевич",
+      "avatar": {
+        "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+        "alt": ""
+      },
+      "is-avatar-exist": true,
+      "rubric-name": "Тренеры",
+      "tarif-name": "Профессионал",
+      "tarif_link": {
+        "url": "#"
+      }
+    }
+  }
+}

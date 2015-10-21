@@ -33,7 +33,7 @@
           "master-request": "3 заявки",
           "show-button": {
             "text": "Просмотреть заявки",
-            "url": "index.html",
+            "url": "../master-request-view/master-request-view.html",
             "mod": "grey, small-font"
           }
         },
@@ -48,7 +48,7 @@
           "master-request": "0 заявок",
           "show-button": {
             "text": "Просмотреть заявки",
-            "url": "index.html",
+            "url": "../master-request-view/master-request-view.html",
             "mod": "grey, small-font"
           }
         }
