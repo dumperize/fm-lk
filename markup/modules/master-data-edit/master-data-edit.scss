@@ -5,11 +5,19 @@
   &__column-1 {
     width: 220px;
     float: left;
-    border: 1px solid blue;
+//    border: 1px solid blue;
+    @include at(sm) {
+     float: none;
+     width: auto;
+    }
   }
   &__column-2 {
     margin-left: 220px;
-    border: 1px solid blue;
+//    border: 1px solid blue;
+    min-width: 200px;
+    @include at(sm) {
+      margin-left: 0;
+    }
   }
   &__avatar-cont {
     width: 200px;
@@ -20,7 +28,7 @@
     @extend %icon_man;
     @extend %icon_block;
     @include icon_size(200px);
-    float: left;
+//    float: left;
   }
   &__avatar {
     @include img-max-size(200px, 200px);
@@ -32,10 +40,36 @@
     padding-bottom: 10px;
   }
   &__section-title {
-    color: #999;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
+    color: #888;
+    font-size: 2.1rem;
+    min-height: 1.5em;
+    //    font-weight: bold;
+    margin-bottom: 6px;
+    clear: right;
+    a {
+      text-decoration: none;
+    }
+    i + span {
+      transition: opacity 0.2s ease-out 0.1s;
+      opacity: 0;
+      font-weight: normal;
+      font-size: 1.4rem;
+      color: $color-bg-grey-medium;
+      margin-left: 6px;
+    }
+    &:hover i + span {
+      display: inline;
+      opacity: 1
+    }
+    span:first-child {
+      margin-right: 8px;
+      height: 1.3em;
+      display: inline-block
+    }
+    &:hover span:first-child {
+      border-bottom: 1px dashed;
+      color: #999;
+    }
   }
   &__edit-link {
     font-weight: normal;
