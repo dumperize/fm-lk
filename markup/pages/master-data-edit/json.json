@@ -25,6 +25,56 @@
       "tarif-name": "Профессионал",
       "tarif_link": {
         "url": "#"
+      },
+      "discounts-and-gifts": {
+        "discounts": [
+          {
+            "url": "#",
+            "is-img-exist": true,
+            "img": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": ""
+            },
+            "header-text": "- 100% скидка",
+            "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium - json"
+          },
+          {
+            "is-img-exist": false,
+            "header-text": "Подарок",
+            "text": "Sed ut perspiciatis, unde omnis iste natus error sit - json"
+          }
+        ]
+      },
+      "useful-read": {
+        "article-preview": [
+          {
+            "url": "#",
+            "is-img-exist": true,
+            "img": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": ""
+            },
+            "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium - json"
+          },
+          {
+            "url": "#",
+            "is-img-exist": true,
+            "img": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": ""
+            },
+            "text": "Sed ut perspiciatis, unde omnis iste natus error sit! - json"
+          },
+          {
+            "url": "#",
+            "is-img-exist": true,
+            "img": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": ""
+            },
+            "text": "Sed ut perspiciatis! - json"
+          }
+        ]
       }
     }
   }

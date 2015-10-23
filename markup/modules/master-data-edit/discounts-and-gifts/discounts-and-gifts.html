@@ -1,4 +1,11 @@
 <div block="mde-discounts-and-gifts">
-    <p>discounts-and-gifts.html</p>
-    {{> discounts/discounts discounts}}
+
+    {{#each discounts}}
+    <div elem="discounts-cont">
+        {{> discounts/discounts}}
+    </div>
+    {{/each}}
+
+    <br elem="clear">
+
 </div><!--mde-discounts-and-gifts-->

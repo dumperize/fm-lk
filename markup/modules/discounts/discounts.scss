@@ -1,0 +1,54 @@
+.discounts {
+  min-height: 134px;
+  position: relative;
+  &:hover a + .discounts__header {
+    background-color: $color-orange-light;
+  }
+  &__url {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+    z-index: 10;
+  }
+  &__header {
+    background-color: $color-orange;
+    color: #FFF;
+    height: 34px;
+    line-height: 34px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  &__img-cont {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 12px;
+    position: relative;
+    float: left;
+    background-color: $color-bg-grey-light;
+  }
+  &__bg-ico {
+    @extend %icon;
+    @extend %icon_gift_grey_light;
+    @extend %icon_block;
+    @include icon_size(70px);
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    z-index: 0;
+  }
+  &__img {
+    @include img-max-size(100px, 100px);
+    position: relative;
+    z-index: 1;
+  }
+  &__wrapper {
+    background-color: $color-bg-grey-xmedium;
+  }
+  &__text {padding-top: 10px; padding-right: 10px}
+  &__clear {clear: both}
+}

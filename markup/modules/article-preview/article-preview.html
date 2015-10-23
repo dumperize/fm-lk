@@ -1,13 +1,10 @@
-<div block="discounts">
+<div block="article-preview">
     {{#if url}}
     <a href="{{url}}" elem="url"></a>
     {{/if}}
 
-    <p elem="header">{{header-text}}</p>
-
     <div elem="wrapper">
         <div elem="img-cont">
-            <i elem="bg-ico"></i>
             {{#if is-img-exist}}
             <img elem="img" src="{{img.src}}" alt="{{img.alt}}">
             {{/if}}
@@ -16,4 +13,4 @@
         <br elem="clear">
     </div>
 
-</div><!--discounts-->
+</div><!--article-preview-->
