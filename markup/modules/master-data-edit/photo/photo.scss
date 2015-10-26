@@ -1,0 +1,54 @@
+.mde-photo {
+  &__album-cover, &__img-prev {
+    display: inline-block;
+    padding: 5px;
+    background-color: $color-bg-grey-light;
+    width: 162px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid $color-bg-grey-medium;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    &:hover {
+      background-color: $color-orange-light;
+      color: #333;
+    }
+    img {
+      @include img-max-size(150px, 150px);
+      margin-bottom: -3px;
+    }
+    span {
+      display: inline-block;
+      max-height: 30px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+  }
+  &__album-cover {
+    &:first-child {
+      background-color: $color-orange-light;
+      color: #333;
+      border: 1px solid #666;
+    }
+  }
+  &__img-prev {
+    width: 158px;
+    img {
+      @include img-max-size(146px, 146px);
+      margin-bottom: -3px;
+    }
+  }
+  &__album-title {
+    color: #444;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  &__album-cont {
+    padding: 20px;
+    padding-right: 10px;
+    background-color: $color-bg-grey-xmedium;
+    margin-top: 10px;
+  }
+}

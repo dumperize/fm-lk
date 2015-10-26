@@ -75,6 +75,108 @@
             "text": "Sed ut perspiciatis! - json"
           }
         ]
+      },
+      "photo": {
+        "albums": [
+          {
+            "album-cover": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": "",
+              "title": "Очень длинное название альбома, которое может не поместиться"
+            }
+          },
+          {
+            "album-cover": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": "тест2",
+              "title": "Очень длинное название альбома"
+            }
+          },
+          {
+            "album-cover": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": "",
+              "title": "Название альбома"
+            }
+          },
+          {
+            "album-cover": {
+              "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+              "alt": "тест2",
+              "title": "Альбом"
+            }
+          }
+        ],
+        "albums-content": [
+          {
+            "title": "Очень длинное название альбома, которое может не поместиться. Здесь есть ещё описание альбома.",
+            "img-prev": [
+              {
+                "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+                "alt": "тест2"
+              },
+              {
+                "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+                "alt": "тест2"
+              },
+              {
+                "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+                "alt": "тест2"
+              },
+              {
+                "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+                "alt": "тест2"
+              },
+              {
+                "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+                "alt": "тест2"
+              },
+              {
+                "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+                "alt": "тест2"
+              }
+            ]
+          }
+        ]
+      },
+      "video": {
+        "videos": [
+          {
+            "url": "#",
+            "title": "Очень длинное название видео, которое может не поместиться",
+            "prev": {
+              "src": "%=staticPrefix=%img/content/test/video1.jpg",
+              "alt": ""
+            }
+          },
+          {
+            "url": "#",
+            "title": "Название видео",
+            "prev": {
+              "src": "%=staticPrefix=%img/content/test/video2.jpg",
+              "alt": ""
+            }
+          }
+        ]
+      },
+      "reviews": {
+        "review-cont": [
+          {
+            "name": "Юлия Владимировна",
+            "date": "27 июня 2015",
+            "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut"
+          },
+          {
+            "name": "Юлия Владимировна",
+            "date": "17 июня 2015",
+            "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut"
+          },
+          {
+            "name": "Юлия Владимировна",
+            "date": "27 августа 2015",
+            "text": "Sed ut perspiciatis, unde omnis iste natus error"
+          }
+        ]
       }
     }
   }

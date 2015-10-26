@@ -1,1 +1,9 @@
-<p>video.html</p>
+<div block="mde-video">
+
+    {{#each videos}}
+    <a href="{{url}}" elem="video-cover">
+        <span elem="title-prev">{{title}}</span><br>
+        <span elem="img-cont"><img src="{{prev.src}}" alt="{{prev.alt}}"></span>
+    </a>
+    {{/each}}
+</div><!--mde-video-->

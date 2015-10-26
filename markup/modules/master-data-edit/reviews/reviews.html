@@ -1,1 +1,12 @@
-<p>reviews.html</p>
+<div block="mde-reviews">
+
+    {{#each review-cont}}
+    <div elem="review-cont">
+
+        <p elem="name">{{name}}<span elem="date">{{date}}</span></p>
+
+        <p elem="text">{{text}}</p>
+    </div><!--review-cont-->
+    {{/each}}
+
+</div><!--mde-reviews-->
