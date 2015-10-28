@@ -1,0 +1,59 @@
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="header__left-col">
+                <div class="logo">
+                    <div class="logo__img">
+                        <a class="logo__link" href="{{logo-url}}">
+                            <img alt="Facemaster.ru Logo" src="/tmpl/builds/stable/static/img/general/logo.svg" width="100%">
+                        </a>
+                    </div>
+                    <div class="visitor">
+                        <p class="visitor__count">{{visitor}}</p>
+
+                        <p class="visitor__mera">в неделю</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header__title">
+                <a class="title" href="{{logo-url}}">
+                    <p class="title__text h1">ПОИСК МАСТЕРОВ В СФЕРЕ УСЛУГ</p>
+                </a>
+            </div>
+            <div class="header__login">
+                {{#if auth}}
+                <div class="login">
+                    <a class="login__btn btn" href="{{homeUrl}}">{{authData.name}}</a>
+                    <div class="menu-user">
+                        <ul class="menu-user__ul">
+                            {{#each authData.menuUser}}
+                            <li class="menu-user__item">
+                                <a class="menu-user__item-link" href="{{url}}">{{{title}}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                {{else}}
+                <div class="login">
+                    <a class="login__btn btn" href="{{authUrl}}">Вход для Мастеров</a>
+                </div>
+                {{/if}}
+            </div>
+            <div class="header__menu">
+                <nav class="menu">
+                <ul class="main-menu">
+                    {{#each menu}}
+                    <li class="main-menu__item">
+                        <a class="main-menu__item-link link" href="{{url}}">{{{title}}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                </nav>
+            </div>
+            <div class="header__social">
+                {{> social/social social}}
+            </div>
+        </div>
+    </div>
+</header>

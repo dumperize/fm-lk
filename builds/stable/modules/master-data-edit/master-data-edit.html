@@ -1,0 +1,77 @@
+<div class="master-data-edit">
+
+    <div class="master-data-edit__section-cont">
+        <div class="master-data-edit__column-1">
+            <div class="master-data-edit__avatar-cont">
+                {{#if is-avatar-exist}}
+                <img class="master-data-edit__avatar" src="{{avatar.src}}" alt="{{avatar.alt}}">
+                {{/if}}
+            </div>
+
+            <p class="master-data-edit__photo-upload"><i></i><a href="#">Загрузить фотографию</a></p>
+
+        </div><!--column-1-->
+
+        <div class="master-data-edit__column-2">
+
+            <p class="master-data-edit__master-name">{{name}}</p>
+
+             <p class="master-data-edit__section-title"><a href="#"><span>Специализация</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
+            <p class="master-data-edit__specialization">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem.</p>
+
+        </div><!--column-2-->
+
+    </div><!--master-data-edit__section-cont-->
+
+    <p class="master-data-edit__section-title"><a href="#"><span>Контакты</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/contact/contact contact}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Фильтры</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/filter/filter filter}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Услуги</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/service/service service}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Режим и условия работы</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/schedule-and-condition/schedule-and-condition schedule-and-condition}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Скидки и подарки</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/discounts-and-gifts/discounts-and-gifts discounts-and-gifts}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>О себе</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/about/about about}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Полезно почитать</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/useful-read/useful-read useful-read}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Фото</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/photo/photo photo}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Видео</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/video/video video}}
+    </div><!--master-data-edit__section-cont-->
+
+     <p class="master-data-edit__section-title"><a href="#"><span>Отзывы</span><i class="master-data-edit__edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <div class="master-data-edit__section-cont">
+        {{> master-data-edit/reviews/reviews reviews}}
+    </div><!--master-data-edit__section-cont-->
+
+</div><!--master-data-edit-->

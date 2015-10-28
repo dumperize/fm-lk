@@ -1,0 +1,19 @@
+{{#if master-menu-links}}
+<ul class="lk-menu">
+    {{#each master-menu-links}}
+    {{#if is-highlight}}
+    <li class="lk-menu__list"><a class="lk-menu__anch lk-menu__anch_highlight" href="{{url}}">{{text}}</a></li>
+    {{else}}
+    <li class="lk-menu__list"><a class="lk-menu__anch" href="{{url}}">{{text}}</a></li>
+    {{/if}}
+    {{/each}}
+</ul>
+{{/if}}
+
+{{#if user-menu-links}}
+<ul class="lk-menu">
+    {{#each user-menu-links}}
+    <li class="lk-menu__list"><a class="lk-menu__anch" href="{{url}}">{{text}}</a></li>
+    {{/each}}
+</ul>
+{{/if}}

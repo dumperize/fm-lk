@@ -1,0 +1,30 @@
+<div class="master-list master-list_mini">
+
+    {{> content-title/content-title}}
+
+    {{#each masters}}
+
+    <div class="master-list__master-card">
+        <p class="master-list__name">{{name}}</p>
+        <div class="master-list__avatar-cont">
+            {{#if is-avatar-exist}}
+            <img class="master-list__avatar" src="{{avatar.src}}" alt="{{avatar.alt}}">
+            {{/if}}
+        </div>
+
+        <div class="master-list__info-cont">
+            <p class="master-list__rubric"><span class="master-list__strong">Рубрика:</span> {{rubric-name}}</p>
+            <p class="master-list__rubric"><span class="master-list__strong">Опубликована до:</span> {{publication-end-date}}</p>
+
+            <a href="{{price-doc-url}}">Прайс</a><br>
+            <a href="{{contract-doc-url}}">Договор</a><br>
+            <a href="{{publication-request-doc-url}}">Заявка на публикацию</a><br>
+
+        </div><!--info-cont-->
+        <div class="master-list__cf"></div>
+
+    </div><!--master-card-->
+    {{/each}}
+
+
+</div><!--master-list_stat-->

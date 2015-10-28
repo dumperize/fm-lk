@@ -1,0 +1,25 @@
+{
+  "block_lk_menu": {
+    "master-menu-links": [{
+      "url": "/main/main.html",
+      "text": "Список мастеров",
+      "is-highlight": true
+    }, {
+      "url": "/master-request/master-request.html",
+      "text": "Заявки"
+    }, {
+      "url": "/master-stat/master-stat.html",
+      "text": "Статистика"
+    }, {
+      "url": "/master-doc/master-doc.html",
+      "text": "Документы"
+    }],
+    "user-menu-links": [{
+      "url": "#",
+      "text": "Новости"
+    }, {
+      "url": "/personal-data/personal-data.html",
+      "text": "Настройки"
+    }]
+  }
+}

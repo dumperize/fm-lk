@@ -1,0 +1,11 @@
+{
+  "edit-button": {
+    "text": "�������������",
+    "url": "index.html"
+  },
+  "publish-button": {
+    "text": "������������",
+    "url": "index.html",
+    "mod": "orange"
+  }
+}

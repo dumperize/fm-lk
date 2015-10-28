@@ -1,0 +1,217 @@
+{
+  "page_main": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": {
+      "logo-url": "/main/main.html",
+      "visitor": "12 456 посещений",
+      "menu": [{
+        "url": "/master_rubrikator/master_rubrikator.html",
+        "title": "КАТАЛОГ УСЛУГ"
+      }, {
+        "url": "http://facemaster.ru/site/javascript:void(0)",
+        "title": "ЗАКАЗАТЬ УСЛУГУ"
+      }, {
+        "url": "/reg-master/reg-master.html",
+        "title": "СТАТЬ МАСТЕРОМ"
+      }],
+      "auth": false,
+      "authData": {
+        "name": "Администратор С.Н.",
+        "homeUrl": "http://facemaster.ru/home",
+        "menuUser": [{
+          "url": "http://facemaster.ru/office",
+          "title": "Офис"
+        }, {
+          "url": "http://facemaster.ru/auth/logout",
+          "title": "Выход"
+        }]
+      },
+      "authUrl": "/entry/entry.html",
+      "social": {
+        "list": [{
+          "url": "http://vk.com/fm_mf",
+          "mod": "vk"
+        }, {
+          "url": "http://www.facebook.com/face.mast",
+          "mod": "fb"
+        }, {
+          "url": "http://www.odnoklassniki.ru/facemaster",
+          "mod": "ok"
+        }, {
+          "url": "http://twitter.com/FacemasterRu",
+          "mod": "tw"
+        }]
+      }
+    },
+    "footer": {
+      "phone": "(8482) 74-44-19",
+      "links": [{
+        "url": "/oth_oferta/oth_oferta.html",
+        "title": "Оферта"
+      }, {
+        "url": "/oth_contact/oth_contact.html",
+        "title": "Контакты"
+      }, {
+        "url": "/oth_feedback/oth_feedback.html",
+        "title": "Обратная связь"
+      }],
+      "counters": {
+        "type": "гость",
+        "login": "гость"
+      }
+    },
+    "lk-menu": {
+      "master-menu-links": [{
+        "url": "/main/main.html",
+        "text": "Список мастеров",
+        "is-highlight": true
+      }, {
+        "url": "/master-request/master-request.html",
+        "text": "Заявки"
+      }, {
+        "url": "/master-stat/master-stat.html",
+        "text": "Статистика"
+      }, {
+        "url": "/master-doc/master-doc.html",
+        "text": "Документы"
+      }],
+      "user-menu-links": [{
+        "url": "#",
+        "text": "Новости"
+      }, {
+        "url": "/personal-data/personal-data.html",
+        "text": "Настройки"
+      }]
+    },
+    "breadcrumbs": {
+      "links": [{
+        "url": "index.html",
+        "title": "fsd"
+      }]
+    },
+    "master-list": {
+      "masters": [{
+        "text-help": "Заполните вашу страницу",
+        "name": "Сярдин Илья",
+        "avatar": {
+          "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+          "alt": ""
+        },
+        "is-avatar-exist": true,
+        "rubric-name": "Тренеры",
+        "tarif-name": "Профессионал",
+        "tarif_link": {
+          "url": "#"
+        },
+        "edit-button": {
+          "text": "Заполнить",
+          "url": "../master-data-edit/master-data-edit.html",
+          "mod": "orange"
+        },
+        "status-text": "Не опубликовано",
+        "is-status": true
+      }, {
+        "text-help": "Ваша страница заполнена, опубликуйте её",
+        "name": "Мельников Иван",
+        "avatar": {
+          "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+          "alt": ""
+        },
+        "is-avatar-exist": true,
+        "rubric-name": "Инструктора",
+        "tarif-name": "Фиговый",
+        "tarif_link": {
+          "url": "#"
+        },
+        "edit-button": {
+          "text": "Редактировать",
+          "url": "../master-data-edit/master-data-edit.html"
+        },
+        "publish-button": {
+          "text": "Опубликовать",
+          "url": "index.html",
+          "mod": "orange"
+        }
+      }, {
+        "text-help": "",
+        "name": "Волков Данил",
+        "avatar": {
+          "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+          "alt": ""
+        },
+        "is-avatar-exist": false,
+        "rubric-name": "Инструктора",
+        "tarif-name": "Фиговый",
+        "tarif_link": {
+          "url": "#"
+        },
+        "edit-button": {
+          "text": "Редактировать",
+          "url": "../master-data-edit/master-data-edit.html"
+        },
+        "publish-button": {
+          "text": "Опубликовать",
+          "url": "index.html",
+          "mod": "orange"
+        },
+        "status-text": "На модерации",
+        "is-status": true,
+        "status-link": {
+          "url": "#",
+          "text": "Снять с модерации"
+        }
+      }, {
+        "name": "Неупокоев Аркадий",
+        "avatar": {
+          "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+          "alt": ""
+        },
+        "is-avatar-exist": false,
+        "rubric-name": "Инструктора",
+        "tarif-name": "Фиговый",
+        "tarif_link": {
+          "url": "#"
+        },
+        "edit-button": {
+          "text": "Редактировать",
+          "url": "../master-data-edit/master-data-edit.html"
+        },
+        "publish-button": {
+          "text": "Опубликовать",
+          "url": "index.html",
+          "mod": "orange"
+        },
+        "moderate-comment": "Ваше что там, не соответствует, что то там"
+      }, {
+        "name": "Грищенко Слава",
+        "avatar": {
+          "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+          "alt": ""
+        },
+        "is-avatar-exist": false,
+        "rubric-name": "Инструктора",
+        "tarif-name": "Фиговый",
+        "tarif_link": {
+          "url": "#"
+        },
+        "edit-button": {
+          "text": "Редактировать",
+          "url": "../master-data-edit/master-data-edit.html"
+        },
+        "publish-button": {
+          "text": "Опубликовать",
+          "url": "#",
+          "mod": "orange"
+        },
+        "status-text": "Опубликован",
+        "is-status": true,
+        "status-link": {
+          "url": "#",
+          "text": "Снять с публикации"
+        }
+      }]
+    }
+  }
+}

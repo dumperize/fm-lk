@@ -1,0 +1,45 @@
+<div class="master-list">
+
+    {{#each masters}}
+    {{#if text-help}}
+    <div class="master-list__cont-help"><p class="master-list__text-help">{{text-help}}</p></div>
+    {{/if}}
+
+    <div class="master-list__master-card">
+        <div class="master-list__avatar-cont">
+            {{#if is-avatar-exist}}
+            <img class="master-list__avatar" src="{{avatar.src}}" alt="{{avatar.alt}}">
+            {{/if}}
+        </div>
+
+        <p class="master-list__name">Мастер — {{name}}</p>
+        <p class="master-list__rubric"><span class="master-list__strong">Рубрика:</span> {{rubric-name}}</p>
+        <p class="master-list__tarif">Тариф: {{tarif-name}}</p><a class="master-list__change" href="{{tarif_link.url}}">cменить</a>
+        <p class="master-list__button-top">{{> button/link-button/link-button edit-button}}</p>
+
+        {{#if is-status}}
+        {{#if status-link}}
+        <p class="master-list__status master-list__status_moderate">
+            {{status-text}}
+            <br>
+            <a class="master-list__status-link" href="{{status-link.url}}">{{status-link.text}}</a>
+        </p>
+
+        {{else}}
+        <p class="master-list__status">{{status-text}}</p>
+        {{/if}}
+
+        {{else}}
+        <p class="master-list__button-bottom">{{> button/link-button/link-button publish-button}}</p>
+        {{/if}}
+
+    </div><!--master-card-->
+
+    {{#if moderate-comment}}
+    <p class="master-list__moderate-comment">Комментарии модератора: {{moderate-comment}}</p>
+    {{/if}}
+
+    {{/each}}
+
+
+</div><!--master-list-->

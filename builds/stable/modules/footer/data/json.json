@@ -1,0 +1,19 @@
+{
+    "block_footer": {
+        "phone": "(8482) 74-44-19",
+        "links": [{
+            "url": "/oth_oferta/oth_oferta.html",
+            "title": "Оферта"
+        }, {
+            "url": "/oth_contact/oth_contact.html",
+            "title": "Контакты"
+        }, {
+            "url": "/oth_feedback/oth_feedback.html",
+            "title": "Обратная связь"
+        }],
+        "counters": {
+            "type": "гость",
+            "login": "гость"
+        }
+    }
+}

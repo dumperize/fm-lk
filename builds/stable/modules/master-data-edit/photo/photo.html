@@ -1,0 +1,22 @@
+<div class="mde-photo">
+    {{#each albums}}
+    <a class="mde-photo__album-cover" href="#">
+        <img src="{{album-cover.src}}" alt="{{album-cover.alt}}"><br>
+        <span>{{album-cover.title}}</span>
+    </a>
+    {{/each}}
+
+    {{#each albums-content}}
+    <div class="mde-photo__album-cont">
+        <p class="mde-photo__album-title">{{title}}</p>
+
+        {{#each img-prev}}
+        <a class="mde-photo__img-prev" href="#">
+            <img src="{{src}}" alt="{{alt}}"><br>
+        </a>
+        {{/each}}
+
+    </div>
+    <!--album-cont-->
+    {{/each}}
+</div><!--mde-photo-->

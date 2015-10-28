@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="ru"><!--<![endif]-->
+{{#with page_personal_data}}
+<head>
+    {{> head/head head}}
+</head>
+
+<body class="page">
+
+<section class="page__wrapper">
+    {{> header/header header}}
+
+    <div class="main-page container">
+
+        <div class="main-page__top">
+            {{> breadcrumbs/breadcrumbs breadcrumbs}}
+        </div><!--top-->
+
+        <div class="main-page__column-3">
+            {{> bookmark-search/bookmark-search}}
+        </div><!--column-3-->
+
+
+        <div class="main-page__column-header">
+            {{> user-info-head/user-info-head user-info-head}}
+        </div><!--column-header-->
+
+
+        <div class="main-page__column-1">
+            {{> lk-menu/lk-menu lk-menu}}
+            {{> notice/notice notice}}
+        </div><!--column-1-->
+
+
+        <div class="main-page__column-2">
+            {{> personal-block/personal-data/personal-data personal-data}}
+            {{> personal-block/personal-data-edit/personal-data-edit personal-data-edit}}
+        </div><!--column-2-->
+
+    </div><!--main-page-->
+
+    <div class="page__buffer"></div>
+</section><!--wrapper-->
+
+<footer class="page__footer">
+    {{> footer/footer footer}}
+</footer><!--footer-->
+
+
+</body>
+{{/with}}
+</html>

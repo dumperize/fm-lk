@@ -1,0 +1,9 @@
+<div class="mde-video">
+
+    {{#each videos}}
+    <a class="mde-video__video-cover" href="{{url}}">
+        <span class="mde-video__title-prev">{{title}}</span><br>
+        <span class="mde-video__img-cont"><img src="{{prev.src}}" alt="{{prev.alt}}"></span>
+    </a>
+    {{/each}}
+</div><!--mde-video-->

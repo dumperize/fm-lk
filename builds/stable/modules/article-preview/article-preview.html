@@ -1,0 +1,16 @@
+<div class="article-preview">
+    {{#if url}}
+    <a class="article-preview__url" href="{{url}}"></a>
+    {{/if}}
+
+    <div class="article-preview__wrapper">
+        <div class="article-preview__img-cont">
+            {{#if is-img-exist}}
+            <img class="article-preview__img" src="{{img.src}}" alt="{{img.alt}}">
+            {{/if}}
+        </div>
+        <p class="article-preview__text">{{text}}</p>
+        <br class="article-preview__clear">
+    </div>
+
+</div><!--article-preview-->

@@ -6,9 +6,9 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 100;
-  display: table;
+//  display: table;
   text-align: center;
-//  display: none;
+  display: none;
   &__wrapper {
     display: table-cell;
     vertical-align: middle;

@@ -1,0 +1,20 @@
+{{#if is-paginator}}
+<div class="paginator">
+    <span class="paginator__title">Перейти к странице: </span>
+    <ul class="paginator__list">
+        <li class="paginator__page paginator__page_previous">
+            <a class="paginator__number" href="{{start.url}}">&lt;</a>
+        </li>
+        {{#each list}}
+        {{#if is-selected}}
+        <li class="paginator__page paginator__page_selected"><span class="paginator__number">{{number}}</span></li>
+        {{else}}
+        <li class="paginator__page"><a class="paginator__number" href="{{url}}">{{number}}</a></li>
+        {{/if}}
+        {{/each}}
+        <li class="paginator__page paginator__page_next">
+            <a class="paginator__number" href="{{end.url}}">&gt;</a>
+        </li>
+    </ul>
+</div>
+{{/if}}

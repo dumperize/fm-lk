@@ -1,0 +1,232 @@
+{
+  "page_master_data_edit": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": {
+      "logo-url": "/main/main.html",
+      "visitor": "12 456 посещений",
+      "menu": [{
+        "url": "/master_rubrikator/master_rubrikator.html",
+        "title": "КАТАЛОГ УСЛУГ"
+      }, {
+        "url": "http://facemaster.ru/site/javascript:void(0)",
+        "title": "ЗАКАЗАТЬ УСЛУГУ"
+      }, {
+        "url": "/reg-master/reg-master.html",
+        "title": "СТАТЬ МАСТЕРОМ"
+      }],
+      "auth": false,
+      "authData": {
+        "name": "Администратор С.Н.",
+        "homeUrl": "http://facemaster.ru/home",
+        "menuUser": [{
+          "url": "http://facemaster.ru/office",
+          "title": "Офис"
+        }, {
+          "url": "http://facemaster.ru/auth/logout",
+          "title": "Выход"
+        }]
+      },
+      "authUrl": "/entry/entry.html",
+      "social": {
+        "list": [{
+          "url": "http://vk.com/fm_mf",
+          "mod": "vk"
+        }, {
+          "url": "http://www.facebook.com/face.mast",
+          "mod": "fb"
+        }, {
+          "url": "http://www.odnoklassniki.ru/facemaster",
+          "mod": "ok"
+        }, {
+          "url": "http://twitter.com/FacemasterRu",
+          "mod": "tw"
+        }]
+      }
+    },
+    "footer": {
+      "phone": "(8482) 74-44-19",
+      "links": [{
+        "url": "/oth_oferta/oth_oferta.html",
+        "title": "Оферта"
+      }, {
+        "url": "/oth_contact/oth_contact.html",
+        "title": "Контакты"
+      }, {
+        "url": "/oth_feedback/oth_feedback.html",
+        "title": "Обратная связь"
+      }],
+      "counters": {
+        "type": "гость",
+        "login": "гость"
+      }
+    },
+    "lk-menu": {
+      "master-menu-links": [{
+        "url": "/main/main.html",
+        "text": "Список мастеров",
+        "is-highlight": true
+      }, {
+        "url": "/master-request/master-request.html",
+        "text": "Заявки"
+      }, {
+        "url": "/master-stat/master-stat.html",
+        "text": "Статистика"
+      }, {
+        "url": "/master-doc/master-doc.html",
+        "text": "Документы"
+      }],
+      "user-menu-links": [{
+        "url": "#",
+        "text": "Новости"
+      }, {
+        "url": "/personal-data/personal-data.html",
+        "text": "Настройки"
+      }]
+    },
+    "breadcrumbs": {
+      "links": [{
+        "url": "index.html",
+        "title": "fsd"
+      }]
+    },
+    "master-data-edit": {
+      "name": "Окаемов Владимир Анатольевич",
+      "avatar": {
+        "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+        "alt": ""
+      },
+      "is-avatar-exist": true,
+      "rubric-name": "Тренеры",
+      "tarif-name": "Профессионал",
+      "tarif_link": {
+        "url": "#"
+      },
+      "discounts-and-gifts": {
+        "discounts": [{
+          "url": "#",
+          "is-img-exist": true,
+          "img": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "header-text": "- 100% скидка",
+          "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium - json"
+        }, {
+          "is-img-exist": false,
+          "header-text": "Подарок",
+          "text": "Sed ut perspiciatis, unde omnis iste natus error sit - json"
+        }]
+      },
+      "useful-read": {
+        "article-preview": [{
+          "url": "#",
+          "is-img-exist": true,
+          "img": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium - json"
+        }, {
+          "url": "#",
+          "is-img-exist": true,
+          "img": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "text": "Sed ut perspiciatis, unde omnis iste natus error sit! - json"
+        }, {
+          "url": "#",
+          "is-img-exist": true,
+          "img": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": ""
+          },
+          "text": "Sed ut perspiciatis! - json"
+        }]
+      },
+      "photo": {
+        "albums": [{
+          "album-cover": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "",
+            "title": "Очень длинное название альбома, которое может не поместиться"
+          }
+        }, {
+          "album-cover": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2",
+            "title": "Очень длинное название альбома"
+          }
+        }, {
+          "album-cover": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "",
+            "title": "Название альбома"
+          }
+        }, {
+          "album-cover": {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2",
+            "title": "Альбом"
+          }
+        }],
+        "albums-content": [{
+          "title": "Очень длинное название альбома, которое может не поместиться. Здесь есть ещё описание альбома.",
+          "img-prev": [{
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2"
+          }, {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2"
+          }, {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2"
+          }, {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2"
+          }, {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2"
+          }, {
+            "src": "%=staticPrefix=%img/content/test/test-img.jpg",
+            "alt": "тест2"
+          }]
+        }]
+      },
+      "video": {
+        "videos": [{
+          "url": "#",
+          "title": "Очень длинное название видео, которое может не поместиться",
+          "prev": {
+            "src": "%=staticPrefix=%img/content/test/video1.jpg",
+            "alt": ""
+          }
+        }, {
+          "url": "#",
+          "title": "Название видео",
+          "prev": {
+            "src": "%=staticPrefix=%img/content/test/video2.jpg",
+            "alt": ""
+          }
+        }]
+      },
+      "reviews": {
+        "review-cont": [{
+          "name": "Юлия Владимировна",
+          "date": "27 июня 2015",
+          "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut"
+        }, {
+          "name": "Юлия Владимировна",
+          "date": "17 июня 2015",
+          "text": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut"
+        }, {
+          "name": "Юлия Владимировна",
+          "date": "27 августа 2015",
+          "text": "Sed ut perspiciatis, unde omnis iste natus error"
+        }]
+      }
+    }
+  }
+}

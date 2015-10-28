@@ -24,6 +24,9 @@
       "delete-link": "#"
     },
     "personal-data-edit": {
+      "popup": {
+        "popup-mix": "js-personal-data-edit"
+      },
       "title": "Редактирование личных данных",
       "form-edit": {
         "action": "personal-data-edit-response.json",
@@ -79,7 +82,7 @@
         "text": "Отмена",
         "url": "#",
         "mod": "grey",
-        "mix": "block:js-hide-edit-form"
+        "mix": "js-hide-edit-form"
       }
     }
   }

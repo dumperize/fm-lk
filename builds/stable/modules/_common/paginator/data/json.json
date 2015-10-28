@@ -1,0 +1,28 @@
+{
+    "block_paginator": {
+        "is-paginator": true,
+        "start": {
+            "url": "#"
+        },
+        "end": {
+            "url": "#"
+        },
+        "list": [{
+            "is-selected": true,
+            "url": "#",
+            "number": "1"
+        }, {
+            "url": "#",
+            "number": "2"
+        }, {
+            "url": "#",
+            "number": "3"
+        }, {
+            "url": "#",
+            "number": "4"
+        }, {
+            "url": "#",
+            "number": "5"
+        }]
+    }
+}

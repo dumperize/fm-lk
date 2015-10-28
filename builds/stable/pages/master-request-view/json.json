@@ -1,0 +1,135 @@
+{
+  "page_master_request": {
+    "head": {
+      "title": "FaceMaster.ru. Специалисты Тольятти"
+    },
+    "header": {
+      "logo-url": "/main/main.html",
+      "visitor": "12 456 посещений",
+      "menu": [{
+        "url": "/master_rubrikator/master_rubrikator.html",
+        "title": "КАТАЛОГ УСЛУГ"
+      }, {
+        "url": "http://facemaster.ru/site/javascript:void(0)",
+        "title": "ЗАКАЗАТЬ УСЛУГУ"
+      }, {
+        "url": "/reg-master/reg-master.html",
+        "title": "СТАТЬ МАСТЕРОМ"
+      }],
+      "auth": false,
+      "authData": {
+        "name": "Администратор С.Н.",
+        "homeUrl": "http://facemaster.ru/home",
+        "menuUser": [{
+          "url": "http://facemaster.ru/office",
+          "title": "Офис"
+        }, {
+          "url": "http://facemaster.ru/auth/logout",
+          "title": "Выход"
+        }]
+      },
+      "authUrl": "/entry/entry.html",
+      "social": {
+        "list": [{
+          "url": "http://vk.com/fm_mf",
+          "mod": "vk"
+        }, {
+          "url": "http://www.facebook.com/face.mast",
+          "mod": "fb"
+        }, {
+          "url": "http://www.odnoklassniki.ru/facemaster",
+          "mod": "ok"
+        }, {
+          "url": "http://twitter.com/FacemasterRu",
+          "mod": "tw"
+        }]
+      }
+    },
+    "footer": {
+      "phone": "(8482) 74-44-19",
+      "links": [{
+        "url": "/oth_oferta/oth_oferta.html",
+        "title": "Оферта"
+      }, {
+        "url": "/oth_contact/oth_contact.html",
+        "title": "Контакты"
+      }, {
+        "url": "/oth_feedback/oth_feedback.html",
+        "title": "Обратная связь"
+      }],
+      "counters": {
+        "type": "гость",
+        "login": "гость"
+      }
+    },
+    "lk-menu": {
+      "master-menu-links": [{
+        "url": "/main/main.html",
+        "text": "Список мастеров",
+        "is-highlight": true
+      }, {
+        "url": "/master-request/master-request.html",
+        "text": "Заявки"
+      }, {
+        "url": "/master-stat/master-stat.html",
+        "text": "Статистика"
+      }, {
+        "url": "/master-doc/master-doc.html",
+        "text": "Документы"
+      }],
+      "user-menu-links": [{
+        "url": "#",
+        "text": "Новости"
+      }, {
+        "url": "/personal-data/personal-data.html",
+        "text": "Настройки"
+      }]
+    },
+    "breadcrumbs": {
+      "links": [{
+        "url": "index.html",
+        "title": "fsd"
+      }]
+    },
+    "master-request-view": {
+      "title": "Заявки для Мастера Грищенко Слава",
+      "request": [{
+        "date": "12.05.2015",
+        "name": "Грищенко Слава",
+        "phone": "+7 960 840-00-00",
+        "text": "Мне нужен сантехник, если вы понимаете о чём я",
+        "action": {
+          "url": "http://localhost:3004/master-request-view/delete-handler.json",
+          "text": "Удалить"
+        }
+      }, {
+        "date": "12.05.2015",
+        "name": "Грищенко Слава",
+        "phone": "+7 960 840-00-00",
+        "text": "Очень длинное описание заявки с уточнениями и кучей подробностей.",
+        "action": {
+          "url": "http://localhost:3004/master-request-view/delete-handler.json",
+          "text": "Удалить"
+        }
+      }, {
+        "date": "12.05.2015",
+        "name": "Грищенко Слава",
+        "phone": "+7 960 840-00-00",
+        "text": "Очень длинное описание заявки с уточнениями и кучей подробностей. Очень длинное описание заявки с уточнениями и кучей подробностей. Очень длинное описание заявки с уточнениями и кучей подробностей. Очень длинное описание заявки с уточнениями и кучей подробностей",
+        "action": {
+          "url": "http://localhost:3004/master-request-view/delete-handler.json",
+          "text": "Удалить"
+        }
+      }, {
+        "date": "12.05.2015",
+        "name": "Грищенко Слава",
+        "phone": "+7 960 840-00-00",
+        "text": "Очень длинное описание заявки с уточнениями и кучей подробностей.",
+        "action": {
+          "url": "http://localhost:3004/master-request-view/delete-handler.json",
+          "text": "Удалить"
+        }
+      }]
+    }
+  }
+}

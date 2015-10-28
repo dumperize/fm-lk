@@ -1,0 +1,26 @@
+<div class="breadcrumbs">
+    <span class="breadcrumbs__header">Вы находитесь: </span>
+    {{#each links}}
+    <span class="breadcrumbs__icon"></span>
+    {{#if url}}
+    {{#if links}}<a class="breadcrumbs__level breadcrumbs__level_link js-parent-rub" href="{{url}}">{{title}}</a>
+    {{else}}
+    <a class="breadcrumbs__level breadcrumbs__level_link" href="{{url}}">{{title}}</a>
+    {{/if}}
+    {{else}}
+    <span class="breadcrumbs__level">{{title}}</span>
+    {{/if}}
+    {{#if links}}
+    <div class="breadcrumbs__list-container js-breadcrumbs-list">
+        <ul class="breadcrumbs__list">
+            {{#each links}}
+            <li class="breadcrumbs__list-item">
+                <span class="breadcrumbs__icon"></span>
+                <a class="breadcrumbs__level breadcrumbs__level_link" href="{{url}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+    {{/each}}
+</div>

@@ -1,0 +1,19 @@
+<div class="discounts">
+    {{#if url}}
+    <a class="discounts__url" href="{{url}}"></a>
+    {{/if}}
+
+    <p class="discounts__header">{{header-text}}</p>
+
+    <div class="discounts__wrapper">
+        <div class="discounts__img-cont">
+            <i class="discounts__bg-ico"></i>
+            {{#if is-img-exist}}
+            <img class="discounts__img" src="{{img.src}}" alt="{{img.alt}}">
+            {{/if}}
+        </div>
+        <p class="discounts__text">{{text}}</p>
+        <br class="discounts__clear">
+    </div>
+
+</div><!--discounts-->

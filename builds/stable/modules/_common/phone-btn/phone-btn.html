@@ -1,0 +1,11 @@
+<div class="phone-btn">
+    <button class="phone-btn__button js-show-phone" data-id="{{masterID}}">
+        Показать телефон
+    </button>
+    <div class="phone-btn__phone-details js-show-phone_details">
+        <p class="phone-btn__phone">{{phone}}</p>
+        {{#if url}}
+        <a class="phone-btn__url" href="{{url}}">еще контакты</a>
+        {{/if}}
+    </div>
+</div>
