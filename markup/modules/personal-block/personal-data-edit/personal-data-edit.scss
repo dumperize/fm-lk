@@ -1,30 +1,4 @@
 .personal-data-edit {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 100;
-//  display: table;
-  text-align: center;
-  display: none;
-  &__wrapper {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  &__form-scroll {
-    overflow: auto;
-    height: 100vh;
-  }
-  &__form-cont {
-    display: inline-block;
-    vertical-align: middle;
-    background-color: $color-bg-grey-light;
-    padding: 30px;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
   &__form {
     padding-top: 10px;
   }

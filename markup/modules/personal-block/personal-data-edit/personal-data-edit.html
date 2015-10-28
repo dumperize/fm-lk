@@ -1,98 +1,109 @@
-<div block="personal-data-edit" mix="block:js-personal-data-edit">
+<!--<div block="personal-data-edit" mix="block:js-personal-data-edit">
     <div elem="wrapper">
         <div elem="form-scroll">
-            <div elem="form-cont">
+            <div elem="form-cont">-->
 
-                {{> content-title/content-title}}
+{{> popup/popup-open-div popup}}
 
-                <form elem="form" action="{{form-edit.action}}" method="{{form-edit.method}}" mix="block:js-form-edit">
+<div block="personal-data-edit">
 
-                    <label elem="label" mod="{{form-edit.inputs.full_name.mod}}">
-                        <span elem="strong">Имя Фамилия: </span>
-                        <input elem="input" type="text" name="{{form-edit.inputs.full_name.name}}"
-                               value="{{form-edit.inputs.full_name.value}}">
-                    </label>
-                    {{#if form-edit.inputs.full_name.error}}
-                    <p elem="error">{{form-edit.inputs.full_name.error}}</p>
-                    {{/if}}
-                    <br>
+    {{> content-title/content-title}}
 
-                    <label elem="label" mod="{{form-edit.inputs.birthday.mod}}">
-                        <span elem="strong">Дата рождения: </span>
-                        <input elem="input" id="datepicker" type="text" name="{{form-edit.inputs.birthday.name}}"
-                               value="{{form-edit.inputs.birthday.value}}">
-                    </label>
-                    {{#if form-edit.inputs.birthday.error}}
-                    <p elem="error">{{form-edit.inputs.birthday.error}}</p>
-                    {{/if}}
-                    <br>
+    <form elem="form" action="{{form-edit.action}}" method="{{form-edit.method}}" mix="block:js-form-edit">
 
-                    <label elem="label" mod="{{form-edit.inputs.phone.mod}}">
-                        <span elem="strong">Телефон: <span elem="country-code">+7</span></span>
-                        <input elem="input" type="tel" name="{{form-edit.inputs.phone.name}}" value="{{form-edit.inputs.phone.value}}">
-                    </label>
-                    {{#if form-edit.inputs.phone.error}}
-                    <p elem="error">{{form-edit.inputs.phone.error}}</p>
-                    {{/if}}
-                    <br>
+        <label elem="label" mod="{{form-edit.inputs.full_name.mod}}">
+            <span elem="strong">Имя Фамилия: </span>
+            <input elem="input" type="text" name="{{form-edit.inputs.full_name.name}}"
+                   value="{{form-edit.inputs.full_name.value}}">
+        </label>
+        {{#if form-edit.inputs.full_name.error}}
+        <p elem="error">{{form-edit.inputs.full_name.error}}</p>
+        {{/if}}
+        <br>
 
-                    <label elem="label" mod="{{form-edit.inputs.email.mod}}">
-                        <span elem="strong">Эл. почта: </span>
-                        <input elem="input" type="email" name="{{form-edit.inputs.email.name}}" value="{{form-edit.inputs.email.value}}">
-                    </label>
-                    {{#if form-edit.inputs.email.error}}
-                    <p elem="error">{{form-edit.inputs.email.error}}</p>
-                    {{/if}}
-                    <br>
+        <label elem="label" mod="{{form-edit.inputs.birthday.mod}}">
+            <span elem="strong">Дата рождения: </span>
+            <input elem="input" id="datepicker" type="text" name="{{form-edit.inputs.birthday.name}}"
+                   value="{{form-edit.inputs.birthday.value}}">
+        </label>
+        {{#if form-edit.inputs.birthday.error}}
+        <p elem="error">{{form-edit.inputs.birthday.error}}</p>
+        {{/if}}
+        <br>
 
-                    <fieldset elem="fieldset">
-                        <legend elem="legend">Пол</legend>
-                        <label elem="label" mod="radio">
-                            <span elem="strong">Мужской</span>
-                            <input elem="input" type="radio" name="{{form-edit.inputs.sex.name}}" value="{{form-edit.inputs.sex.value}}" {{form-edit.inputs.sex.add_property}}>
-                        </label>
-                        <label elem="label" mod="radio">
-                            <span elem="strong">Женский</span>
-                            <input elem="input" type="radio" name="{{form-edit.inputs.sex.name}}" value="{{form-edit.inputs.sex.value2}}" {{form-edit.inputs.sex.add_property2}}>
-                        </label>
-                        <br elem="clear">
-                        {{#if form-edit.inputs.sex.error}}
-                        <p elem="error">{{form-edit.inputs.sex.error}}</p>
-                        {{/if}}
-                    </fieldset>
-                    <br>
+        <label elem="label" mod="{{form-edit.inputs.phone.mod}}">
+            <span elem="strong">Телефон: <span elem="country-code">+7</span></span>
+            <input elem="input" type="tel" name="{{form-edit.inputs.phone.name}}"
+                   value="{{form-edit.inputs.phone.value}}">
+        </label>
+        {{#if form-edit.inputs.phone.error}}
+        <p elem="error">{{form-edit.inputs.phone.error}}</p>
+        {{/if}}
+        <br>
 
-                    <fieldset elem="fieldset">
-                        <legend elem="legend">Изменить пароль</legend>
+        <label elem="label" mod="{{form-edit.inputs.email.mod}}">
+            <span elem="strong">Эл. почта: </span>
+            <input elem="input" type="email" name="{{form-edit.inputs.email.name}}"
+                   value="{{form-edit.inputs.email.value}}">
+        </label>
+        {{#if form-edit.inputs.email.error}}
+        <p elem="error">{{form-edit.inputs.email.error}}</p>
+        {{/if}}
+        <br>
 
-                        <label elem="label" mod="{{form-edit.inputs.old-password.mod}}">
-                            <span elem="strong">Старый пароль: </span>
-                            <input elem="input" type="password" name="{{form-edit.inputs.old-password.name}}" value="">
-                        </label>
-                        {{#if form-edit.inputs.old-password.error}}
-                        <p elem="error">{{form-edit.inputs.old-password.error}}</p>
-                        {{/if}}
-                        <br>
+        <fieldset elem="fieldset">
+            <legend elem="legend">Пол</legend>
+            <label elem="label" mod="radio">
+                <span elem="strong">Мужской</span>
+                <input elem="input" type="radio" name="{{form-edit.inputs.sex.name}}"
+                       value="{{form-edit.inputs.sex.value}}" {{form-edit.inputs.sex.add_property}}>
+            </label>
+            <label elem="label" mod="radio">
+                <span elem="strong">Женский</span>
+                <input elem="input" type="radio" name="{{form-edit.inputs.sex.name}}"
+                       value="{{form-edit.inputs.sex.value2}}" {{form-edit.inputs.sex.add_property2}}>
+            </label>
+            <br elem="clear">
+            {{#if form-edit.inputs.sex.error}}
+            <p elem="error">{{form-edit.inputs.sex.error}}</p>
+            {{/if}}
+        </fieldset>
+        <br>
 
-                        <label elem="label" mod="{{form-edit.inputs.new-password.mod}}">
-                            <span elem="strong">Новый пароль: </span>
-                            <input elem="input" type="password" name="{{form-edit.inputs.new-password.name}}" value="">
-                        </label>
-                        {{#if form-edit.inputs.new-password.error}}
-                        <p elem="error">{{form-edit.inputs.new-password.error}}</p>
-                        {{/if}}
-                    </fieldset>
+        <fieldset elem="fieldset">
+            <legend elem="legend">Изменить пароль</legend>
 
-                    <p elem="save">{{> button/submit-button/submit-button save-button}}</p>
+            <label elem="label" mod="{{form-edit.inputs.old-password.mod}}">
+                <span elem="strong">Старый пароль: </span>
+                <input elem="input" type="password" name="{{form-edit.inputs.old-password.name}}" value="">
+            </label>
+            {{#if form-edit.inputs.old-password.error}}
+            <p elem="error">{{form-edit.inputs.old-password.error}}</p>
+            {{/if}}
+            <br>
 
-                    <p elem="cancel">{{> button/link-button/link-button cancel-button}}</p>
+            <label elem="label" mod="{{form-edit.inputs.new-password.mod}}">
+                <span elem="strong">Новый пароль: </span>
+                <input elem="input" type="password" name="{{form-edit.inputs.new-password.name}}" value="">
+            </label>
+            {{#if form-edit.inputs.new-password.error}}
+            <p elem="error">{{form-edit.inputs.new-password.error}}</p>
+            {{/if}}
+        </fieldset>
 
-                </form>
+        <p elem="save">{{> button/submit-button/submit-button save-button}}</p>
 
-            </div><!--personal-data-edit__form-cont-->
+        <p elem="cancel">{{> button/link-button/link-button cancel-button}}</p>
 
-        </div><!--personal-data-edit__form-scroll-->
-
-    </div><!--personal-data-edit__wrapper-->
-
+    </form>
 </div><!--personal-data-edit-->
+
+{{> popup/popup-close-div}}
+
+<!--</div>&lt;!&ndash;personal-data-edit__form-cont&ndash;&gt;-->
+
+<!--</div>&lt;!&ndash;personal-data-edit__form-scroll&ndash;&gt;-->
+
+<!--</div>&lt;!&ndash;personal-data-edit__wrapper&ndash;&gt;-->
+
+<!--</div>&lt;!&ndash;personal-data-edit&ndash;&gt;-->

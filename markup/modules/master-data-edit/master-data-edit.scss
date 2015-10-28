@@ -1,19 +1,28 @@
 .master-data-edit {
+  &__popup_test {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+  }
   &__section-cont {
     padding-bottom: 20px;
   }
   &__column-1 {
     width: 220px;
     float: left;
-//    border: 1px solid blue;
+    //    border: 1px solid blue;
     @include at(sm) {
-     float: none;
-     width: auto;
+      float: none;
+      width: auto;
     }
   }
   &__column-2 {
     margin-left: 220px;
-//    border: 1px solid blue;
+    //    border: 1px solid blue;
     min-width: 200px;
     @include at(sm) {
       margin-left: 0;
@@ -24,11 +33,12 @@
     height: 200px;
     overflow: hidden;
     margin-right: 20px;
+    margin-bottom: 4px;
     @extend %icon;
     @extend %icon_man;
     @extend %icon_block;
     @include icon_size(200px);
-//    float: left;
+    //    float: left;
   }
   &__avatar {
     @include img-max-size(200px, 200px);
@@ -83,5 +93,21 @@
     @extend %icon_inline;
     @include icon_size(12px);
     margin-right: 4px;
+  }
+  &__photo-upload {
+    vertical-align: middle;
+    a {
+      text-decoration: none;
+      border-bottom: 1px dashed;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    i {
+      @extend %icon;
+      @extend %icon_cogwheel;
+      @extend %icon_inline;
+      @include icon_size(16px);
+      vertical-align: middle;
+    }
   }
 }
