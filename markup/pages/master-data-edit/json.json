@@ -26,6 +26,9 @@
       "tarif_link": {
         "url": "#"
       },
+      "avatar-edit": {
+        "title": "Загрузка фотографии мастера"
+      },
       "discounts-and-gifts": {
         "discounts": [
           {

@@ -1,0 +1,29 @@
+.avatar-edit {
+  #image-cropper {
+    padding: 20px;
+  }
+  .cropit-image-preview-container {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px dashed #999;
+  }
+  .cropit-image-preview {
+    /* You can specify preview size in CSS */
+    width: 200px;
+    height: 200px;
+  }
+  /* Translucent background image */
+  .cropit-image-background {
+    opacity: .2;
+  }
+  input.cropit-image-zoom-input {
+    position: relative;
+  }
+  /* Limit the background image by adding overflow: hidden */
+  #image-cropper {
+    overflow: hidden;
+  }
+  .slider-wrapper {display: none}
+}

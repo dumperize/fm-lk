@@ -8,7 +8,11 @@
                 {{/if}}
             </div>
 
-            <p elem="photo-upload"><i></i><a href="#">Загрузить фотографию</a></p>
+            <p elem="photo-upload"><i></i><a href="#" mix="block:js-show-popup">Загрузить фотографию</a></p>
+
+            {{> popup/popup-open-div popup}}
+            {{> master-data-edit/avatar-edit/avatar-edit avatar-edit}}
+            {{> popup/popup-close-div}}
 
         </div><!--column-1-->
 
@@ -21,18 +25,25 @@
             <p elem="specialization">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem.</p>
 
         </div><!--column-2-->
-
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title"><a href="#"><span>Контакты</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
     <div elem="section-cont">
+        <p elem="section-title" mix="block:js-show-popup"><a href="#"><span>Контакты</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
         {{> master-data-edit/contact/contact contact}}
+
+        {{> popup/popup-open-div popup}}
+        {{> popup/popup-close-div}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Фильтры</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
     <div elem="section-cont">
+        <p elem="section-title"><a href="#"><span>Фильтры</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
         {{> master-data-edit/filter/filter filter}}
     </div><!--master-data-edit__section-cont-->
+
 
      <p elem="section-title"><a href="#"><span>Услуги</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
     <div elem="section-cont">

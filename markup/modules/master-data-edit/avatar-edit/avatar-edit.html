@@ -1,0 +1,24 @@
+<div block="avatar-edit">
+
+    {{> content-title/content-title}}
+
+    <div elem="wrapper" id="image-cropper">
+        <!-- The preview container is needed for background image to work -->
+        <div class="cropit-image-preview-container">
+            <div class="cropit-image-preview"></div>
+        </div>
+
+        <div class="slider-wrapper">
+            <span class="icon icon-image small-image"></span>
+            <input type="range" class="cropit-image-zoom-input">
+            <input type="hidden" class="single-slider">
+            <span class="icon icon-image large-image"></span>
+        </div>
+
+
+
+        <input type="file" class="cropit-image-input js-input-photo" accept="image/*" />
+        <div class="select-image-btn">Select new image</div>
+    </div>
+
+</div><!--avatar-edit-->
