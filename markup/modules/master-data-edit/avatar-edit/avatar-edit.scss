@@ -1,6 +1,10 @@
 .avatar-edit {
+  text-align: center;
   #image-cropper {
-    padding: 20px;
+    padding: 50px;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
   }
   .cropit-image-preview-container {
     margin: 0 auto;
@@ -8,22 +12,88 @@
     height: 200px;
     margin-bottom: 20px;
     border: 1px dashed #999;
+    box-sizing: content-box;
   }
   .cropit-image-preview {
     /* You can specify preview size in CSS */
     width: 200px;
     height: 200px;
+    cursor: grab;
   }
-  /* Translucent background image */
   .cropit-image-background {
     opacity: .2;
   }
   input.cropit-image-zoom-input {
     position: relative;
+    display: none;
   }
   /* Limit the background image by adding overflow: hidden */
   #image-cropper {
     overflow: hidden;
   }
-  .slider-wrapper {display: none}
+  .slider-wrapper {
+//    border: 1px solid blue;
+    height: 22px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .icon-image {
+    display: inline-block;
+    @extend %icon;
+    @extend %icon_image;
+    @include icon_size(20px);
+    vertical-align: middle;
+  }
+  .icon-image.small-image {
+    @include icon_size(16px);
+  }
+  .slider-container {display: inline-block; vertical-align: middle; margin: 0 18px}
+  .js-open-file {display: none}
+  &__btn-cont {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  &__select-image-btn, &__download-image-btn {
+    float: left;
+    width: 140px;
+  }
+  &__select-image-btn {
+    width: 200px;
+    margin-right: 20px;
+  }
+  &__help, &__help2 {
+    font-family: "Cheeseusaceu", serif;
+    font-size: 1.8rem;
+    color: #666;
+    width: 150px;
+//    border: 1px solid red;
+    position: absolute;
+    top:50%; left: 50%;
+    margin-left: 130px;
+    i {
+      background:  url('%=staticPrefixForCss=%general/lk/arrowDown.png') 0 0 no-repeat;
+      width: 71px; height: 36px;
+      position: absolute;
+      display: block;
+      transform: scale(-1, 1);
+      left: -75px;
+      top: 10px;
+    }
+  }
+  &__help {
+    top: 67px;
+  }
+  &__help2 {
+    margin-top: 40px;
+    left: auto; right: 50%;
+    margin-left: auto;
+    margin-right: 120px;
+    i {
+      transform: scale(1, -1) rotate(-50deg);
+      left: auto;
+      right: -10px;
+      top: auto;
+      bottom: -38px;
+    }
+  }
 }

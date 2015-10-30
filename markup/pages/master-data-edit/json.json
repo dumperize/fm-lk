@@ -27,7 +27,20 @@
         "url": "#"
       },
       "avatar-edit": {
-        "title": "Загрузка фотографии мастера"
+        "title": "Загрузка фотографии мастера",
+        "select-button": {
+          "url": "#",
+          "mod": "grey",
+          "text": "Выбрать другое фото"
+        },
+        "download-button": {
+          "url": "#",
+          "mod": "orange",
+          "text": "Сохранить"
+        }
+      },
+      "popup-photo-upload": {
+        "mix": "js-popup-photo-upload"
       },
       "discounts-and-gifts": {
         "discounts": [

@@ -34,7 +34,8 @@
           "show-button": {
             "text": "Просмотреть заявки",
             "url": "../master-request-view/master-request-view.html",
-            "mod": "grey, small-font"
+            "mod": "grey",
+            "mod2": "small-font"
           }
         },
         {
@@ -49,7 +50,8 @@
           "show-button": {
             "text": "Просмотреть заявки",
             "url": "../master-request-view/master-request-view.html",
-            "mod": "grey, small-font"
+            "mod": "grey",
+            "mod2": "small-font"
           }
         }
       ]
