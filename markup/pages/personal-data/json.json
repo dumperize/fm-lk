@@ -25,7 +25,7 @@
     },
     "personal-data-edit": {
       "popup": {
-        "popup-mix": "js-personal-data-edit"
+        "mix": "js-personal-data-edit"
       },
       "title": "Редактирование личных данных",
       "form-edit": {

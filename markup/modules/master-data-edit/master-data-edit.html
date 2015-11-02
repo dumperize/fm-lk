@@ -8,11 +8,13 @@
                 {{/if}}
             </div>
 
-            <p elem="photo-upload"><i></i><a href="#" mix="block:js-photo-upload">Загрузить фотографию</a></p>
+            <p elem="photo-upload"><i></i><a href="#{{cropper-id}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
 
-            {{> popup/popup-open-div popup-photo-upload}}
-            {{> master-data-edit/avatar-edit/avatar-edit avatar-edit}}
-            {{> popup/popup-close-div}}
+            <a class="various" href="#img-upload">Inline</a>
+
+
+            {{> master-data-edit/img-upload/img-upload avatar-upload}}
+
 
         </div><!--column-1-->
 

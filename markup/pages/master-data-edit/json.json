@@ -26,8 +26,10 @@
       "tarif_link": {
         "url": "#"
       },
-      "avatar-edit": {
+      "cropper-id":"image-cropper",
+      "avatar-upload": {
         "title": "Загрузка фотографии мастера",
+        "cropper-id":"image-cropper",
         "select-button": {
           "url": "#",
           "mod": "grey",

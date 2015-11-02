@@ -1,10 +1,12 @@
-<div block="avatar-edit">
+<div block="img-upload" id="img-upload">
+
+    <div elem="wrapper">
 
     {{> content-title/content-title}}
 
     <p elem="help">Нажмите внутри и&nbsp;передвиньте фотографию<i></i></p>
 
-    <div elem="wrapper" id="image-cropper">
+    <div elem="wrapper" id="{{cropper-id}}" class="image-cropper">
         <!-- The preview container is needed for background image to work -->
         <div class="cropit-image-preview-container">
             <div class="cropit-image-preview"></div>
@@ -12,14 +14,15 @@
 
         <div class="slider-wrapper">
             <span class="icon-image small-image"></span>
-            <input type="range" class="cropit-image-zoom-input">
-            <input type="hidden" class="single-slider">
+            <!--<input type="range" class="cropit-image-zoom-input">-->
+            <div class="cropit-slider"></div>
             <span class="icon-image large-image"></span>
         </div>
 
         <label class="js-open-file"><input type="file" class="cropit-image-input js-input-photo" accept="image/*"></label>
 
     </div><!--wrapper-->
+
     <p elem="help2">Если нужно, отре&shy;гулируйте размер<i></i></p>
 
     <div elem="btn-cont">
@@ -27,4 +30,6 @@
         <div elem="download-image-btn" mix="block:js-download-image-btn">{{> button/link-button/link-button download-button}}</div>
     </div>
 
-</div><!--avatar-edit-->
+        </div>
+
+</div><!--img-upload-->
