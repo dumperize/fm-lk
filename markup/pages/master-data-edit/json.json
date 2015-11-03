@@ -29,7 +29,7 @@
       "cropper-id":"image-cropper",
       "avatar-upload": {
         "title": "Загрузка фотографии мастера",
-        "cropper-id":"image-cropper",
+        "cropper-id":"img-upload-cropper",
         "select-button": {
           "url": "#",
           "mod": "grey",

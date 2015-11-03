@@ -52,7 +52,9 @@
   .icon-image.small-image {
     @include icon_size(16px);
   }
-  .js-open-file {display: none}
+  .js-open-file, .js-reset-file {
+    display: none;
+  }
 
   /* ---- Кнопки ---- */
   &__btn-cont {
