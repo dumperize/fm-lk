@@ -1,5 +1,8 @@
 <div block="master-data-edit">
 
+    {{> master-data-edit/img-upload/img-upload avatar-upload}}
+    {{> master-data-edit/img-upload/img-upload test-upload}}
+
     <div elem="section-cont">
         <div elem="column-1">
             <div elem="avatar-cont">
@@ -8,13 +11,8 @@
                 {{/if}}
             </div>
 
-            <p elem="photo-upload"><i></i><a href="#{{cropper-id}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
-
-            <a class="various" href="#img-upload">Inline</a>
-
-
-            {{> master-data-edit/img-upload/img-upload avatar-upload}}
-
+            <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
+            <p elem="photo-upload"><i></i><a href="#{{popup-id2}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
 
         </div><!--column-1-->
 

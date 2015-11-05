@@ -1,11 +1,11 @@
-<div block="img-upload" id="img-upload">
+<div block="img-upload" id="{{popup-id}}">
     <div elem="wrapper">
 
         {{> content-title/content-title}}
 
         <p elem="help">Нажмите внутри и&nbsp;передвиньте фотографию<i></i></p>
 
-        <div elem="wrapper" id="{{cropper-id}}" class="image-cropper">
+        <div elem="wrapper" id="{{popup-id}}-cropper" class="image-cropper">
             <!-- The preview container is needed for background image to work -->
             <div class="cropit-image-preview-container">
                 <div class="cropit-image-preview"></div>
@@ -19,7 +19,8 @@
             </div>
 
             <form>
-                <label class="js-open-file"><input type="file" class="cropit-image-input js-input-photo" accept="image/*"></label>
+                <!--cropit-image-input-->
+                <label class="js-open-file"><input type="file" class="js-input-photo" accept="image/*" data-selector="#img-upload"></label>
                 <input type="reset" value="Очистить" class="js-reset-file">
             </form>
         </div><!--wrapper-->
@@ -29,7 +30,7 @@
         <br>
 
         <div elem="btn-cont">
-            <div elem="select-image-btn" mix="block:js-photo-upload">
+            <div elem="select-image-btn" mix="block:js-photo-upload-btn">
                 {{> button/link-button/link-button select-button}}
             </div>
             <div elem="download-image-btn" mix="block:js-download-image-btn">

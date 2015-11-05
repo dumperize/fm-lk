@@ -1,19 +1,39 @@
 $(document).ready(function () {
-    $('.various').click(function () {
-        var selector = $(this).attr('href'); //передаем в переменную уникальный id из адресса ссылки
-        initCropit(selector);                //Инициализация cropit и jquery-ui slider
+    $('.js-photo-upload').click(function () {
+        var selector = $(this).attr('href');   //передаем в переменную уникальный id из адресса ссылки
         $(selector).find('.js-open-file').trigger('click'); //при клике на ссылке, происходит клик по лейблу с файл инпутом
-        //if ($(selector).find('.cropit-image-background').width() != 0) {
-        //     $(selector).parents('.js-popup-photo-upload').first().css('display', 'table');
-        //}
         return false;
     });
-    $('.js-photo-upload').click(function () {
-        $('#img-upload').find('.js-open-file').trigger('click');
+    $('.js-photo-upload-btn').click(function () {
+        $(this).parents('.img-upload').first().find('.js-open-file').trigger('click'); //при клике на кнопку, происходит клик по лейблу с файл инпутом
+        return false;
     });
 });
+$('.js-input-photo').change(function (e) {
+    var file = e.target.files[0];
+    var id = '#' + $(this).parents('.img-upload').first().attr('id');
+    //console.log(id);
+    canvasResize(file, {
+        width: 800,
+        height: 0,
+        crop: false,
+        quality: 80,
+        //rotate: 90,
+        callback: function (data, width, height) {
+            if (width >= 200 && height >= 200) {
+                initCropit(id);                                         //Инициализация cropit
+                $(id).find(id + '-cropper').cropit('imageSrc', data);   //передаем в cropit data (изображение)
+            } else {
+                alert('Слишком маленькое изображение.\nВыберите другое изображение.');
+                $(id).find('.js-open-file').trigger('click');     //снова просим выбрать файл
+            }
+        }
+    });
+});
+//Инициализация cropit и jquery-ui slider
 function initCropit(selector) {
     var cropitSelector = selector + '-cropper';
+    console.log(cropitSelector);
     $(selector).find('.cropit-slider').slider({
         min: 0,
         max: 1,
@@ -22,19 +42,10 @@ function initCropit(selector) {
     $(cropitSelector).cropit({
         imageBackground: true,
         onImageLoaded: function (object) {
-            console.log($(cropitSelector).cropit('imageSize'));
-            //$(selector).parents('.js-popup-photo-upload').first().css('display', 'table');
-            //var bgImage = $(cropitSelector).find('.cropit-image-preview').css('background-image');
-            //console.log(bgImage.substr(3, bgImage.length - 1));
-            //$(cropitSelector).find('.cropit-image-background').attr('src', bgImage.substr(4, bgImage.length - 2));
             if ($(selector).is(':hidden')) {
-                $.fancybox.open('#img-upload',
+                $.fancybox.open(selector,
                     {
-                        maxWidth: 800,
-                        maxHeight: 600,
-                        width: '70%',
-                        height: '70%',
-                        autoSize: false,
+                        minWidth: '600px',
                         closeEffect: 'none',
                         afterClose: function () {
                             $(selector).find('form').trigger('reset');
@@ -54,7 +65,7 @@ $('.cropit-slider').on('slide', function (event, ui) {
 });
 //Загрузка данных на сервер и вставка обрез. изображения в аватарку до загрузки на сервер
 $('.js-download-image-btn').click(function () {
-        var data = $(this).parents('.js-popup-photo-upload').first().find('.image-cropper').first().cropit('export');
+        var data = $(this).parents('.img-upload').first().find('.image-cropper').first().cropit('export');
         $.ajax({
             url: $(this).attr('href'),
             dataType: 'json',
@@ -68,7 +79,7 @@ $('.js-download-image-btn').click(function () {
                 }
             }
         });
-        $('.js-popup-photo-upload').hide();
+        $.fancybox.close();
         $('.master-data-edit__avatar').attr('src', data); //вставка обрез. изображения в аватарку
         return false;
     }

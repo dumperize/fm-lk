@@ -26,10 +26,11 @@
       "tarif_link": {
         "url": "#"
       },
-      "cropper-id":"image-cropper",
+      "popup-id": "img-upload",
+      "popup-id2": "img-upload2",
       "avatar-upload": {
         "title": "Загрузка фотографии мастера",
-        "cropper-id":"img-upload-cropper",
+        "popup-id": "img-upload",
         "select-button": {
           "url": "#",
           "mod": "grey",
@@ -41,8 +42,19 @@
           "text": "Сохранить"
         }
       },
-      "popup-photo-upload": {
-        "mix": "js-popup-photo-upload"
+      "test-upload": {
+        "title": "Тест",
+        "popup-id": "img-upload2",
+        "select-button": {
+          "url": "#",
+          "mod": "grey",
+          "text": "Выбрать другое фото"
+        },
+        "download-button": {
+          "url": "#",
+          "mod": "orange",
+          "text": "Сохранить"
+        }
       },
       "discounts-and-gifts": {
         "discounts": [
