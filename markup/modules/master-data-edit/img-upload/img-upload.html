@@ -1,5 +1,5 @@
 <div block="img-upload" id="{{popup-id}}">
-    <div elem="wrapper">
+    <i elem="ico-close" mix="block:js-close-ico"></i>
 
         {{> content-title/content-title}}
 
@@ -21,7 +21,6 @@
             <form>
                 <!--cropit-image-input-->
                 <label class="js-open-file"><input type="file" class="js-input-photo" accept="image/*" data-selector="#img-upload"></label>
-                <input type="reset" value="Очистить" class="js-reset-file">
             </form>
         </div><!--wrapper-->
 
@@ -31,12 +30,11 @@
 
         <div elem="btn-cont">
             <div elem="select-image-btn" mix="block:js-photo-upload-btn">
-                {{> button/link-button/link-button select-button}}
+                <a href="#" block="button" mod="grey" >Выбрать другое фото</a>
             </div>
             <div elem="download-image-btn" mix="block:js-download-image-btn">
-                {{> button/link-button/link-button download-button}}
+                <a href="#" block="button" mod="orange">Сохранить</a>
             </div>
         </div>
 
-    </div>
 </div><!--img-upload-->

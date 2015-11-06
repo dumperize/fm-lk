@@ -43,20 +43,22 @@ function initCropit(selector) {
         imageBackground: true,
         onImageLoaded: function (object) {
             if ($(selector).is(':hidden')) {
-                $.fancybox.open(selector,
-                    {
-                        minWidth: '600px',
-                        closeEffect: 'none',
-                        afterClose: function () {
-                            $(selector).find('form').trigger('reset');
-                        }
-                    });
+                $('body').addClass('blackout');
+                $(selector).css('z-index', '1001');
+                $(selector).show();
+                //$.fancybox.open(selector,
+                //    {
+                //        minWidth: '600px',
+                //        closeEffect: 'none',
+                //        afterClose: function () {
+                //            $(selector).find('form').trigger('reset');
+                //        }
+                //    });
             }
             $(selector).find('.cropit-slider').slider('option', 'min', $(cropitSelector).cropit('zoom'));
             $(selector).find('.cropit-slider').slider('option', 'value', $(cropitSelector).cropit('zoom'));
         }
     });
-
 }
 //Передаем значение value из jquery-ui slider в cropit для увел./умен. изображения
 $('.cropit-slider').on('slide', function (event, ui) {
@@ -79,17 +81,26 @@ $('.js-download-image-btn').click(function () {
                 }
             }
         });
-        $.fancybox.close();
+        //$.fancybox.close();
         $('.master-data-edit__avatar').attr('src', data); //вставка обрез. изображения в аватарку
+        closeImgUpload(this);
         return false;
     }
 );
+//Закрытые псевдоокна
+$('.js-close-ico').click(function () {
+    closeImgUpload(this);
+});
+function closeImgUpload(selector) {
+    $(selector).parents('.img-upload').first().css('display', 'none');
+    $(selector).parents('.img-upload').find('form').trigger('reset');
+    $('body').removeClass('blackout');
+}
 //При клике на cropit-image-preview меняем вид курсора
 $('.cropit-image-preview').mousedown(function () {
-    $('.cropit-image-preview').css({
-        cursor: '-webkit-grabbing'
-    });
+    $('.cropit-image-preview').addClass('grabbing');
+
 });
 $('.cropit-image-preview').mouseup(function () {
-    $('.cropit-image-preview').css('cursor', '');
+    $('.cropit-image-preview').removeClass('grabbing');
 });

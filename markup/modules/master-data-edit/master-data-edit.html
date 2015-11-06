@@ -1,8 +1,5 @@
 <div block="master-data-edit">
 
-    {{> master-data-edit/img-upload/img-upload avatar-upload}}
-    {{> master-data-edit/img-upload/img-upload test-upload}}
-
     <div elem="section-cont">
         <div elem="column-1">
             <div elem="avatar-cont">
@@ -11,8 +8,8 @@
                 {{/if}}
             </div>
 
-            <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
-            <p elem="photo-upload"><i></i><a href="#{{popup-id2}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
+            <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Загрузить фотографию</a>
+            </p>
 
         </div><!--column-1-->
 
@@ -20,67 +17,100 @@
 
             <p elem="master-name">{{name}}</p>
 
-             <p elem="section-title"><a href="#"><span>Специализация</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+            <div elem="section-cont">
+                <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Специализация</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+                </p>
 
-            <p elem="specialization">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem.</p>
+                <p elem="specialization">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+                    architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit,
+                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem.</p>
+
+                <div elem="btn-cont">
+                    <div elem="select-image-btn" mix="block:js-edit-block-save">
+                        <a href="{{edit-save.url}}" block="button" mod="orange" >Сохранить</a>
+                    </div>
+                    <div elem="download-image-btn" mix="block:js-edit-block-cancel">
+                        <a href="#" block="button" mod="grey" >Отмена</a>
+                    </div>
+                </div><!--btn-cont-->
+
+            </div><!--master-data-edit__section-cont-->
 
         </div><!--column-2-->
     </div><!--master-data-edit__section-cont-->
 
+    {{> master-data-edit/img-upload/img-upload avatar-upload}}
 
     <div elem="section-cont">
-        <p elem="section-title" mix="block:js-show-popup"><a href="#"><span>Контакты</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+        <p elem="section-title" mod="edit" mix="block:js-edit-block" mix="block:js-show-popup"><a href="#"><span>Контакты</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
 
         {{> master-data-edit/contact/contact contact}}
 
-        {{> popup/popup-open-div popup}}
-        {{> popup/popup-close-div}}
     </div><!--master-data-edit__section-cont-->
 
 
     <div elem="section-cont">
-        <p elem="section-title"><a href="#"><span>Фильтры</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Фильтры</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
 
         {{> master-data-edit/filter/filter filter}}
     </div><!--master-data-edit__section-cont-->
 
 
-     <p elem="section-title"><a href="#"><span>Услуги</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Услуги</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    </p>
+
     <div elem="section-cont">
         {{> master-data-edit/service/service service}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Режим и условия работы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Режим и условия работы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    </p>
+
     <div elem="section-cont">
         {{> master-data-edit/schedule-and-condition/schedule-and-condition schedule-and-condition}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Скидки и подарки</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Скидки и подарки</span><i
+            elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
     <div elem="section-cont">
         {{> master-data-edit/discounts-and-gifts/discounts-and-gifts discounts-and-gifts}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>О себе</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>О себе</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    </p>
+
     <div elem="section-cont">
         {{> master-data-edit/about/about about}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Полезно почитать</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Полезно почитать</span><i
+            elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+
     <div elem="section-cont">
         {{> master-data-edit/useful-read/useful-read useful-read}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Фото</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Фото</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    </p>
+
     <div elem="section-cont">
         {{> master-data-edit/photo/photo photo}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Видео</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Видео</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    </p>
+
     <div elem="section-cont">
         {{> master-data-edit/video/video video}}
     </div><!--master-data-edit__section-cont-->
 
-     <p elem="section-title"><a href="#"><span>Отзывы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
+    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Отзывы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    </p>
+
     <div elem="section-cont">
         {{> master-data-edit/reviews/reviews reviews}}
     </div><!--master-data-edit__section-cont-->

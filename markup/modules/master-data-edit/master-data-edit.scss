@@ -1,18 +1,20 @@
 .master-data-edit {
-  &__popup_test {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 100;
-  }
+  $avatar-size: 220px;
+  position: relative;
   &__section-cont {
     padding-bottom: 20px;
+    position: relative;
+    &.edit {
+      background-color: $color-bg;
+      padding: 20px;
+      margin-bottom: 20px;
+      z-index: 1001;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      .master-data-edit__btn-cont {display: block}
+    }
   }
   &__column-1 {
-    width: 220px;
+    width: $avatar-size + 20px;
     float: left;
     //    border: 1px solid blue;
     @include at(sm) {
@@ -21,7 +23,7 @@
     }
   }
   &__column-2 {
-    margin-left: 220px;
+    margin-left: $avatar-size + 20px;
     //    border: 1px solid blue;
     min-width: 200px;
     @include at(sm) {
@@ -29,19 +31,20 @@
     }
   }
   &__avatar-cont {
-    width: 200px;
-    height: 200px;
+    width: $avatar-size;
+    height: $avatar-size;
     overflow: hidden;
     margin-right: 20px;
     margin-bottom: 4px;
     @extend %icon;
     @extend %icon_man;
     @extend %icon_block;
-    @include icon_size(200px);
+    @include icon_size($avatar-size);
     //    float: left;
   }
   &__avatar {
-    @include img-max-size(200px, 200px);
+    @include img-max-size($avatar-size, $avatar-size);
+    width: $avatar-size;
   }
   &__master-name {
     font-size: 4rem;
@@ -58,27 +61,41 @@
     clear: right;
     a {
       text-decoration: none;
+      color: inherit;
+      cursor: default;
+      span:first-child {
+        margin-right: 6px;
+      }
     }
     i + span {
-      transition: opacity 0.2s ease-out 0.1s;
-      opacity: 0;
-      font-weight: normal;
-      font-size: 1.4rem;
-      color: $color-bg-grey-medium;
-      margin-left: 6px;
+      display: none;
     }
-    &:hover i + span {
-      display: inline;
-      opacity: 1
-    }
-    span:first-child {
-      margin-right: 8px;
-      height: 1.3em;
-      display: inline-block
-    }
-    &:hover span:first-child {
-      border-bottom: 1px dashed;
-      color: #888;
+    &_edit {
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      i + span {
+        transition: opacity 0.2s ease-out 0.1s;
+        opacity: 0;
+        font-weight: normal;
+        font-size: 1.4rem;
+        color: $color-bg-grey-medium;
+        margin-left: 6px;
+      }
+      &:hover i + span {
+        display: inline;
+        opacity: 1
+      }
+      span:first-child {
+        margin-right: 8px;
+        height: 1.3em;
+        display: inline-block
+      }
+      &:hover span:first-child {
+        border-bottom: 1px dashed;
+        color: #888;
+      }
     }
   }
   &__edit-link {
@@ -109,5 +126,16 @@
       @include icon_size(16px);
       vertical-align: middle;
     }
+  }
+  &__btn-cont {
+    display: none;
+    height: $button-mid-height;
+    margin-top: 20px;
+  }
+  &__download-image-btn, &__select-image-btn {
+    height: $button-mid-height;
+    width: $button-mid-width;
+    float: left;
+    margin-right: 20px;
   }
 }

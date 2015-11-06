@@ -1,59 +1,81 @@
 .img-upload {
   text-align: center;
   display: none;
-  &__wrapper {
-    display: inline-block;
+  position: relative;
+  background-color: $color-bg;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  &__ico-close {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    @extend %icon;
+    @extend %icon_close;
+    @include icon_size(18px);
+    cursor: pointer;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
   }
-  /* ---- CropIt ---- */
-  .image-cropper {
+  &__wrapper {      //image-cropper
+    /* ---- CropIt ---- */
     padding: 50px;
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 330px;
     margin-bottom: 20px;
     overflow: hidden;
-  }
-  .cropit-image-preview-container {
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-    border: 1px dashed #999;
-    box-sizing: content-box;
-  }
-  .cropit-image-preview {
-    /* You can specify preview size in CSS */
-    width: 200px;
-    height: 200px;
-    cursor: grab;
-  }
-  .cropit-image-background {
-    opacity: .2;
-  }
-  /* ---- Слайдер ---- */
-  .slider-wrapper {
-//    border: 1px solid blue;
-    height: 22px;
-    vertical-align: middle;
-    text-align: center;
-  }
-  .cropit-slider {
-    display: inline-block;
-    width: 150px;
-    margin: 0 18px;
-    vertical-align: middle;
-  }
-  .icon-image {
-    display: inline-block;
-    @extend %icon;
-    @extend %icon_image;
-    @include icon_size(20px);
-    vertical-align: middle;
-  }
-  .icon-image.small-image {
-    @include icon_size(16px);
-  }
-  .js-open-file, .js-reset-file {
-    display: none;
+    .cropit-image-preview-container {
+      margin: 0 auto;
+      width: 220px;
+      height: 220px;
+      margin-bottom: 20px;
+      border: 1px dashed #999;
+      box-sizing: content-box;
+    }
+    .cropit-image-preview {
+      /* You can specify preview size in CSS */
+      width: 220px;
+      height: 220px;
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+    .cropit-image-preview.grabbing {
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }
+    .cropit-image-background {
+      opacity: .2;
+    }
+    /* ---- Слайдер ---- */
+    .slider-wrapper {
+      //    border: 1px solid blue;
+      height: 22px;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .cropit-slider {
+      display: inline-block;
+      width: 150px;
+      margin: 0 18px;
+      vertical-align: middle;
+    }
+    .icon-image {
+      display: inline-block;
+      @extend %icon;
+      @extend %icon_image;
+      @include icon_size(20px);
+      vertical-align: middle;
+    }
+    .icon-image.small-image {
+      @include icon_size(16px);
+    }
+    .js-open-file {
+      display: none;
+    }
   }
 
   /* ---- Кнопки ---- */
@@ -75,18 +97,20 @@
     font-family: "Cheeseusaceu", serif;
     font-size: 1.8rem;
     color: #666;
-    width: 150px;
-//    border: 1px solid red;
+    width: 154px;
+    //    border: 1px solid red;
     position: absolute;
-    top:50%; left: 50%;
+    top: 50%;
+    left: 50%;
     margin-left: 130px;
     i {
-      background:  url('%=staticPrefixForCss=%general/lk/arrowDown.png') 0 0 no-repeat;
-      width: 71px; height: 36px;
+      background: url('%=staticPrefixForCss=%general/lk/arrowDown.png') 0 0 no-repeat;
+      width: 71px;
+      height: 36px;
       position: absolute;
       display: block;
       transform: scale(-1, 1);
-      left: -75px;
+      left: -64px;
       top: 10px;
     }
   }
@@ -94,8 +118,9 @@
     top: 67px;
   }
   &__help2 {
-    margin-top: 40px;
-    left: auto; right: 50%;
+    margin-top: 35px;
+    left: auto;
+    right: 50%;
     margin-left: auto;
     margin-right: 120px;
     i {
