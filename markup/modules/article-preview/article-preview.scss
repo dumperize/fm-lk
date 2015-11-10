@@ -1,5 +1,7 @@
 .article-preview {
-  min-height: 134px;
+  min-height: 100px;
+  height: 100px;
+  overflow: hidden;
   position: relative;
   &:hover a + .article-preview__wrapper  {
     background-color: #DDD;

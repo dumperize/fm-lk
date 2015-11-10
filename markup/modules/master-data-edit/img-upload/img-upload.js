@@ -12,7 +12,6 @@ $(document).ready(function () {
 $('.js-input-photo').change(function (e) {
     var file = e.target.files[0];
     var id = '#' + $(this).parents('.img-upload').first().attr('id');
-    //console.log(id);
     canvasResize(file, {
         width: 800,
         height: 0,
@@ -33,7 +32,6 @@ $('.js-input-photo').change(function (e) {
 //Инициализация cropit и jquery-ui slider
 function initCropit(selector) {
     var cropitSelector = selector + '-cropper';
-    console.log(cropitSelector);
     $(selector).find('.cropit-slider').slider({
         min: 0,
         max: 1,
@@ -46,6 +44,9 @@ function initCropit(selector) {
                 $('body').addClass('blackout');
                 $(selector).css('z-index', '1001');
                 $(selector).show();
+                $('html, body').animate({
+                    scrollTop: $(selector).offset().top
+                }, 600);
                 //$.fancybox.open(selector,
                 //    {
                 //        minWidth: '600px',

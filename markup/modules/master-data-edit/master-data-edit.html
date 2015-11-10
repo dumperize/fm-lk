@@ -8,8 +8,7 @@
                 {{/if}}
             </div>
 
-            <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Загрузить фотографию</a>
-            </p>
+            <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Загрузить фотографию</a></p>
 
         </div><!--column-1-->
 
@@ -21,19 +20,12 @@
                 <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Специализация</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
                 </p>
 
-                <p elem="specialization">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                <p elem="specialization" id="mde-specialization">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
                     doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
                     architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit,
                     aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem.</p>
 
-                <div elem="btn-cont">
-                    <div elem="select-image-btn" mix="block:js-edit-block-save">
-                        <a href="{{edit-save.url}}" block="button" mod="orange" >Сохранить</a>
-                    </div>
-                    <div elem="download-image-btn" mix="block:js-edit-block-cancel">
-                        <a href="#" block="button" mod="grey" >Отмена</a>
-                    </div>
-                </div><!--btn-cont-->
+                {{> master-data-edit/edit-btn/edit-btn edit-btn}}
 
             </div><!--master-data-edit__section-cont-->
 
@@ -47,7 +39,7 @@
         </p>
 
         {{> master-data-edit/contact/contact contact}}
-
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
 
@@ -56,63 +48,72 @@
         </p>
 
         {{> master-data-edit/filter/filter filter}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Услуги</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
-    </p>
-
     <div elem="section-cont">
-        {{> master-data-edit/service/service service}}
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="/master-data-edit/json.json"><span>Услуги</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
+        <div elem="hide-edit">
+            {{> master-data-edit/service/service service}}
+        </div>
+        {{> master-data-edit/service/service-edit service-edit}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Режим и условия работы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
-    </p>
 
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Режим и условия работы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
         {{> master-data-edit/schedule-and-condition/schedule-and-condition schedule-and-condition}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Скидки и подарки</span><i
-            elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
 
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Скидки и подарки</span><i
+                elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
         {{> master-data-edit/discounts-and-gifts/discounts-and-gifts discounts-and-gifts}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>О себе</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
-    </p>
 
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>О себе</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
         {{> master-data-edit/about/about about}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Полезно почитать</span><i
-            elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
 
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Полезно почитать</span><i
+                elem="edit-ico"></i><span>—&nbsp;редактировать</span></a></p>
         {{> master-data-edit/useful-read/useful-read useful-read}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Фото</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
-    </p>
 
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Фото</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
         {{> master-data-edit/photo/photo photo}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Видео</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
-    </p>
-
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Видео</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
         {{> master-data-edit/video/video video}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
-    <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Отзывы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
-    </p>
-
     <div elem="section-cont">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Отзывы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+        </p>
         {{> master-data-edit/reviews/reviews reviews}}
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
 </div><!--master-data-edit-->

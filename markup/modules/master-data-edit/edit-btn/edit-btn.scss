@@ -1,0 +1,11 @@
+.mde-btn-cont {
+  display: none;
+  height: $button-mid-height;
+  margin-top: 20px;
+  &__save-btn, &__cancel-btn {
+    height: $button-mid-height;
+    width: $button-mid-width;
+    float: left;
+    margin-right: 20px;
+  }
+}

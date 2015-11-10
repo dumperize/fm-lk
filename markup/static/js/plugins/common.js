@@ -12,6 +12,7 @@ $('a.js-scrollto[href^=#]').each(function () {
 
 // запрос на валидацию формы
 function sendForm(form_DOM, successHandler, errorHandler) {
+    var form = form_DOM;
     jQuery.ajax({
         url: form_DOM.attr('action'),
         type: form_DOM.attr('method'),
@@ -20,7 +21,7 @@ function sendForm(form_DOM, successHandler, errorHandler) {
         success: function (response) {
             if (response.success) {
                 form_DOM.find('.error-summary').remove();
-                successHandler(response);
+                successHandler(response, form);
             } else {
                 form_DOM.find('.error-summary').remove();
                 form_DOM.prepend('<div class="error-summary format">' + response.errorSummary + '</div>');

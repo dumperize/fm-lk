@@ -1,0 +1,8 @@
+<form block="mde-service-edit" action="/master-data-edit/json.json" method="GET">
+    {{#repeat 10}}
+    <textarea name="specialization" class="mde-form-element" data-id="mde-specialization"></textarea>
+    {{/repeat}}
+    <div elem="add-btn" mix="block:js-add-service-field">
+        <a href="#" block="button">Добавить услугу</a>
+    </div>
+</form><!--mde-service-edit-->

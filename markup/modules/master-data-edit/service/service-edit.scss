@@ -1,0 +1,13 @@
+.mde-service-edit {
+  display: none;
+  textarea {
+    width: 100%;
+    resize: vertical;
+    display: none;
+    margin-bottom: 10px;
+  }
+  &__add-btn {
+    width: $button-mid-width;
+    margin-bottom: 40px;
+  }
+}
