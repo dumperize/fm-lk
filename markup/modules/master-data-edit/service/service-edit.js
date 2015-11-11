@@ -2,17 +2,24 @@ $('.js-add-service-field').click(function () {
     var formId = $(this).parent('form').first();
     var fields = formId.find('.mde-form-element');
     for (var i = 0; i < fields.length; i++) {
-        console.log(fields[i]);
-        if ($(fields[i]).is(':hidden')) {
-            $(fields[i]).show();
-            if (i == 9) {
+        if ($(fields[i]).closest('p').is(':hidden')) {
+            $(fields[i]).closest('p').show();
+            if (i + 1 == fields.length) {
                 $(this).hide();
-                alert('Достигнуто максимальное количество услуг');
+                formId.find('.mde-service-edit__max-service').show();
+                formId.find('.mde-service-edit__max-service').delay(3000).fadeOut('slow');
             }
             break;
         }
     }
     return false;
+});
+//$('.mde-form-element').elastic();
+$('.js-del-service-field').click(function () {
+    confirm('Удалить услугу?');
+    $(this).closest('p').hide();
+    $(this).siblings('textarea').val('');
+    $('.js-add-service-field').show();
 });
 
 function openActualData(currentBlock) {
@@ -21,17 +28,28 @@ function openActualData(currentBlock) {
     sendForm(formId, writeActualData, errorHandler);
 }
 function writeActualData(response, formId) {
+    //console.log(formId.find('.mde-form-element').first().attr('name'));
     var data = response;
-    //console.log(formId);
-    //for (var key in data.data) {
-    //    console.log(data.data[key]);
-    //}
-    if (formId.attr('class') == 'mde-service-edit') {
+    if (formId.attr('class') == 'mde-service-edit2') {
         $.each(data.data, function (index, element) {
             var fields = formId.find('.mde-form-element');
             $(fields[index]).val(element);
-            $(fields[index]).show();
+            $(fields[index]).closest('p').show();
         });
+    } else {
+        for (var key in data.data) {
+            //console.log(key + '' + data.data[key]);
+            if (Array.isArray(data.data[key])) {
+                formId.find('[name*=' + key + ']').each(function (i) {
+                    if (data.data[key][i]) {
+                        $(this).val(data.data[key][i]);
+                        $(this).closest('p').show();
+                    }
+                });
+            } else {
+                formId.find('[name=' + key + ']').val(data.data[key]);
+            }
+        }
     }
 }
 function saveServiceForm(response, formId) {
@@ -61,14 +79,12 @@ function saveServiceForm(response, formId) {
         if (fieldsValLength < 30) {
             fieldsValLength = 30;
         }
-        if (fieldsValHalfSum <= fieldsValSum / 2) {
+        //console.log(fieldsValHalfSum + ' ' + fieldsValSum);
+        if (fieldsValHalfSum < fieldsValSum / 2) {
             $(list[0]).append('<li>' + fieldsVal + '</li>');
         } else {
             $(list[1]).append('<li>' + fieldsVal + '</li>');
         }
         fieldsValHalfSum += fieldsValLength;
     }
-}
-function successHandler() {
-    console.log('ОК!');
 }

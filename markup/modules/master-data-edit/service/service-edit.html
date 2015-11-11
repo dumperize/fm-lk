@@ -1,7 +1,11 @@
-<form block="mde-service-edit" action="/master-data-edit/json.json" method="GET">
-    {{#repeat 10}}
-    <textarea name="specialization" class="mde-form-element" data-id="mde-specialization"></textarea>
+<form block="mde-service-edit" action="/master-data-edit/json2.json" method="GET">
+    {{#repeat 8}}
+    <p elem="textarea-cont">
+        <i elem="ico-del" mix="block:js-del-service-field"></i>
+        <textarea name="service[]" class="mde-form-element"></textarea>
+    </p>
     {{/repeat}}
+    <p elem="max-service">Достигнуто максимальное количество услуг</p>
     <div elem="add-btn" mix="block:js-add-service-field">
         <a href="#" block="button">Добавить услугу</a>
     </div>

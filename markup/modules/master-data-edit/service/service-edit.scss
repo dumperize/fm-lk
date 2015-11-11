@@ -1,10 +1,33 @@
 .mde-service-edit {
   display: none;
-  textarea {
-    width: 100%;
-    resize: vertical;
+  &__textarea-cont {
+    position: relative;
     display: none;
-    margin-bottom: 10px;
+    textarea {
+      @extend .mde-textarea;
+    }
+  }
+  &__ico-del {
+    position: absolute;
+    display: block;
+    @extend %icon;
+    @extend %icon_close;
+    @include icon_size(12px);
+    right: 3px;
+    top: 3px;
+    z-index: 10;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    &:hover + textarea {
+      background-color: $color-bg-warning;
+    }
+  }
+  &__max-service {
+    @extend .standard-error;
+    display: none;
   }
   &__add-btn {
     width: $button-mid-width;

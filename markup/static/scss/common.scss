@@ -149,6 +149,13 @@ $footer-height-xs:110px; //высота футера-xs
     width: auto;
     height: auto;
 }
+.standard-error {
+    padding: 8px 10px;
+    background-color: $color-bg-warning;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 
 
 //

@@ -1,0 +1,6 @@
+.mde-specialization-edit {
+  display: none;
+  textarea {
+    @extend .mde-textarea;
+  }
+}

@@ -6,6 +6,7 @@ $('.js-edit-block').click(function () {
     currentBlock.find('.master-data-edit__hide-edit').hide();
     currentBlock.find('form').show();
     currentBlock.find('.mde-btn-cont').show();
+    currentBlock.find('textarea').elastic();
     openActualData(currentBlock);
     return false;
 });
@@ -34,7 +35,7 @@ function mdeCloseEditBlock(currentBlock) {
 function errorHandler(response) {
     alert('Ошибка!');
 }
-function sucseesHandler(response) {
-    alert('Ура!');
+function successHandler() {
+    console.log('ОК!');
 }
 
