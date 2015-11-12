@@ -112,7 +112,7 @@ var tarsConfig = {
          * Switch to false, if you don't need to open browser in dev mode
          * @type {Boolean}
          */
-        open: true,
+        open: false,
 
         /**
          * Choose browser to open
@@ -120,7 +120,7 @@ var tarsConfig = {
          * Example: ['google chrome', 'firefox']
          * Avalible: safari, internet explorer, google chrome, firefox, opera
          */
-        browser: 'firefox',
+        browser: 'google chrome',
 
         /**
          * Choose the page to open in browser at first opening

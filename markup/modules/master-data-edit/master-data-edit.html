@@ -38,7 +38,11 @@
         <p elem="section-title" mod="edit" mix="block:js-edit-block" mix="block:js-show-popup"><a href="#"><span>Контакты</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
         </p>
 
-        {{> master-data-edit/contact/contact contact}}
+        <div elem="hide-edit">
+            {{> master-data-edit/contact/contact contact}}
+        </div>
+
+        {{> master-data-edit/contact/contact-edit contact-edit}}
         {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
@@ -47,7 +51,10 @@
         <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Фильтры</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
         </p>
 
-        {{> master-data-edit/filter/filter filter}}
+        <div elem="hide-edit">
+            {{> master-data-edit/filter/filter filter}}
+        </div>
+
         {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 
@@ -55,9 +62,11 @@
     <div elem="section-cont">
         <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="/master-data-edit/json.json"><span>Услуги</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
         </p>
+
         <div elem="hide-edit">
             {{> master-data-edit/service/service service}}
         </div>
+
         {{> master-data-edit/service/service-edit service-edit}}
         {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
@@ -66,7 +75,12 @@
     <div elem="section-cont">
         <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Режим и условия работы</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
         </p>
-        {{> master-data-edit/schedule-and-condition/schedule-and-condition schedule-and-condition}}
+
+        <div elem="hide-edit">
+            {{> master-data-edit/schedule-and-condition/schedule-and-condition schedule-and-condition}}
+        </div>
+
+        {{> master-data-edit/schedule-and-condition/schedule-and-condition-edit schedule-and-condition-edit}}
         {{> master-data-edit/edit-btn/edit-btn edit-btn}}
     </div><!--master-data-edit__section-cont-->
 

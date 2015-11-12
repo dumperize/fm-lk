@@ -1,0 +1,28 @@
+.mde-contact-edit {
+  display: none;
+  label {
+    margin-bottom: 10px;
+    display: block;
+    input {
+      padding: 2px 6px;
+      width: 90%;
+    }
+  }
+  &__phone-ico, &__email-ico, &__skype-ico, &__icq-ico, &__placemark-ico {
+    @extend %icon;
+    @extend %icon_inline;
+    @include icon_size(18px);
+    margin-right: 10px;
+    margin-top: -3px;
+    vertical-align: middle;
+  }
+  &__phone-ico {@extend %icon_phone;}
+  &__skype-ico {@extend %icon_skype;}
+  &__email-ico {@extend %icon_email;}
+  &__icq-ico {@extend %icon_icq;}
+  &__placemark-ico {@extend %icon_placemark;}
+  &__column-1, &__column-2 {
+    @extend .col-md-6;
+  }
+  &__clear {clear: left}
+}

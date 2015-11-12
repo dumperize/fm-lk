@@ -1,0 +1,35 @@
+.schedule-and-condition {
+  &_edit {
+    label {
+      display: block;
+      input {
+        margin-right: 4px;
+      }
+      span {
+        display: inline-block;
+        max-width: 86%;
+      }
+    }
+    label * {
+      vertical-align: middle;
+    }
+  }
+}
+.schedule-and-condition_edit {
+  display: none;
+  .schedule-and-condition {
+    &__list li li {
+      padding-left: 20px;
+      label input {
+        vertical-align: top;
+        position: relative;
+        top: 3px;
+      }
+    }
+    &__list-big-cont {
+      &_wide {
+        width: 100%;
+      }
+    }
+  }
+}
