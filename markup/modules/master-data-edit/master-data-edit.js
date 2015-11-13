@@ -38,4 +38,44 @@ function errorHandler(response) {
 function successHandler() {
     console.log('ОК!');
 }
+function openActualData(currentBlock) {
+    var formId = currentBlock.find('form');
+    //var formLength = currentBlock.find('.mde-form-element').length;
+    sendForm(formId, writeActualData, errorHandler);
+}
+function writeActualData(response, formId) {
+    //console.log(formId.find('.mde-form-element').first().attr('name'));
+    var data = response;
+    for (var key in data.data) {
+        //console.log(key + '' + data.data[key]);
+        if (Array.isArray(data.data[key])) {
+            formId.find('[name*=' + key + ']').each(function (i) {
+                if ($(this).attr('type') == 'checkbox') {
+                    for (var j = 0; j < data.data[key].length; j++) {
+                        if (data.data[key][j] == $(this).val()) {
+                            $(this).attr('checked', true);
+                            break;
+                        }
+                    }
+                } else {
+                    if (data.data[key][i]) {
+                        $(this).val(data.data[key][i]);
+                        $(this).closest('p').show();
+                    }
+                }
+            });
+        } else {
+            var field = $(formId).find('[name=' + key + ']');
+            if ($(field).attr('type') == 'checkbox') {
+                //alert('if ' + $(field).attr('type'));
+                $(field).attr('checked');
+            } else if ($(field).attr('type') == 'radio') {
+                $(formId).find('[name=' + key + '][value=' + data.data[key] + ']').attr('checked', true);
+            } else {
+                $(field).val(data.data[key]);
+                $(field).closest('p').show();
+            }
+        }
+    }
+}
 

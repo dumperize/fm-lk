@@ -3,10 +3,10 @@
     <p elem="list-caption">Выезд на дом</p>
 
     <ul elem="list">
-        <li><label><input type="radio" name="radio_name1"><span>Выезд на дом бесплатно</span></label></li>
-        <li><label><input type="radio" name="radio_name1"><span>Платный выезд на дом</span></label></li>
-        <li><label><input type="radio" name="radio_name1"><span>Выезд на дом не осуществляю</span></label></li>
-        <li><label><input type="radio" name="radio_name1"><span>Бесплатно по городу, выезд за город платно</span></label></li>
+        <li><label><input type="radio" name="radio_name1" value="0"><span>Выезд на дом бесплатно</span></label></li>
+        <li><label><input type="radio" name="radio_name1" value="1"><span>Платный выезд на дом</span></label></li>
+        <li><label><input type="radio" name="radio_name1" value="2"><span>Выезд на дом не осуществляю</span></label></li>
+        <li><label><input type="radio" name="radio_name1" value="3"><span>Бесплатно по городу, выезд за город платно</span></label></li>
     </ul>
 
     <div elem="list-big-cont">
@@ -16,13 +16,13 @@
             <p elem="list-caption" mod="mini">Город</p>
 
             <ul elem="list">
-                <li><label><input type="checkbox" name="check_name1[]"><span>Автозаводский</span></label></li>
+                <li><label><input type="checkbox" name="check_name1[]" value="123"><span>Автозаводский</span></label></li>
                 <li><label><input type="checkbox" name="check_name1[]"><span>Центральный</span></label></li>
                 <li><label><input type="checkbox" name="check_name1[]"><span>Комсомольский</span></label></li>
-                <li><label><input type="checkbox" name="check_name1[]"><span>Шлюзовой</span></label></li>
+                <li><label><input type="checkbox" name="check_name1[]" value="1234"><span>Шлюзовой</span></label></li>
                 <li><label><input type="checkbox" name="check_name1[]"><span>5 ВСО</span></label></li>
                 <li><label><input type="checkbox" name="check_name1[]"><span>Жиг. море</span></label></li>
-                <li><label><input type="checkbox" name="check_name1[]"><span>Весь пригород</span></label></li>
+                <li><label><input type="checkbox" name="check_name1[]" value="12345"><span>Весь пригород</span></label></li>
             </ul>
         </div><!--list-cont-->
 
@@ -85,18 +85,33 @@
         <p elem="list-caption">Режим работы</p>
 
         <div elem="list-cont">
-            <ul elem="list">
-                <li><label><input type="radio" name="radio_name2"><span>Круглосуточно</span></label></li>
-                <li><label><input type="radio" name="radio_name2"><span>Рабочие дни</span></label></li>
-                <li><label><input type="radio" name="radio_name2"><span>Другое</span></label></li>
+            <ul elem="list" mix="block:js-select-schedule">
+                <li>
+                    <label>
+                        <input type="radio" name="radio_name2" data-id="#mde-schedule_1">
+                        <span>Круглосуточно</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="radio_name2" data-id="#mde-schedule_2">
+                        <span>Рабочие дни</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="radio_name2" data-id="#mde-schedule_3">
+                        <span>Другое</span>
+                    </label>
+                </li>
             </ul>
         </div><!--list-cont-->
 
-        <div elem="list-cont">
+        <div elem="list-cont" id="mde-schedule_2">
             <ul elem="list">
                 <li>Рабочие дни:</li>
                 <li>
-                    C
+                    <span>C</span>
                     <select>
                         <option>Понедельник</option>
                         <option>Вторник</option>
@@ -106,8 +121,7 @@
                         <option>Суббота</option>
                         <option>Воскресенье</option>
                     </select>
-
-                    по
+                    <span>по</span>
                     <select>
                         <option>Понедельник</option>
                         <option>Вторник</option>
@@ -120,7 +134,7 @@
                 </li>
                 <li>Рабочее время:</li>
                 <li>
-                    C
+                    <span>C</span>
                     <select>
                         <option>0</option>
                         <option>1</option>
@@ -148,8 +162,7 @@
                         <option>23</option>
                         <option>24</option>
                     </select>
-
-                    по
+                    <span>до</span>
                     <select>
                         <option>0</option>
                         <option>1</option>
@@ -182,19 +195,445 @@
 
         </div><!--list-cont-->
 
-        <div elem="list-cont" style="display: none">
-            <ul elem="list">
-                <li><label><input type="checkbox" name="check_name2[]"><span>Приморский</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Подстепки</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Ягодное</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Русская борковка</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Выселки</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Васильевка</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Тимофеевка</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Зеленовка</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Федоровка</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Жигулевск</span></label></li>
-                <li><label><input type="checkbox" name="check_name2[]"><span>Поволжский</span></label></li>
+        <div elem="list-cont" id="mde-schedule_3">
+            <ul elem="list" mod="timetable">
+                <li>
+                    <label>
+                        <input type="checkbox" name="check_name3[]">
+                        <span>пн.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="check_name3[]">
+                        <span>вт.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="check_name3[]">
+                        <span>ср.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="check_name3[]">
+                        <span>чт.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="check_name3[]">
+                        <span>пт.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="check_name3[]">
+                        <span>сб.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="check_name3[]">
+                        <span>вс.</span>
+                    </label>
+
+                    <span>с</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option selected="selected">9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                    <span>до</span>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option selected="selected">18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </li>
             </ul>
         </div><!--list-cont-->
 

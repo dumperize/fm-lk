@@ -21,37 +21,6 @@ $('.js-del-service-field').click(function () {
     $(this).siblings('textarea').val('');
     $('.js-add-service-field').show();
 });
-
-function openActualData(currentBlock) {
-    var formId = currentBlock.find('form');
-    //var formLength = currentBlock.find('.mde-form-element').length;
-    sendForm(formId, writeActualData, errorHandler);
-}
-function writeActualData(response, formId) {
-    //console.log(formId.find('.mde-form-element').first().attr('name'));
-    var data = response;
-    if (formId.attr('class') == 'mde-service-edit2') {
-        $.each(data.data, function (index, element) {
-            var fields = formId.find('.mde-form-element');
-            $(fields[index]).val(element);
-            $(fields[index]).closest('p').show();
-        });
-    } else {
-        for (var key in data.data) {
-            //console.log(key + '' + data.data[key]);
-            if (Array.isArray(data.data[key])) {
-                formId.find('[name*=' + key + ']').each(function (i) {
-                    if (data.data[key][i]) {
-                        $(this).val(data.data[key][i]);
-                        $(this).closest('p').show();
-                    }
-                });
-            } else {
-                formId.find('[name=' + key + ']').val(data.data[key]);
-            }
-        }
-    }
-}
 function saveServiceForm(response, formId) {
     var list = formId.parent('.master-data-edit__section-cont').first().find('.mde-service__list');
     //var formId = currentBlock.find('form');

@@ -1,7 +1,7 @@
 .schedule-and-condition {
   &_edit {
     label {
-      display: block;
+      //display: block;
       input {
         margin-right: 4px;
       }
@@ -18,6 +18,27 @@
 .schedule-and-condition_edit {
   display: none;
   .schedule-and-condition {
+    &__list-cont[id*=mde-schedule] {
+      display: none;
+    }
+    &__list {
+      * {
+        vertical-align: middle;
+      }
+      &_timetable {
+        li {
+          margin-bottom: 4px;
+        }
+        label {
+          display: inline-block;
+          width: 50px;
+          margin-bottom: 1px;
+        }
+        select {
+          margin: 0 4px;
+        }
+      }
+    }
     &__list li li {
       padding-left: 20px;
       label input {
