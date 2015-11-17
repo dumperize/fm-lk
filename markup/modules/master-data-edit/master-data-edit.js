@@ -78,4 +78,3 @@ function writeActualData(response, formId) {
         }
     }
 }
-
