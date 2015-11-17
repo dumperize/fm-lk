@@ -21,6 +21,38 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    position: relative;
+  }
+  &__edit, &__del {
+    display: none;
+    height: inherit;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.2);
+    width: 34px;
+    padding: 8px;
+    span {
+      display: block;
+      @extend %icon;
+      @include icon_size(20px);
+      opacity: 0.8;
+    }
+    &:hover {
+      background-color: rgba(255,255,255,0.4);
+      span { opacity: 1; }
+    }
+  }
+  &__del {
+    span {
+      @extend %icon_close;
+    }
+  }
+  &__edit {
+    right: 34px;
+    span {
+      @extend %icon_pencil_edit;
+    }
   }
   &__img-cont {
     width: 100px;
@@ -51,4 +83,13 @@
   }
   &__text {padding-top: 10px; padding-right: 10px}
   &__clear {clear: both}
+  &_edit {
+    .discounts {
+      &__url {display: none}
+      &__edit, &__del {display: block}
+    }
+    &:hover a + .discounts__header {
+      background-color: $color-orange;
+    }
+  }
 }

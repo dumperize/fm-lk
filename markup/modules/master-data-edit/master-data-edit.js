@@ -1,13 +1,13 @@
 $('.js-edit-block').click(function () {
-    $('body').addClass('blackout');
     $(this).removeClass('master-data-edit__section-title_edit');
     var currentBlock = $(this).parents('.master-data-edit__section-cont').first();
-    currentBlock.addClass('edit');
-    currentBlock.find('.master-data-edit__hide-edit').hide();
-    currentBlock.find('form').show();
-    currentBlock.find('.mde-btn-cont').show();
-    currentBlock.find('textarea').elastic();
-    openActualData(currentBlock);
+    mdeOpenEditBlock(currentBlock);
+    return false;
+});
+$('.js-edit-block-discounts').click(function () {
+    $(this).removeClass('master-data-edit__section-title_edit');
+    var currentBlock = $(this).parents('.master-data-edit__section-cont').first();
+    mdeOpenEditBlockDiscounts(currentBlock);
     return false;
 });
 $('.js-edit-block-cancel').click(function () {
@@ -26,17 +26,29 @@ $('.js-edit-block-save').click(function () {
 });
 function mdeCloseEditBlock(currentBlock) {
     $('body').removeClass('blackout');
-    currentBlock.find('.js-edit-block').addClass('master-data-edit__section-title_edit');
+    currentBlock.find('.master-data-edit__section-title').addClass('master-data-edit__section-title_edit');
     currentBlock.removeClass('edit');
     currentBlock.find('form').hide();
     currentBlock.find('.master-data-edit__hide-edit').show();
     currentBlock.find('.mde-btn-cont').hide();
+    currentBlock.find('.discounts').removeClass('discounts_edit'); //Убрать элементы редакт. у discounts
 }
-function errorHandler(response) {
-    alert('Ошибка!');
+function mdeOpenEditBlock(currentBlock) {
+    $('body').addClass('blackout');
+    currentBlock.addClass('edit');
+    currentBlock.find('.master-data-edit__hide-edit').hide();
+    currentBlock.find('form').show();
+    currentBlock.find('.mde-btn-cont').show();
+    currentBlock.find('textarea').elastic();
+    //currentBlock.find('.mde-btn-cont__save-btn').show();
+    openActualData(currentBlock);
 }
-function successHandler() {
-    console.log('ОК!');
+function mdeOpenEditBlockDiscounts(currentBlock) {
+    $('body').addClass('blackout');
+    currentBlock.addClass('edit');
+    currentBlock.find('.discounts').addClass('discounts_edit');
+    //currentBlock.find('.mde-btn-cont__save-btn').hide();
+    currentBlock.find('.mde-btn-cont').show();
 }
 function openActualData(currentBlock) {
     var formId = currentBlock.find('form');
@@ -77,4 +89,10 @@ function writeActualData(response, formId) {
             }
         }
     }
+}
+function errorHandler(response) {
+    alert('Ошибка!');
+}
+function successHandler() {
+    console.log('ОК!');
 }

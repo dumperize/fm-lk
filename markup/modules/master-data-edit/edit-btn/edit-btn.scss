@@ -7,5 +7,9 @@
     width: $button-mid-width;
     float: left;
     margin-right: 20px;
+    &_long {
+      width: auto;
+      display: inline-block
+    }
   }
 }

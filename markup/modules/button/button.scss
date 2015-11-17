@@ -36,4 +36,9 @@
     font-size: 1.1rem;
     text-transform: none;
   }
+  &_long {
+    width: auto;
+    display: inline-block;
+    padding: 0 20px;
+  }
 }

@@ -1,9 +1,13 @@
-<div block="discounts">
+<div block="discounts"><!-- Кнопки удаления и редактирования mod="edit" -->
     {{#if url}}
     <a href="{{url}}" elem="url"></a>
     {{/if}}
 
-    <p elem="header">{{header-text}}</p>
+    <p elem="header">
+        {{header-text}}
+        <a href="#" elem="edit" mix="block:js-edit-block"><span></span></a>
+        <a href="#" elem="del"><span></span></a>
+    </p>
 
     <div elem="wrapper">
         <div elem="img-cont">
