@@ -41,6 +41,48 @@ function sendForm(form_DOM, successHandler, errorHandler) {
         cache: false
     });
 }
+function sendAjaxForm(formObj, successHandler, errorHandler) {
+    if (!successHandler) {
+        successHandler = ajaxSuccessHandler;
+    }
+    if (!errorHandler) {
+        errorHandler = ajaxErrorHandler;
+    }
+    $.ajax({
+        url: formObj.attr('action'),
+        dataType: 'json',
+        data: formObj.serialize(),
+        success: successHandler.bind(formObj),
+        error: errorHandler.bind(formObj)
+    });
+}
+function sendAjaxLink(obj, successHandler, errorHandler) {
+    if (!successHandler) {
+        successHandler = ajaxSuccessHandler;
+    }
+    if (!errorHandler) {
+        errorHandler = ajaxErrorHandler;
+    }
+    $.ajax({
+        url: obj.attr('href'),
+        dataType: 'json',
+        success: successHandler.bind(obj),
+        error: errorHandler.bind(obj)
+    });
+}
+function ajaxErrorHandler(jqXHR, status, err) {
+    console.log(status);
+}
+function ajaxSuccessHandler(response) {
+    console.log('ОК!');
+}
+// old handler
+function errorHandler(response) {
+    console.log('Ошибка!');
+}
+function successHandler(response) {
+    console.log('ОК!');
+}
 
 function yandexGoal_showPhone(masterID) {
     yaCounter21591305.reachGoal("show_number", {

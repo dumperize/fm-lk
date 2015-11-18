@@ -132,3 +132,15 @@
     clear: left;
   }
 }
+.mde-textarea {
+   width: 100%;
+   resize: vertical;
+   margin-bottom: 10px;
+   position: relative;
+   padding: 6px 6px;
+   height: 32px;
+   min-height: 32px;
+   overflow: hidden;
+   max-height:200px;
+   transition: height 0.1s ease-in-out 0.1s;
+ }

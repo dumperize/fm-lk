@@ -1,7 +1,38 @@
 <form block="discounts-and-gifts-edit" action="/master-data-edit/json2.json" method="GET">
 
-    <p>discounts-and-gifts-edit.html</p>
+    <div elem="column-1">
+        <div elem="img-cont">
+            <i elem="bg-ico"></i>
+            {{#if is-img-exist}}
+            <img elem="img" src="{{img.src}}" alt="{{img.alt}}">
+            {{/if}}
+        </div>
+        <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Изменить миниатюру</a></p>
 
-    {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+        <p elem="title">Тип скидки</p>
+        <ul elem="radio-list">
+            <li><label><span>Подарок</span><input type="radio" name="radio_name1" value="0"></label></li>
+            <li><label><span>Скидка в %</span><input type="radio" name="radio_name1" value="1"></label></li>
+            <li><label><span>Скидка в руб.</span><input type="radio" name="radio_name1" value="2"></label></li>
+        </ul>
+    </div>
+    <div elem="column-2">
+        <p elem="title">Заголовок</p>
+        <label elem="title-input"><input type="text" name="name1"></label>
+
+        <p elem="title">Описание скидки</p>
+        <textarea name="name2"></textarea>
+
+        <p elem="title">Дата окончания акции</p>
+        <label elem="end-date-input"><input type="text" name="name3"></label>
+
+        <p elem="title">Размер скидки</p>
+        <label elem="disc-value-input"><input type="text" name="name4"></label>
+    </div>
+
+    <br elem="clear">
+    <div elem="btn-cont">
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+    </div>
 
 </form><!--discounts-and-gifts-edit-->

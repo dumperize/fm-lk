@@ -1,5 +1,5 @@
 .mde-discounts-and-gifts {
-  &__discounts-cont {
+  &__discounts-cont, &__add-discounts-cont {
 //    width: 350px;
     @extend .col-md-6;
     height:135px;
@@ -7,6 +7,29 @@
     padding-right: 20px;
     margin-bottom: 20px;
     overflow: hidden;
+  }
+  &__add-discounts-cont  {
+    display: none;
+    a {
+      display: block;
+      height: inherit;
+      line-height: 135px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 2rem;
+      background-color: $color-bg-grey-light;
+      vertical-align: middle;
+      &:hover {
+        background-color: $color-bg-grey-light - #111111;
+      }
+    }
+    span {
+      font-size: 5rem;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+      margin-right: 6px;
+    }
   }
   &__clear {clear: both}
 }

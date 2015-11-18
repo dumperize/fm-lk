@@ -25,13 +25,18 @@ $('.js-edit-block-save').click(function () {
     return false;
 });
 function mdeCloseEditBlock(currentBlock) {
-    $('body').removeClass('blackout');
-    currentBlock.find('.master-data-edit__section-title').addClass('master-data-edit__section-title_edit');
-    currentBlock.removeClass('edit');
-    currentBlock.find('form').hide();
-    currentBlock.find('.master-data-edit__hide-edit').show();
-    currentBlock.find('.mde-btn-cont').hide();
-    currentBlock.find('.discounts').removeClass('discounts_edit'); //Убрать элементы редакт. у discounts
+    if (currentBlock.hasClass('two-step') && currentBlock.find('form').is(':visible')) {
+        currentBlock.find('form').hide();
+        currentBlock.find('.master-data-edit__hide-edit').show();
+    } else {
+        $('body').removeClass('blackout');
+        currentBlock.find('.master-data-edit__section-title').addClass('master-data-edit__section-title_edit');
+        currentBlock.removeClass('edit');
+        currentBlock.find('form').hide();
+        currentBlock.find('.master-data-edit__hide-edit').show();
+        currentBlock.find('.mde-btn-cont').hide();
+        currentBlock.find('.discounts').removeClass('discounts_edit'); //Убрать элементы редакт. у discounts
+    }
 }
 function mdeOpenEditBlock(currentBlock) {
     $('body').addClass('blackout');
@@ -40,26 +45,21 @@ function mdeOpenEditBlock(currentBlock) {
     currentBlock.find('form').show();
     currentBlock.find('.mde-btn-cont').show();
     currentBlock.find('textarea').elastic();
-    //currentBlock.find('.mde-btn-cont__save-btn').show();
     openActualData(currentBlock);
 }
 function mdeOpenEditBlockDiscounts(currentBlock) {
     $('body').addClass('blackout');
     currentBlock.addClass('edit');
     currentBlock.find('.discounts').addClass('discounts_edit');
-    //currentBlock.find('.mde-btn-cont__save-btn').hide();
     currentBlock.find('.mde-btn-cont').show();
 }
 function openActualData(currentBlock) {
     var formId = currentBlock.find('form');
-    //var formLength = currentBlock.find('.mde-form-element').length;
     sendForm(formId, writeActualData, errorHandler);
 }
 function writeActualData(response, formId) {
-    //console.log(formId.find('.mde-form-element').first().attr('name'));
     var data = response;
     for (var key in data.data) {
-        //console.log(key + '' + data.data[key]);
         if (Array.isArray(data.data[key])) {
             formId.find('[name*=' + key + ']').each(function (i) {
                 if ($(this).attr('type') == 'checkbox') {
@@ -89,10 +89,4 @@ function writeActualData(response, formId) {
             }
         }
     }
-}
-function errorHandler(response) {
-    alert('Ошибка!');
-}
-function successHandler() {
-    console.log('ОК!');
 }

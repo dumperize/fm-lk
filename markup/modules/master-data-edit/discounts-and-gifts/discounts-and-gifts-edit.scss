@@ -1,4 +1,48 @@
 .discounts-and-gifts-edit {
   display: none;
-
+  textarea {
+    @extend .mde-textarea;
+    min-height: 70px;
+  }
+  &__column-1 {
+    border: 1px solid blue;
+    width: 170px;
+    padding-right: 20px;
+    float: left;
+  }
+  &__column-2 {
+    border: 1px solid blue;
+    margin-left: 170px;
+  }
+  &__img-cont {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-right: 12px;
+    position: relative;
+    float: left;
+    background-color: $color-bg-grey-light;
+  }
+  &__bg-ico {
+    @extend %icon;
+    @extend %icon_gift_grey_light;
+    @extend %icon_block;
+    @include icon_size(100px);
+    position: absolute;
+    left: 25px;
+    top: 23px;
+    z-index: 0;
+  }
+  &__img {
+    @include img-max-size(150px, 150px);
+    position: relative;
+    z-index: 1;
+  }
+  &__btn-cont {
+    text-align: center;
+  }
+  &__btn-cont > div {
+    display: inline-block;
+  }
+  &__clear {clear: left}
 }
