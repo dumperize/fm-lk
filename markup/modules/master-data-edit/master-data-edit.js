@@ -65,7 +65,7 @@ function writeActualData(response, formId) {
                 if ($(this).attr('type') == 'checkbox') {
                     for (var j = 0; j < data.data[key].length; j++) {
                         if (data.data[key][j] == $(this).val()) {
-                            $(this).attr('checked', true);
+                            $(this).attr('checked', true).trigger('change');
                             break;
                         }
                     }
@@ -80,9 +80,9 @@ function writeActualData(response, formId) {
             var field = $(formId).find('[name=' + key + ']');
             if ($(field).attr('type') == 'checkbox') {
                 //alert('if ' + $(field).attr('type'));
-                $(field).attr('checked');
+                $(field).attr('checked').trigger('change');
             } else if ($(field).attr('type') == 'radio') {
-                $(formId).find('[name=' + key + '][value=' + data.data[key] + ']').attr('checked', true);
+                $(formId).find('[name=' + key + '][value=' + data.data[key] + ']').attr('checked', true).trigger('change');
             } else {
                 $(field).val(data.data[key]);
                 $(field).closest('p').show();

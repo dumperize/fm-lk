@@ -2,16 +2,15 @@
   display: none;
   textarea {
     @extend .mde-textarea;
-    min-height: 70px;
   }
   &__column-1 {
-    border: 1px solid blue;
+    //border: 1px solid blue;
     width: 170px;
     padding-right: 20px;
     float: left;
   }
   &__column-2 {
-    border: 1px solid blue;
+    //border: 1px solid blue;
     margin-left: 170px;
   }
   &__img-cont {
@@ -44,5 +43,64 @@
   &__btn-cont > div {
     display: inline-block;
   }
+  &__photo-upload {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      border-bottom: 1px dashed;
+      margin-left: 4px;
+      vertical-align: middle;
+      font-size: 1.2rem;
+    }
+    i {
+      @extend %icon;
+      @extend %icon_cogwheel;
+      @extend %icon_inline;
+      @include icon_size(12px);
+      vertical-align: middle;
+    }
+  }
+  &__title {
+    color: #444;
+    font-size: 1.6rem;;
+    margin-bottom: 4px;
+    font-weight: bold;
+    display: block;
+  }
+  &__radio-list {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+    label {
+      margin-bottom: 4px;
+    }
+    span {
+      display: inline-block;
+      width: 100px;
+      vertical-align: middle;
+    }
+    input {
+      vertical-align: middle;
+    }
+  }
+  &__label-cont > label {
+    float: left;
+    &:first-child {
+      margin-right: 17px;
+    }
+    span {
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 0;
+      vertical-align: middle;
+
+    }
+    input {margin-bottom: 0; vertical-align: middle;}
+    input + span {margin-left: 3px}
+  }
+  &__end-date-input, &__disc-value-input, &__title-input {padding: 2px 6px; margin-bottom: 8px}
+  &__end-date-input {width: 88px}
+  &__disc-value-input {width: 52px}
+  &__title-input {width: 100%}
   &__clear {clear: left}
 }

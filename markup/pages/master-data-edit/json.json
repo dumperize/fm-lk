@@ -42,6 +42,20 @@
           "text": "Сохранить"
         }
       },
+      "discount-upload": {
+        "title": "Загрузка фотографии скидок",
+        "popup-id": "img-upload2",
+        "select-button": {
+          "url": "#",
+          "mod": "grey",
+          "text": "Выбрать другое фото"
+        },
+        "download-button": {
+          "url": "#",
+          "mod": "orange",
+          "text": "Сохранить"
+        }
+      },
       "discounts-and-gifts": {
         "discounts": [
           {

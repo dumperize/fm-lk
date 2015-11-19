@@ -47,14 +47,6 @@ function initCropit(selector) {
                 $('html, body').animate({
                     scrollTop: $(selector).offset().top
                 }, 600);
-                //$.fancybox.open(selector,
-                //    {
-                //        minWidth: '600px',
-                //        closeEffect: 'none',
-                //        afterClose: function () {
-                //            $(selector).find('form').trigger('reset');
-                //        }
-                //    });
             }
             $(selector).find('.cropit-slider').slider('option', 'min', $(cropitSelector).cropit('zoom'));
             $(selector).find('.cropit-slider').slider('option', 'value', $(cropitSelector).cropit('zoom'));
@@ -82,7 +74,6 @@ $('.js-download-image-btn').click(function () {
                 }
             }
         });
-        //$.fancybox.close();
         $('.master-data-edit__avatar').attr('src', data); //вставка обрез. изображения в аватарку
         closeImgUpload(this);
         return false;
@@ -105,3 +96,11 @@ $('.cropit-image-preview').mousedown(function () {
 $('.cropit-image-preview').mouseup(function () {
     $('.cropit-image-preview').removeClass('grabbing');
 });
+//$.fancybox.open(selector,
+//    {
+//        minWidth: '600px',
+//        closeEffect: 'none',
+//        afterClose: function () {
+//            $(selector).find('form').trigger('reset');
+//        }
+//    });

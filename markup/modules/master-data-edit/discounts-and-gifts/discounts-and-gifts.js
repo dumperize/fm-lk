@@ -5,7 +5,7 @@ $('.js-del-discounts-block').click(function () {
     return false;
 });
 function delDiscountsBlock() {
-    this.closest('.discounts').parent().toggle(500, function () {
+    this.closest('.discounts').parent.toggle(500, function () {
         $(this).remove();
         addCreateDiscountsBlock();
     });

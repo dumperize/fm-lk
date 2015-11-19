@@ -113,12 +113,12 @@
   }
   &__photo-upload {
     vertical-align: middle;
+    margin-bottom: 30px;
     a {
       text-decoration: none;
       border-bottom: 1px dashed;
       margin-left: 6px;
       vertical-align: middle;
-      margin-bottom: 30px;
     }
     i {
       @extend %icon;

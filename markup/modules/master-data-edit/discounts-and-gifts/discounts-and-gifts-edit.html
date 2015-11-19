@@ -7,27 +7,33 @@
             <img elem="img" src="{{img.src}}" alt="{{img.alt}}">
             {{/if}}
         </div>
-        <p elem="photo-upload"><i></i><a href="#{{popup-id}}" mix="block:js-photo-upload">Изменить миниатюру</a></p>
+        <p elem="photo-upload"><i></i><a href="#img-upload2" mix="block:js-photo-upload">Изменить миниатюру</a></p>
 
         <p elem="title">Тип скидки</p>
-        <ul elem="radio-list">
-            <li><label><span>Подарок</span><input type="radio" name="radio_name1" value="0"></label></li>
-            <li><label><span>Скидка в %</span><input type="radio" name="radio_name1" value="1"></label></li>
-            <li><label><span>Скидка в руб.</span><input type="radio" name="radio_name1" value="2"></label></li>
+        <ul elem="radio-list" mix="block:js-discount-type-change">
+            <li><label><span>Подарок</span><input type="radio" name="radio_name1" value="0" data-id="0" checked></label></li>
+            <li><label><span>Скидка в %</span><input type="radio" name="radio_name1" value="1" data-id="1"></label></li>
+            <li><label><span>Скидка в руб.</span><input type="radio" name="radio_name1" value="2" data-id="2"></label></li>
         </ul>
     </div>
     <div elem="column-2">
-        <p elem="title">Заголовок</p>
-        <label elem="title-input"><input type="text" name="name1"></label>
+        <label><span elem="title">Заголовок</span>
+            <input elem="title-input" type="text" name="name1">
+        </label>
 
-        <p elem="title">Описание скидки</p>
-        <textarea name="name2"></textarea>
+        <label><span elem="title">Описание скидки</span>
+            <textarea name="name2"></textarea>
+        </label>
 
-        <p elem="title">Дата окончания акции</p>
-        <label elem="end-date-input"><input type="text" name="name3"></label>
+        <div elem="label-cont">
+            <label><span elem="title">Дата окончания акции</span>
+                <input elem="end-date-input" id="datepicker" type="text" name="name3">
+            </label>
 
-        <p elem="title">Размер скидки</p>
-        <label elem="disc-value-input"><input type="text" name="name4"></label>
+            <label mix="block:js-discount-type-value"><span elem="title">Размер скидки</span>
+               <input elem="disc-value-input" type="text" name="name4"><span id="disc-value"></span>
+            </label>
+        </div>
     </div>
 
     <br elem="clear">
