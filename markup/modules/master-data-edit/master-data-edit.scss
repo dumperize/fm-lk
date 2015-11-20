@@ -31,6 +31,7 @@
     }
   }
   &__avatar-cont {
+    position: relative;
     width: $avatar-size;
     height: $avatar-size;
     overflow: hidden;
@@ -38,7 +39,7 @@
     margin-bottom: 4px;
     @extend %icon;
     @extend %icon_man;
-    @extend %icon_block;
+    //@extend %icon_block;
     @include icon_size($avatar-size);
     //    float: left;
   }
@@ -144,3 +145,10 @@
    max-height:200px;
    transition: height 0.1s ease-in-out 0.1s;
  }
+.mde-new-image {
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}

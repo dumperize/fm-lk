@@ -1,22 +1,22 @@
 $('.js-edit-block').click(function () {
     $(this).removeClass('master-data-edit__section-title_edit');
-    var currentBlock = $(this).parents('.master-data-edit__section-cont').first();
+    var currentBlock = $(this).closest('.master-data-edit__section-cont');
     mdeOpenEditBlock(currentBlock);
     return false;
 });
 $('.js-edit-block-discounts').click(function () {
     $(this).removeClass('master-data-edit__section-title_edit');
-    var currentBlock = $(this).parents('.master-data-edit__section-cont').first();
+    var currentBlock = $(this).closest('.master-data-edit__section-cont');
     mdeOpenEditBlockDiscounts(currentBlock);
     return false;
 });
 $('.js-edit-block-cancel').click(function () {
-    var currentBlock = $(this).parents('.master-data-edit__section-cont').first();
+    var currentBlock = $(this).closest('.master-data-edit__section-cont');
     mdeCloseEditBlock(currentBlock);
     return false;
 });
 $('.js-edit-block-save').click(function () {
-    var currentBlock = $(this).parents('.master-data-edit__section-cont').first();
+    var currentBlock = $(this).closest('.master-data-edit__section-cont');
     var formId = currentBlock.find('form');
     if (formId.attr('class') == 'mde-service-edit') {
         sendForm(formId, saveServiceForm, errorHandler);

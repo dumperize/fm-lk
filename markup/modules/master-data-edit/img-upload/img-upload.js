@@ -19,7 +19,7 @@ $('.js-input-photo').change(function (e) {
         quality: 80,
         //rotate: 90,
         callback: function (data, width, height) {
-            if (width >= 200 && height >= 200) {
+            if (width >= 220 && height >= 220) {
                 initCropit(id);                                         //Инициализация cropit
                 $(id).find(id + '-cropper').cropit('imageSrc', data);   //передаем в cropit data (изображение)
             } else {
@@ -40,14 +40,7 @@ function initCropit(selector) {
     $(cropitSelector).cropit({
         imageBackground: true,
         onImageLoaded: function (object) {
-            if ($(selector).is(':hidden')) {
-                $('body').addClass('blackout');
-                $(selector).css('z-index', '1001');
-                $(selector).show();
-                $('html, body').animate({
-                    scrollTop: $(selector).offset().top
-                }, 600);
-            }
+            openImgUpload(selector);
             $(selector).find('.cropit-slider').slider('option', 'min', $(cropitSelector).cropit('zoom'));
             $(selector).find('.cropit-slider').slider('option', 'value', $(cropitSelector).cropit('zoom'));
         }
@@ -60,21 +53,21 @@ $('.cropit-slider').on('slide', function (event, ui) {
 });
 //Загрузка данных на сервер и вставка обрез. изображения в аватарку до загрузки на сервер
 $('.js-download-image-btn').click(function () {
-        var data = $(this).parents('.img-upload').first().find('.image-cropper').first().cropit('export');
+        var data = $(this).closest('.img-upload').find('.image-cropper').first().cropit('export');
         $.ajax({
-            url: $(this).attr('href'),
+            url: $(this).children('a').attr('href'),
             dataType: 'json',
-            type: 'POST',
+            type: 'GET', //важно! заменить на POST!
             data: {
-                img: data
+                //img: data
             },
             success: function (response) {
                 if (response.success) {
-                    console.log(response);
+                    saveImgOnPage(this, data);
                 }
-            }
+            }.bind($(this))
         });
-        $('.master-data-edit__avatar').attr('src', data); //вставка обрез. изображения в аватарку
+        //$('.master-data-edit__avatar').attr('src', data);
         closeImgUpload(this);
         return false;
     }
@@ -83,10 +76,38 @@ $('.js-download-image-btn').click(function () {
 $('.js-close-ico').click(function () {
     closeImgUpload(this);
 });
+function openImgUpload(selector) {
+    if ($(selector).is(':hidden')) {
+        $('body').addClass('blackout');
+        if ($(selector).closest('.master-data-edit__section-cont').hasClass('edit')) {
+            $(selector).closest('.master-data-edit__section-cont').removeClass('edit').find('form').hide();
+        }
+        $(selector).css('z-index', '1001');
+        $(selector).show();
+        //alert($(selector).offset().top);
+        $('html, body').animate({
+            scrollTop: $(selector).offset().top - 20
+        }, 600);
+    }
+}
 function closeImgUpload(selector) {
-    $(selector).parents('.img-upload').first().css('display', 'none');
-    $(selector).parents('.img-upload').find('form').trigger('reset');
-    $('body').removeClass('blackout');
+    $(selector).closest('.img-upload').css('display', 'none');
+    $(selector).closest('.img-upload').find('form').trigger('reset');
+    if ($(selector).closest('.master-data-edit__section-cont').hasClass('master-data-edit__section-cont')) {
+        $(selector).closest('.master-data-edit__section-cont').addClass('edit').find('form').show();
+    } else {
+        $('body').removeClass('blackout');
+    }
+}
+function  saveImgOnPage(btnSelector, data) {
+    var idImgSave = '#' + btnSelector.closest('.img-upload').attr('id') + '-save';
+    //console.log($(idImgSave).children().is('img'));
+    //if (!$(idImgSave).children('img').is('img')) {
+    //    $(idImgSave).append('<img>');
+    //}
+    $(idImgSave).append('<img class="mde-new-image">');
+    $(idImgSave).children('img').last().attr('src', data); //вставка обрез. изображения в аватарку
+    $(idImgSave).children('img').last().fadeIn(500);
 }
 //При клике на cropit-image-preview меняем вид курсора
 $('.cropit-image-preview').mousedown(function () {

@@ -27,7 +27,6 @@
         "url": "#"
       },
       "popup-id": "img-upload",
-      "popup-id2": "img-upload2",
       "avatar-upload": {
         "title": "Загрузка фотографии мастера",
         "popup-id": "img-upload",
@@ -41,6 +40,9 @@
           "mod": "orange",
           "text": "Сохранить"
         }
+      },
+      "discounts-and-gifts-edit": {
+        "popup-id2": "img-upload2"
       },
       "discount-upload": {
         "title": "Загрузка фотографии скидок",
