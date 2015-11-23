@@ -1,0 +1,13 @@
+.about-edit {
+  display: none;
+  textarea {
+    @extend .mde-textarea;
+    margin-bottom: 12px;
+  }
+  &__title {
+    color: #444;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+}

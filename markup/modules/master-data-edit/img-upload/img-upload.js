@@ -107,7 +107,11 @@ function  saveImgOnPage(btnSelector, data) {
     //}
     $(idImgSave).append('<img class="mde-new-image">');
     $(idImgSave).children('img').last().attr('src', data); //вставка обрез. изображения в аватарку
-    $(idImgSave).children('img').last().fadeIn(500);
+    $(idImgSave).children('img').last().fadeIn(500, function () {
+        if (1 < $(idImgSave).children('img').length) {
+            $(idImgSave).children('img').first().remove();
+        }
+    });
 }
 //При клике на cropit-image-preview меняем вид курсора
 $('.cropit-image-preview').mousedown(function () {

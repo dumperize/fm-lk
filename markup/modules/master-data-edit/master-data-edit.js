@@ -4,10 +4,10 @@ $('.js-edit-block').click(function () {
     mdeOpenEditBlock(currentBlock);
     return false;
 });
-$('.js-edit-block-discounts').click(function () {
+$('.js-edit-block-two-steps').click(function () {
     $(this).removeClass('master-data-edit__section-title_edit');
     var currentBlock = $(this).closest('.master-data-edit__section-cont');
-    mdeOpenEditBlockDiscounts(currentBlock);
+    mdeOpenEditBlockTwoSteps(currentBlock);
     return false;
 });
 $('.js-edit-block-cancel').click(function () {
@@ -47,7 +47,7 @@ function mdeOpenEditBlock(currentBlock) {
     currentBlock.find('textarea').elastic();
     openActualData(currentBlock);
 }
-function mdeOpenEditBlockDiscounts(currentBlock) {
+function mdeOpenEditBlockTwoSteps(currentBlock) {
     $('body').addClass('blackout');
     currentBlock.addClass('edit');
     currentBlock.find('.discounts').addClass('discounts_edit');
