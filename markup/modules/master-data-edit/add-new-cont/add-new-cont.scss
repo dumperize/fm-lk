@@ -1,0 +1,22 @@
+.add-new-cont {
+  a {
+    display: block;
+    height: inherit;
+    line-height: inherit;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    background-color: $color-bg-grey-light;
+    vertical-align: middle;
+    &:hover {
+      background-color: $color-bg-grey-light - #111111;
+    }
+  }
+  span {
+    font-size: 5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    margin-right: 6px;
+  }
+}

@@ -1,3 +1,93 @@
 .useful-read-edit {
   display: none;
+  textarea {
+    @extend .mde-textarea;
+  }
+  &__column-1 {
+    width: 170px;
+    padding-right: 20px;
+    float: left;
+  }
+  &__column-2 {
+    margin-left: 170px;
+  }
+  &__img-cont {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-right: 12px;
+    position: relative;
+    float: left;
+    background-color: $color-bg-grey-light;
+  }
+  &__bg-ico {
+    @extend %icon;
+    @extend %icon_gift_grey_light;
+    @extend %icon_block;
+    @include icon_size(100px);
+    position: absolute;
+    left: 25px;
+    top: 23px;
+    z-index: 0;
+  }
+  &__img {
+    @include img-max-size(150px, 150px);
+    position: relative;
+    z-index: 1;
+  }
+  &__btn-cont {
+    text-align: center;
+  }
+  &__btn-cont > div {
+    display: inline-block;
+  }
+  &__photo-upload {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      border-bottom: 1px dashed;
+      margin-left: 4px;
+      vertical-align: middle;
+      font-size: 1.2rem;
+    }
+    i {
+      @extend %icon;
+      @extend %icon_cogwheel;
+      @extend %icon_inline;
+      @include icon_size(12px);
+      vertical-align: middle;
+    }
+  }
+  &__title {
+    color: #444;
+    font-size: 1.6rem;;
+    margin-bottom: 4px;
+    font-weight: bold;
+    display: block;
+  }
+  &__add-href {
+    span:first-child {
+      display: inline-block;
+      width: 34%;
+      margin-bottom: 0;
+      vertical-align: middle;
+      margin-right: 0;
+    }
+    span:nth-child(2) {
+      display: inline-block;
+      width: 65.2%;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+    input {
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 100%;
+      padding: 2px 6px;
+    }
+  }
+  &__title-input {padding: 2px 6px; margin-bottom: 8px}
+  &__title-input {width: 100%}
+  &__clear {clear: left}
 }

@@ -1,5 +1,34 @@
 <form block="useful-read-edit" action="/master-data-edit/json2.json" method="GET">
 
+    <div elem="column-1">
+        <div elem="img-cont" id="{{popup-id2}}-save">
+            <i elem="bg-ico"></i>
+            {{#if is-img-exist}}
+            <img elem="img" src="{{img.src}}" alt="{{img.alt}}">
+            {{/if}}
+        </div>
+        <p elem="photo-upload"><i></i><a href="#{{popup-id2}}" mix="block:js-photo-upload">Изменить миниатюру</a></p>
 
-    {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+    </div>
+    <div elem="column-2">
+        <label><span elem="title">Заголовок</span>
+            <input elem="title-input" type="text" name="name1">
+        </label>
+
+        <label><span elem="title">Статья</span>
+            <textarea name="name2"></textarea>
+        </label>
+
+        <label elem="add-href">
+            <span elem="title">Ссылка на источник</span>
+            <span><input elem="href-input" type="text" name="name3"></span>
+        </label>
+    </div>
+
+    <br elem="clear">
+
+    <div elem="btn-cont">
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+    </div>
+
 </form>

@@ -45,8 +45,25 @@
         "popup-id2": "img-upload2"
       },
       "discount-upload": {
-        "title": "Загрузка фотографии скидок",
+        "title": "Загрузка миниатюры для скидки",
         "popup-id": "img-upload2",
+        "select-button": {
+          "url": "#",
+          "mod": "grey",
+          "text": "Выбрать другое фото"
+        },
+        "download-button": {
+          "url": "#",
+          "mod": "orange",
+          "text": "Сохранить"
+        }
+      },
+      "useful-read-edit": {
+        "popup-id2": "img-upload3"
+      },
+      "article-preview-upload": {
+        "title": "Загрузка миниатюры для статьи",
+        "popup-id": "img-upload3",
         "select-button": {
           "url": "#",
           "mod": "grey",

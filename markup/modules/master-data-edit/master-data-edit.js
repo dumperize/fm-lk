@@ -35,7 +35,9 @@ function mdeCloseEditBlock(currentBlock) {
         currentBlock.find('form').hide();
         currentBlock.find('.master-data-edit__hide-edit').show();
         currentBlock.find('.mde-btn-cont').hide();
-        currentBlock.find('.discounts').removeClass('discounts_edit'); //Убрать элементы редакт. у discounts
+        currentBlock.find('.discounts').removeClass('discounts_edit');  //Убрать элементы редакт. у discounts
+        currentBlock.find('.article-preview').find('.ctrl-btn').hide(); //Убрать элементы редакт. у article-preview
+        currentBlock.find('.add-new-cont').parent().hide();             //Убрать добавить новый блок
     }
 }
 function mdeOpenEditBlock(currentBlock) {
@@ -51,7 +53,10 @@ function mdeOpenEditBlockTwoSteps(currentBlock) {
     $('body').addClass('blackout');
     currentBlock.addClass('edit');
     currentBlock.find('.discounts').addClass('discounts_edit');
+    currentBlock.find('.article-preview').find('.ctrl-btn').fadeIn(500);
     currentBlock.find('.mde-btn-cont').show();
+    addCreateDiscountsBlock();
+    addCreateNewBlock();
 }
 function openActualData(currentBlock) {
     var formId = currentBlock.find('form');

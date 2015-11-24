@@ -5,13 +5,13 @@ $('.js-del-discounts-block').click(function () {
     return false;
 });
 function delDiscountsBlock() {
-    this.closest('.discounts').parent.toggle(500, function () {
+    $(this).closest('.discounts').parent().toggle(500, function () {
         $(this).remove();
         addCreateDiscountsBlock();
     });
 }
 function addCreateDiscountsBlock() {
     if (2 > $('.mde-discounts-and-gifts').find('.discounts').length) {
-        $('.mde-discounts-and-gifts__add-discounts-cont').show();
+        $('.mde-discounts-and-gifts__add-new-cont').show();
     }
 }

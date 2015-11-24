@@ -1,10 +1,27 @@
-<div block="mde-useful-read">
+<div block="mde-useful-read" data-max-article="4">
 
-    {{#each article-preview}}
-    <div elem="useful-read-cont">
-        {{> article-preview/article-preview}}
+    <div elem="publish" id="publish-article">
+        <p elem="title">Опубликовано</p>
+
+        <br elem="clear">
     </div>
-    {{/each}}
+
+    <div elem="not-publish" id="not-publish-article">
+        <p elem="title">Не опубликовано</p>
+
+        {{#each article-preview}}
+        <div elem="useful-read-cont" data-publish="0">
+            {{> article-preview/article-preview}}
+        </div>
+        {{/each}}
+
+        <div elem="add-new-cont">
+            {{> master-data-edit/add-new-cont/add-new-cont add-new-cont}}
+        </div>
+
+        <br elem="clear">
+    </div>
+
     <br elem="clear">
 
 </div><!--useful-read-->

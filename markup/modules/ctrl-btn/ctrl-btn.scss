@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   z-index: 10;
-  //display: none;
+  display: none;
   &__edit, &__del, &__publish {
     height: inherit;
     position: absolute;
@@ -46,14 +46,22 @@
     }
   }
   &_vertical {
+    height: auto;
     a {
       right: 0;
+      height: 32px;
+      background-color: rgba(255,255,255,0.5);
+      &:hover {
+        background-color: rgba(255,255,255,0.7);
+      }
     }
-    &__del {
-      top: 34px;
-    }
-    &__publish {
-      top: 68px;
+    .ctrl-btn {
+      &__edit {
+        top: 34px;
+      }
+      &__publish {
+        top: 68px;
+      }
     }
   }
 }
