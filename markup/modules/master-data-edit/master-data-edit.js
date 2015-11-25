@@ -55,6 +55,7 @@ function mdeOpenEditBlockTwoSteps(currentBlock) {
     currentBlock.find('.discounts').addClass('discounts_edit');
     currentBlock.find('.article-preview').find('.ctrl-btn').fadeIn(500);
     currentBlock.find('.mde-btn-cont').show();
+    currentBlock.find('.mde-useful-read__not-publish').show();
     addCreateDiscountsBlock();
     addCreateNewBlock();
 }

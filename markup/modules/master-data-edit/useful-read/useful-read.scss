@@ -6,12 +6,26 @@
     padding-right: 20px;
     margin-bottom: 20px;
   }
+  &__title {
+    @extend .mde-title;
+  }
   &__add-new-cont {
     line-height: 100px;
     display: none;
   }
+  &__publish {
+    margin-bottom: 20px;
+    background-color: rgba(211,242,192,0.5);
+  }
+  &__publish, &__not-publish {
+    margin-top: 4px;
+    padding: 20px 0 0 20px;
+  }
+  &__not-publish {
+    background-color: #EEE;
+  }
   &__clear {clear: both}
 }
 .mde-useful-read>div {
-  border: 1px solid blue;
+  //border: 1px solid blue;
 }

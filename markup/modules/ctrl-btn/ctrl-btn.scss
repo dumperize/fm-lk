@@ -4,7 +4,7 @@
   right: 0;
   z-index: 10;
   display: none;
-  &__edit, &__del, &__publish {
+  &__edit, &__del, &__publish, &__not-publish {
     height: inherit;
     position: absolute;
     right: 0;
@@ -45,21 +45,32 @@
       @extend %icon_open_eye;
     }
   }
+  &__not-publish {
+    right: 68px;
+    padding: 5px;
+    span {
+      @include icon_size(26px);
+      @extend %icon_open_eye;
+    }
+    &:hover span {
+      @extend %icon_close_eye;
+    }
+  }
   &_vertical {
     height: auto;
     a {
       right: 0;
       height: 32px;
-      background-color: rgba(255,255,255,0.5);
+      background-color: rgba(255,255,255,0.7);
       &:hover {
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.9);
       }
     }
     .ctrl-btn {
       &__edit {
         top: 34px;
       }
-      &__publish {
+      &__publish, &__not-publish {
         top: 68px;
       }
     }
