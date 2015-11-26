@@ -1,4 +1,29 @@
 .mde-photo {
+  .ctrl-btn {
+    top: 5px;
+    right: 5px;
+  }
+  &__add-new-cont {
+    display: none;
+    width: 156px;
+    height: 156px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    .add-new-cont {
+      text-align: center;
+      display: table;
+      a {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: normal;
+        span {
+          display: block;
+          margin-bottom: -12px;
+          margin-top: -12px;
+        }
+      }
+    }
+  }
   &__album-cover, &__img-prev {
     display: inline-block;
     padding: 5px;
@@ -11,15 +36,18 @@
     margin-right: 10px;
     margin-bottom: 10px;
     vertical-align: top;
+    position: relative;
     &:hover {
       background-color: $color-orange-light;
-      color: #333;
+      > a {
+        color: #333;
+      }
     }
     img {
-      @include img-max-size(142px, 142px);
+      @include img-max-size(144px, 144px);
       margin-bottom: -3px;
     }
-    span {
+    > a span {
       display: inline-block;
       max-height: 30px;
       overflow: hidden;
@@ -47,8 +75,10 @@
   &__album-cover {
     &_act {
       background-color: $color-orange-light;
-      color: #333;
       border: 1px solid #666;
+      > a {
+        color: #333;
+      }
     }
   }
 }

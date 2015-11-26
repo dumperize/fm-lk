@@ -1,10 +1,16 @@
-<div block="mde-photo">
+<div block="mde-photo" data-max-elem="5">
     {{#each albums}}
-    <a href="/master-data-edit/json3.json" elem="album-cover" mix="block: js-select-album">
-        <img src="{{album-cover.src}}" alt="{{album-cover.alt}}"><br>
-        <span>{{album-cover.title}}</span>
-    </a>
+    <div elem="album-cover" mix="block: js-select-album">
+        <a href="/master-data-edit/json3.json">
+            <img src="{{album-cover.src}}" alt="{{album-cover.alt}}"><br>
+            <span>{{album-cover.title}}</span>
+        </a>
+        {{> ctrl-btn/ctrl-btn ctrl-btn}}
+    </div>
     {{/each}}
+    <div elem="add-new-cont">
+        {{> master-data-edit/add-new-cont/add-new-cont add-new-cont text='альбом'}}
+    </div>
 
     {{#each albums-content}}
     <div elem="album-cont">
@@ -16,7 +22,6 @@
         </a>
         {{/each}}
 
-    </div>
-    <!--album-cont-->
+    </div><!--album-cont-->
     {{/each}}
 </div><!--mde-photo-->

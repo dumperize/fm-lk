@@ -36,8 +36,9 @@ function mdeCloseEditBlock(currentBlock) {
         currentBlock.find('.master-data-edit__hide-edit').show();
         currentBlock.find('.mde-btn-cont').hide();
         currentBlock.find('.discounts').removeClass('discounts_edit');  //Убрать элементы редакт. у discounts
-        currentBlock.find('.article-preview').find('.ctrl-btn').hide(); //Убрать элементы редакт. у article-preview
+        currentBlock.find('.ctrl-btn').hide();                          //Убрать элементы редакт.
         currentBlock.find('.add-new-cont').parent().hide();             //Убрать добавить новый блок
+        currentBlock.find('.mde-photo__album-cont').show();             //Показать содержимое альбома
     }
 }
 function mdeOpenEditBlock(currentBlock) {
@@ -53,11 +54,13 @@ function mdeOpenEditBlockTwoSteps(currentBlock) {
     $('body').addClass('blackout');
     currentBlock.addClass('edit');
     currentBlock.find('.discounts').addClass('discounts_edit');
-    currentBlock.find('.article-preview').find('.ctrl-btn').fadeIn(500);
+    currentBlock.find('.article-preview').find('.ctrl-btn').fadeIn(400);
+    currentBlock.find('.mde-photo__album-cover').find('.ctrl-btn').fadeIn(400).find('.ctrl-btn__publish').hide();
     currentBlock.find('.mde-btn-cont').show();
     currentBlock.find('.mde-useful-read__not-publish').show();
+    currentBlock.find('.mde-photo__album-cont').hide();
     addCreateDiscountsBlock();
-    addCreateNewBlock();
+    addCreateNewBlock(currentBlock);
 }
 function openActualData(currentBlock) {
     var formId = currentBlock.find('form');
