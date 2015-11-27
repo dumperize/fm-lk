@@ -1,0 +1,30 @@
+<form block="mde-photo-edit" action="/master-data-edit/json2.json" method="GET" data-max-elem="9">
+
+    <label elem="title-edit">
+        <span>Название альбома:</span>
+        <span><input type="text" name="name1"></span>
+    </label>
+
+    <div elem="wrapper">
+    {{#repeat 9}}
+    <div elem="elem-cont">
+        <div elem="img-cont" id="{{popup-id2}}-save">
+            <img elem="img" src="/static/img/content/test/romashki.jpg" alt="{{img.alt}}">
+        </div>
+
+        <textarea name="name2" rows="1" placeholder="Описание к фотографии"></textarea>
+
+        {{> ctrl-btn/ctrl-btn ctrl-btn}}
+    </div>
+        <div elem="clear-div"></div>
+    {{/repeat}}
+    </div>
+
+    <br elem="clear">
+
+    <div elem="btn-cont">
+        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+    </div>
+
+
+</form>

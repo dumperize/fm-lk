@@ -17,25 +17,3 @@ function addCreateNewBlock(elm) {
         }
     }
 }
-//удаление родительского блока
-function delArtPrevBlock() {
-    if ($(this).closest('.article-preview').length > 0) {
-        $(this).closest('.article-preview').parent().toggle(500, function () {
-            addCreateNewBlock(this);
-            $(this).remove();
-        });
-    }
-}
-function delThisBlock() {
-    if ($(this).closest('.article-preview').length > 0) {
-        $(this).closest('.article-preview').parent().toggle(500, function () {
-            addCreateNewBlock(this);
-            $(this).remove();
-        });
-    } else if ($(this).closest('.mde-photo__album-cover').length > 0) {
-        $(this).closest('.mde-photo__album-cover').toggle(500, function () {
-            addCreateNewBlock(this);
-            $(this).remove();
-        });
-    }
-}

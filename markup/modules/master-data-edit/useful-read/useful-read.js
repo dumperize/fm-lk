@@ -2,7 +2,6 @@ $('.js-publish-block').click(function () {
     var dataPublish = $(this).parents('.mde-useful-read__useful-read-cont').data('publish');
     var article = $(this).parents('.mde-useful-read__useful-read-cont');
 
-    console.log(dataPublish);
     if (dataPublish == 0) {
         $(article).find('.ctrl-btn__publish').removeClass('ctrl-btn__publish').addClass('ctrl-btn__not-publish');
         $(article).prependTo('#publish-article');

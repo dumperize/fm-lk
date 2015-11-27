@@ -47,13 +47,14 @@ function mdeOpenEditBlock(currentBlock) {
     currentBlock.find('.master-data-edit__hide-edit').hide();
     currentBlock.find('form').show();
     currentBlock.find('.mde-btn-cont').show();
-    currentBlock.find('textarea').elastic();
+    autosize(currentBlock.find('textarea'));
     openActualData(currentBlock);
 }
 function mdeOpenEditBlockTwoSteps(currentBlock) {
     $('body').addClass('blackout');
     currentBlock.addClass('edit');
     currentBlock.find('.discounts').addClass('discounts_edit');
+    currentBlock.find('.ctrl-btn').fadeIn(400); //отладка
     currentBlock.find('.article-preview').find('.ctrl-btn').fadeIn(400);
     currentBlock.find('.mde-photo__album-cover').find('.ctrl-btn').fadeIn(400).find('.ctrl-btn__publish').hide();
     currentBlock.find('.mde-btn-cont').show();
