@@ -5,25 +5,38 @@
         <span><input type="text" name="name1"></span>
     </label>
 
-    <div elem="wrapper">
-    {{#repeat 9}}
-    <div elem="elem-cont">
+    <div elem="elem-cont" id="elem-cont-template">
         <div elem="img-cont" id="{{popup-id2}}-save">
-            <img elem="img" src="/static/img/content/test/romashki.jpg" alt="{{img.alt}}">
+            <div><img elem="img" src="" alt=""></div>
         </div>
-
         <textarea name="name2" rows="1" placeholder="Описание к фотографии"></textarea>
-
         {{> ctrl-btn/ctrl-btn ctrl-btn}}
     </div>
+
+    <div elem="wrapper">
+        {{#repeat 9}}
+        <div elem="elem-cont">
+            <div elem="img-cont" id="{{popup-id2}}-save">
+                <div><img elem="img" src="/static/img/content/test/romashki.jpg" alt="{{img.alt}}"></div>
+            </div>
+
+            <textarea name="name2" rows="1" placeholder="Описание к фотографии"></textarea>
+
+            {{> ctrl-btn/ctrl-btn ctrl-btn}}
+        </div>
         <div elem="clear-div"></div>
-    {{/repeat}}
+        {{/repeat}}
     </div>
+
+    <label elem="input-photo-load"><input type="file" multiple name="photo-load" mix="block: js-photo-load"></label>
 
     <br elem="clear">
 
     <div elem="btn-cont">
-        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+        <div elem="add-btn" mix="block:js-add-photo-to-album">
+            <a href="#" block="button" mod="orange">Добавить фотографию</a>
+        </div>
+        {{> master-data-edit/edit-btn/edit-btn edit-btn save-btn-text="Завершить редактирование"}}
     </div>
 
 

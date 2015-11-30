@@ -3,6 +3,7 @@
   textarea {
     @extend .mde-textarea;
     max-height: 80px !important;
+    margin-top: 4px;
   }
   &__clear-div {
     display: none;
@@ -15,44 +16,48 @@
       margin-bottom: 12px;
     }
     &:nth-child(18) {
-      border-top: none;
+      //border-top: none;
     }
   }
   &__elem-cont {
     @extend .col-md-4;
     padding-top: 10px;
     margin-bottom: 6px;
-    //border: 1px solid blue;
-  }
-  &__column-1 {
-    width: 170px;
-    padding-right: 20px;
-    float: left;
-  }
-  &__column-2 {
-    margin-left: 170px;
   }
   &__img-cont {
     min-width: 100%;
-    min-height: 100%;
+    min-height: 153px;
     width: 100%;
-    height: 100%;
+    height: 153px;
+    //max-height: 153px;
     overflow: hidden;
-    //margin-right: 12px;
     position: relative;
-    //float: left;
-    //background-color: $color-bg-grey-light;
+    //border: 1px solid blue;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    > div {
+      display: inline-block;
+      max-height: 153px;
+      overflow: hidden;
+      vertical-align: middle;
+    }
   }
   &__img {
     @include img-max-size(100%, auto);
     position: relative;
     z-index: 1;
+    vertical-align: middle;
   }
   &__btn-cont {
+    margin-top: -20px;
     text-align: center;
+    vertical-align: middle;
+    clear: left;
   }
   &__btn-cont > div {
     display: inline-block;
+    vertical-align: middle;
   }
   &__title-edit {
     display: block;
@@ -62,7 +67,7 @@
       display: inline-block !important;
       float: left;
       width: 160px;
-      margin-top:2px;
+      margin-top: 2px;
     }
     span:nth-child(2) {;
       display: block;
@@ -73,7 +78,50 @@
       padding: 2px 6px;
     }
   }
+  &__input-photo-load {
+    display: none;
+  }
   &__clear {
     clear: left
+  }
+}
+
+.mde-photo-edit {
+  #elem-cont-template {
+    display: none;
+  }
+  .ctrl-btn a {
+    opacity: 0;
+    transition: opacity 0.05s ease-in-out 0.3s;
+  }
+  .ctrl-btn .ctrl-btn__del {
+    right: 10px;
+    top: 10px;
+  }
+  &__elem-cont {
+    &:hover .ctrl-btn .ctrl-btn__del {
+      opacity: 1;
+    }
+  }
+}
+
+.mde-photo-edit {
+  .mde-btn-cont__save-btn {
+    width: auto;
+    display: inline-block;
+    .button {
+      padding: 0 20px;
+    }
+  }
+  .mde-btn-cont__cancel-btn {
+    margin-right: 0;
+  }
+  &__add-btn {
+    margin-top: 20px;
+    margin-right: 15px;
+    width: auto;
+    .button {
+      padding: 0 20px;
+    }
   }
 }
