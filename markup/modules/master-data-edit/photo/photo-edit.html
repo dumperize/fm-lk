@@ -5,18 +5,22 @@
         <span><input type="text" name="name1"></span>
     </label>
 
+    <!--html template-->
+
     <div elem="elem-cont" id="elem-cont-template">
-        <div elem="img-cont" id="{{popup-id2}}-save">
+        <div elem="img-cont">
             <div><img elem="img" src="" alt=""></div>
         </div>
         <textarea name="name2" rows="1" placeholder="Описание к фотографии"></textarea>
         {{> ctrl-btn/ctrl-btn ctrl-btn}}
     </div>
 
+    <!--html template-->
+
     <div elem="wrapper">
-        {{#repeat 9}}
+        {{#repeat 8}}
         <div elem="elem-cont">
-            <div elem="img-cont" id="{{popup-id2}}-save">
+            <div elem="img-cont">
                 <div><img elem="img" src="/static/img/content/test/romashki.jpg" alt="{{img.alt}}"></div>
             </div>
 
@@ -28,7 +32,7 @@
         {{/repeat}}
     </div>
 
-    <label elem="input-photo-load"><input type="file" multiple name="photo-load" mix="block: js-photo-load"></label>
+    <label elem="input-photo-load"><input type="file" multiple name="photo-load[]" mix="block: js-photo-load"></label>
 
     <br elem="clear">
 

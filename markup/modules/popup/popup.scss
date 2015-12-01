@@ -6,10 +6,16 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
 //  padding: 20px;
-  z-index: 100;
+  z-index: 10000;
 //  display: table;
   text-align: center;
   display: none;
+  &__table {
+    display: table;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+  }
   &__wrapper {
     display: table-cell;
     vertical-align: middle;
@@ -27,7 +33,6 @@
     position: relative;
   }
   &__ico-close {
-    content: '';
     display: block;
     position: absolute;
     right: 12px;
@@ -45,5 +50,9 @@
 .popup .popup__cont>div {   //делаем вложенный div inline-block, проверить как работает
   display: inline-block;
 //  border: 1px solid orange;
-
 }
+.popup .popup-alert-text {
+  font-size: 2rem;
+  text-align: center;
+}
+#popup-template {display: none}
