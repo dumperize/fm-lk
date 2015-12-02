@@ -2,6 +2,7 @@ $('.js-edit-block').click(function () {
     $(this).removeClass('master-data-edit__section-title_edit');
     var currentBlock = $(this).closest('.master-data-edit__section-cont');
     mdeOpenEditBlock(currentBlock);
+    sendAjaxLink($(this), writeAlbumEdit);
     return false;
 });
 $('.js-edit-block-two-steps').click(function () {

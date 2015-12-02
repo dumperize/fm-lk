@@ -29,6 +29,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 //    border: 1px solid red;
     max-height: 100vh;
+    max-width: 70vw;
     overflow: auto;
     position: relative;
   }
@@ -47,12 +48,15 @@
     }
   }
 }
-.popup .popup__cont>div {   //делаем вложенный div inline-block, проверить как работает
+.popup .popup__content>div {   //делаем вложенный div inline-block, проверить как работает
   display: inline-block;
 //  border: 1px solid orange;
 }
 .popup .popup-alert-text {
   font-size: 2rem;
   text-align: center;
+  p {
+    line-height: 1.5em;
+  }
 }
 #popup-template {display: none}
