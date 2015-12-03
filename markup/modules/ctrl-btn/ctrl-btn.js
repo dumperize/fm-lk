@@ -24,8 +24,8 @@ function delThisBlock() {
         });
     } else if ($(this).closest('.mde-photo-edit__elem-cont').length > 0) {
         $(this).closest('.mde-photo-edit__elem-cont').fadeOut(500, function () {
-            console.log(this);
             $(this).next('div').remove();
+            $(this).closest('.mde-photo-edit').find('.mde-photo-edit__add-btn').fadeIn(500);
             $(this).remove();
         });
     } else if ($(this).closest('.mde-photo__album-cover').length > 0) {

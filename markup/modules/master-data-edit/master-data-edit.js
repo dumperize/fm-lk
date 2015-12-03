@@ -50,6 +50,7 @@ function mdeOpenEditBlock(currentBlock) {
     currentBlock.find('.mde-btn-cont').show();
     autosize(currentBlock.find('textarea'));
     openActualData(currentBlock);
+    $('.mde-photo-edit__wrapper').html(''); //очищаем контейнер с фотографиями
 }
 function mdeOpenEditBlockTwoSteps(currentBlock) {
     $('body').addClass('blackout');
