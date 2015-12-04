@@ -2,7 +2,13 @@ $('.js-edit-block').click(function () {
     $(this).removeClass('master-data-edit__section-title_edit');
     var currentBlock = $(this).closest('.master-data-edit__section-cont');
     mdeOpenEditBlock(currentBlock);
-    sendAjaxLink($(this), writeAlbumEdit);
+    if (currentBlock.find('.mde-photo-edit').length > 0) {
+        sendAjaxLink($(this), writeAlbumEdit);
+    }
+    if (currentBlock.find('.mde-video-edit').length > 0 && $(this).attr('href') == '#new') {
+        $('.mde-video-edit__download').show();
+        $('.mde-video-edit__wrapper').hide();
+    }
     return false;
 });
 $('.js-edit-block-two-steps').click(function () {
@@ -14,6 +20,10 @@ $('.js-edit-block-two-steps').click(function () {
 $('.js-edit-block-cancel').click(function () {
     var currentBlock = $(this).closest('.master-data-edit__section-cont');
     mdeCloseEditBlock(currentBlock);
+    if (currentBlock.find('.mde-video-edit').length > 0) {
+        $('.mde-video-edit__download').hide();
+        $('.mde-video-edit__wrapper').show();
+    }
     return false;
 });
 $('.js-edit-block-save').click(function () {
@@ -21,6 +31,10 @@ $('.js-edit-block-save').click(function () {
     var formId = currentBlock.find('form');
     if (formId.attr('class') == 'mde-service-edit') {
         sendForm(formId, saveServiceForm, errorHandler);
+    }
+    if (formId.attr('class') == 'mde-video-edit') {
+        loadNewVideo();
+        return false;
     }
     mdeCloseEditBlock(currentBlock);
     return false;

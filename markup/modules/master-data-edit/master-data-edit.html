@@ -141,11 +141,16 @@
         {{> master-data-edit/photo/photo-edit photo-edit}}
     </div><!--master-data-edit__section-cont-->
 
-    <div elem="section-cont">
-        <p elem="section-title" mod="edit" mix="block:js-edit-block"><a href="#"><span>Видео</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
+    <div elem="section-cont" mix="block: two-step">
+        <p elem="section-title" mod="edit" mix="block:js-edit-block-two-steps"><a href="#"><span>Видео</span><i elem="edit-ico"></i><span>—&nbsp;редактировать</span></a>
         </p>
-        {{> master-data-edit/video/video video}}
-        {{> master-data-edit/edit-btn/edit-btn edit-btn}}
+
+        <div elem="hide-edit">
+            {{> master-data-edit/video/video video}}
+            {{> master-data-edit/edit-btn/end-edit-btn}}
+        </div>
+
+        {{> master-data-edit/video/video-edit video-edit}}
     </div><!--master-data-edit__section-cont-->
 
     <div elem="section-cont">

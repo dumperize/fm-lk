@@ -1,9 +1,17 @@
-<div block="mde-video">
+<div block="mde-video" data-max-elem="3">
 
     {{#each videos}}
-    <a href="{{url}}" elem="video-cover">
-        <span elem="title-prev">{{title}}</span><br>
-        <span elem="img-cont"><img src="{{prev.src}}" alt="{{prev.alt}}"></span>
-    </a>
+    <div elem="video-cont">
+        <a href="{{url}}" elem="video-cover">
+            <span elem="title-prev">{{title}}</span><br>
+            <span elem="img-cont"><img src="{{prev.src}}" alt="{{prev.alt}}"></span>
+        </a>
+        {{> ctrl-btn/ctrl-btn ctrl-btn}}
+    </div>
     {{/each}}
+
+    <div elem="add-new-cont">
+        {{> master-data-edit/add-new-cont/add-new-cont add-new-cont text='видео'}}
+    </div>
+
 </div><!--mde-video-->

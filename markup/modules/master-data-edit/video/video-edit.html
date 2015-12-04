@@ -1,0 +1,45 @@
+<form block="mde-video-edit" action="/master-data-edit/json2.json" method="GET">
+
+    <div elem="download">
+        <label elem="one-row">
+            <span elem="title">Ссылка на видео</span>
+            <b><input elem="title-input" type="text" name="/master-data-edit/json2.json" id="newVideoUpload"></b>
+        </label>
+
+        {{> master-data-edit/edit-btn/edit-btn edit-btn save-btn-text="Загрузить"}}
+    </div>
+
+    <div elem="wrapper">
+        <label elem="one-row">
+            <span elem="title">Название видео</span>
+            <b><input elem="title-input" type="text" name="name1"></b>
+        </label>
+
+        <div elem="column-1">
+            <div elem="img-cont" id="{{popup-id2}}-save">
+                <i elem="bg-ico"></i>
+                {{#if is-img-exist}}
+                <img elem="img" src="{{img.src}}" alt="{{img.alt}}">
+                {{/if}}
+            </div>
+        </div>
+
+        <div elem="column-2">
+            <label><span elem="title">Описание</span>
+                <textarea name="name2"></textarea>
+            </label>
+
+            <label elem="one-row" mod="tags">
+                <span elem="title">Теги</span>
+                <b><input elem="href-input" type="text" name="name3"></b>
+            </label>
+        </div>
+
+        <br elem="clear">
+
+        <div elem="btn-cont">
+            {{> master-data-edit/edit-btn/edit-btn edit-btn save-btn-text="Сохранить"}}
+        </div>
+    </div>
+
+</form>

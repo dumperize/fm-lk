@@ -33,5 +33,10 @@ function delThisBlock() {
             addCreateNewBlock(this);
             $(this).remove();
         });
+    } else if ($(this).closest('.mde-video').length > 0) {
+        $(this).closest('.mde-video__video-cover').toggle(500, function () {
+            addCreateNewBlock(this);
+            $(this).remove();
+        });
     }
 }

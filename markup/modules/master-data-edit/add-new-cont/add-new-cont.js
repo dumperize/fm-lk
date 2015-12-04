@@ -15,5 +15,9 @@ function addCreateNewBlock(elm) {
         if (maxElem > $('.mde-photo').find('.mde-photo__album-cover').length) {
             $('.mde-photo__add-new-cont').css('display', 'inline-block');
         }
+    } else if ($(elm).find('.mde-video').length > 0) {
+        if (maxElem > $('.mde-video').find('.mde-video__video-cont').length) {
+            $('.mde-video__add-new-cont').css('display', 'inline-block');
+        }
     }
 }
