@@ -65,6 +65,7 @@ function mdeOpenEditBlock(currentBlock) {
     autosize(currentBlock.find('textarea'));
     openActualData(currentBlock);
     $('.mde-photo-edit__wrapper').html(''); //очищаем контейнер с фотографиями
+    currentBlock.find('.mde-reviews').find('.ctrl-btn').fadeIn(400).find('.ctrl-btn__edit').hide();
 }
 function mdeOpenEditBlockTwoSteps(currentBlock) {
     $('body').addClass('blackout');

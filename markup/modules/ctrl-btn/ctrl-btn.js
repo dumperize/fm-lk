@@ -11,6 +11,10 @@ $('.js-del-this-block').click(function () {
         if (confirm('Вы уверены, что хотите удалить фотографию?')) {
             sendAjaxLink($(this), delThisBlock);
         }
+    } else if ($(this).closest('.mde-reviews__review-cont').length > 0) {
+        if (confirm('Удалить комментарий?')) {
+            sendAjaxLink($(this), delThisBlock);
+        }
     }
     return false;
 });
@@ -36,6 +40,10 @@ function delThisBlock() {
     } else if ($(this).closest('.mde-video').length > 0) {
         $(this).closest('.mde-video__video-cover').toggle(500, function () {
             addCreateNewBlock(this);
+            $(this).remove();
+        });
+    } else if ($(this).closest('.mde-reviews').length > 0) {
+        $(this).closest('.mde-reviews__review-cont').fadeOut(500, function () {
             $(this).remove();
         });
     }

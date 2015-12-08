@@ -14,7 +14,6 @@ $('.js-add-service-field').click(function () {
     }
     return false;
 });
-//$('.mde-form-element').elastic();
 $('.js-del-service-field').click(function () {
     confirm('Удалить услугу?');
     $(this).closest('p').hide();

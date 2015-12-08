@@ -1,12 +1,28 @@
 <div block="mde-reviews">
 
-    {{#each review-cont}}
-    <div elem="review-cont">
+    <p elem="title">Опубликовано</p>
 
-        <p elem="name">{{name}}<span elem="date">{{date}}</span></p>
+    <div elem="publish" id="publish-cont">
 
-        <p elem="text">{{text}}</p>
-    </div><!--review-cont-->
-    {{/each}}
+        <br elem="clear">
+    </div>
+
+
+    <p elem="title">Не опубликовано</p>
+
+    <div elem="not-publish" id="not-publish-cont">
+
+        {{#each review-cont}}
+        <div elem="review-cont" data-publish="0">
+
+            <p elem="name">{{name}}<span elem="date">{{date}}</span></p>
+
+            <p elem="text">{{text}}</p>
+
+            {{> ctrl-btn/ctrl-btn ctrl-btn}}
+        </div>
+        <!--review-cont-->
+        {{/each}}
+    </div>
 
 </div><!--mde-reviews-->

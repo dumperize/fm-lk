@@ -52,7 +52,7 @@ $('.js-photo-load').change(function (e) {
                     }
                 }
                 if (completeFiles >= filesCount && toMuchFiles.length > 0) {
-                    showPopUpMessage('Изображения: ' + toMuchFiles + ' не были загружены.');
+                    showPopUpMessage('Изображения: ' + toMuchFiles + ' не были загружены.<br>Закончилось место в альбоме.');
                 }
             }.bind(file)
         });
